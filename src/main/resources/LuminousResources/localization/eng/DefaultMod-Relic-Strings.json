@@ -30,5 +30,12 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "Luminous:MirrorRelic": {
+    "NAME": "Mirror Relic",
+    "FLAVOR": "Edit Letter",
+    "DESCRIPTIONS": [
+      "Enable Mirror Magic Power System"
+    ]
   }
 }

@@ -1,5 +1,6 @@
 package Luminous;
 
+import Luminous.relics.MirrorRelic;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -27,7 +28,6 @@ import Luminous.events.IdentityCrisisEvent;
 import Luminous.potions.PlaceholderPotion;
 import Luminous.relics.BottledPlaceholderRelic;
 import Luminous.relics.DefaultClickableRelic;
-import Luminous.relics.PlaceholderRelic;
 import Luminous.relics.PlaceholderRelic2;
 import Luminous.util.IDCheckDontTouchPls;
 import Luminous.util.TextureLoader;
@@ -370,9 +370,10 @@ public class DefaultMod implements
         logger.info("Adding relics");
         
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), luminous.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), luminous.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), luminous.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_GRAY);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -402,8 +403,8 @@ public class DefaultMod implements
         // Add the cards
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
-        
-        //BaseMod.addCard(new OrbSkill());
+
+        BaseMod.addCard(new OrbSkill());
         BaseMod.addCard(new DefaultSecondMagicNumberSkill());
         BaseMod.addCard(new DefaultCommonAttack());
         BaseMod.addCard(new DefaultAttackWithVariable());
@@ -415,6 +416,7 @@ public class DefaultMod implements
         BaseMod.addCard(new DefaultRareAttack());
         BaseMod.addCard(new DefaultRareSkill());
         BaseMod.addCard(new DefaultRarePower());
+        BaseMod.addCard(new Light_Flash_Shower());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
@@ -432,6 +434,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(DefaultRareAttack.ID);
         UnlockTracker.unlockCard(DefaultRareSkill.ID);
         UnlockTracker.unlockCard(DefaultRarePower.ID);
+        UnlockTracker.unlockCard(Light_Flash_Shower.ID);
         
         logger.info("Done adding cards!");
     }

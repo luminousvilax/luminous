@@ -49,5 +49,9 @@
   "Luminous:OrbSkill": {
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "Luminous:Light_Flash_Shower": {
+    "NAME": "Flash Shower",
+    "DESCRIPTION": "Use light to Deal !D! Damage. NL [#03e3fc]Light[]"
   }
 }

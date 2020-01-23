@@ -1,5 +1,6 @@
 package Luminous.characters;
 
+import Luminous.relics.MirrorRelic;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
@@ -24,7 +25,6 @@ import org.apache.logging.log4j.Logger;
 import Luminous.DefaultMod;
 import Luminous.cards.*;
 import Luminous.relics.DefaultClickableRelic;
-import Luminous.relics.PlaceholderRelic;
 import Luminous.relics.PlaceholderRelic2;
 
 import java.util.ArrayList;
@@ -64,7 +64,7 @@ public class luminous extends CustomPlayer {
     public static final int STARTING_HP = 75;
     public static final int MAX_HP = 75;
     public static final int STARTING_GOLD = 99;
-    public static final int CARD_DRAW = 9;
+    public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
 
     // =============== /BASE STATS/ =================
@@ -170,7 +170,10 @@ public class luminous extends CustomPlayer {
 
         retVal.add(DefaultAttackWithVariable.ID);
         retVal.add(DefaultSecondMagicNumberSkill.ID);
-        //retVal.add(OrbSkill.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
         return retVal;
     }
 
@@ -178,11 +181,11 @@ public class luminous extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(PlaceholderRelic.ID);
+        retVal.add(MirrorRelic.ID);
         retVal.add(PlaceholderRelic2.ID);
         retVal.add(DefaultClickableRelic.ID);
 
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
+        UnlockTracker.markRelicAsSeen(MirrorRelic.ID);
         UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
         UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
 
