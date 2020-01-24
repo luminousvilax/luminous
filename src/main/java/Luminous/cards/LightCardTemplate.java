@@ -2,13 +2,7 @@ package Luminous.cards;
 
 import Luminous.DefaultMod;
 import Luminous.characters.luminous;
-import Luminous.powers.lightPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static Luminous.DefaultMod.makeCardPath;
@@ -31,7 +25,7 @@ public class LightCardTemplate extends AbstractLightCard {
     private static final CardRarity RARITY = CardRarity.COMMON; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.ENEMY;  //   since they don't change much.
     private static final CardType TYPE = CardType.valueOf("Light");       //
-    public static final CardColor COLOR = luminous.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
     private static final int COST = 1;  // COST = ${COST}
     private static final int UPGRADED_COST = 0; // UPGRADED_COST = ${UPGRADED_COST}

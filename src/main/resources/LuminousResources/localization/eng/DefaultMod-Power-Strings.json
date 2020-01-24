@@ -9,7 +9,7 @@
 },
         "Luminous:LightPower": {
                 "NAME": "Light Power",
-                "DESCRIPTIONS": ["Allow #blight card attack 1 time more, need ", " power ", "powers", "to arrive #ybalance"]
+                "DESCRIPTIONS": ["Allow #blight card have buffed attack, need ", " power ", "powers", "to arrive #ybalance"]
         },
         "Luminous:MagicPowerSystem": {
                 "NAME": "Magic Power",

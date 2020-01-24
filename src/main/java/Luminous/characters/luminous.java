@@ -30,7 +30,7 @@ import Luminous.relics.PlaceholderRelic2;
 import java.util.ArrayList;
 
 import static Luminous.DefaultMod.*;
-import static Luminous.characters.luminous.Enums.COLOR_GRAY;
+import static Luminous.characters.luminous.Enums.COLOR_luminous;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
 //and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
@@ -50,7 +50,7 @@ public class luminous extends CustomPlayer {
         @SpireEnum
         public static AbstractPlayer.PlayerClass THE_DEFAULT;
         @SpireEnum(name = "DEFAULT_GRAY_COLOR") // These two HAVE to have the same absolutely identical name.
-        public static AbstractCard.CardColor COLOR_GRAY;
+        public static AbstractCard.CardColor COLOR_luminous;
         @SpireEnum(name = "DEFAULT_GRAY_COLOR") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
@@ -216,7 +216,7 @@ public class luminous extends CustomPlayer {
     // Should return the card color enum to be associated with your character.
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return COLOR_GRAY;
+        return COLOR_luminous;
     }
 
     // Should return a color object to be used to color the trail of moving cards

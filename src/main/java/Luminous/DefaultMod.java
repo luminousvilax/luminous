@@ -94,7 +94,10 @@ public class DefaultMod implements
     
     // Colors (RGB)
     // Character Color
-    public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
+    public static final Color DEFAULT_GRAY = CardHelper.getColor(3.0f,232.0f,252.0f); //color changed, lazy to change name
+    //public static final Color LIGHT = CardHelper.getColor(64.0f, 70.0f, 70.0f);
+//    public static final Color DARK = CardHelper.getColor(133,12,40);
+//    public static final Color BALANCE = CardHelper.getColor(197, 211, 217);
     
     // Potion Colors in RGB
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
@@ -166,7 +169,7 @@ public class DefaultMod implements
     // =============== /INPUT TEXTURE LOCATION/ =================
     
     
-    // =============== SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE =================
+    // =============== SUBSCRIBE, CREATE THE COLOR_luminous, INITIALIZE =================
     
     public DefaultMod() {
         logger.info("Subscribe to BaseMod hooks");
@@ -199,16 +202,17 @@ public class DefaultMod implements
         
         logger.info("Done subscribing");
         
-        logger.info("Creating the color " + luminous.Enums.COLOR_GRAY.toString());
-        
-        BaseMod.addColor(luminous.Enums.COLOR_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
+        logger.info("Creating the color " + luminous.Enums.COLOR_luminous.toString());
+        logger.info("==================正在注入新卡片信息=====================");
+        BaseMod.addColor(luminous.Enums.COLOR_luminous, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
                 DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
+
         
         logger.info("Done creating the color");
-        
+        logger.info("================成功注入新卡片信息==================");
         
         logger.info("Adding mod settings");
         // This loads the mod settings.
@@ -277,7 +281,7 @@ public class DefaultMod implements
         logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
     }
     
-    // ============== /SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE/ =================
+    // ============== /SUBSCRIBE, CREATE THE COLOR_luminous, INITIALIZE/ =================
     
     
     // =============== LOAD THE CHARACTER =================
@@ -370,10 +374,10 @@ public class DefaultMod implements
         logger.info("Adding relics");
         
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), luminous.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), luminous.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_luminous);
+        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), luminous.Enums.COLOR_luminous);
+        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), luminous.Enums.COLOR_luminous);
+        BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_luminous);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);

@@ -42,7 +42,7 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
     // On use card, apply (amount) of Dexterity. (Go to the actual power card for the amount.)
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
-        if (getPowerAmtAction.main("lightPower") >= this.Balance_AMT){
+        if (getPowerAmtAction.main("LightPower") >= this.Balance_AMT){
 
         }
 //        else if (getPowerAmtAction.main("DarkPower") >= this.Balance_AMT){

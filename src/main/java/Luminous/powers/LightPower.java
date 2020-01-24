@@ -1,17 +1,11 @@
 package Luminous.powers;
 
 import Luminous.DefaultMod;
-import Luminous.util.TextureLoader;
+import Luminous.patches.cards.AbstractCardEnum;
 import basemod.interfaces.CloneablePowerInterface;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,11 +13,12 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import Luminous.actions.getPowerAmtAction;
 
 import static Luminous.DefaultMod.makePowerPath;
 
 
-public class lightPower extends AbstractPower implements CloneablePowerInterface {
+public class LightPower extends AbstractPower implements CloneablePowerInterface {
     public static final String POWER_ID = DefaultMod.makeID("LightPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
@@ -32,7 +27,7 @@ public class lightPower extends AbstractPower implements CloneablePowerInterface
     private int Balance_AMT = 10;
     private int Left_AMT = 0;
 
-    public lightPower(final AbstractCreature owner,  final int amount) {
+    public LightPower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -47,9 +42,11 @@ public class lightPower extends AbstractPower implements CloneablePowerInterface
         updateDescription();
     }
 
-    // On use card, apply (amount) of Dexterity. (Go to the actual power card for the amount.)
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
+        this.Light_AMT = getPowerAmtAction.main("LightPower");
+        this.Left_AMT = this.Balance_AMT - this.Light_AMT;
+        updateDescription();
 
     }
 
@@ -71,6 +68,6 @@ public class lightPower extends AbstractPower implements CloneablePowerInterface
 
     @Override
     public AbstractPower makeCopy() {
-        return new lightPower(owner, amount);
+        return new LightPower(owner, amount);
     }
 }
