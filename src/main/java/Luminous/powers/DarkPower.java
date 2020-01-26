@@ -1,34 +1,29 @@
 package Luminous.powers;
 
 import Luminous.DefaultMod;
+import Luminous.actions.juageMagicCardAction;
+import Luminous.actions.luckTestAction;
+import Luminous.actions.plusDamegeAction;
 import basemod.interfaces.CloneablePowerInterface;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import Luminous.actions.getPowerAmtAction;
-import Luminous.actions.juageMagicCardAction;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import Luminous.actions.luckTestAction;
-import Luminous.actions.plusDamegeAction;
 
 import static Luminous.DefaultMod.makePowerPath;
 
 
-public class LightPower extends AbstractPower implements CloneablePowerInterface {
-    public static final String POWER_ID = DefaultMod.makeID("LightPower");
+public class DarkPower extends AbstractPower implements CloneablePowerInterface {
+    public static final String POWER_ID = DefaultMod.makeID("DarkPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private int Left_AMT = 0;
 
-    public LightPower(final AbstractCreature owner, final int amount) {
+    public DarkPower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -38,19 +33,16 @@ public class LightPower extends AbstractPower implements CloneablePowerInterface
         type = PowerType.BUFF;
         isTurnBased = false;
 
-        this.img = ImageMaster.loadImage(makePowerPath("LightPower.png"));
+        this.img = ImageMaster.loadImage(makePowerPath("DarkPower.png"));
 
         updateDescription();
     }
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m)  {
-        if (card.type == AbstractCard.CardType.ATTACK && juageMagicCardAction.isLightCard(card)){
+        if (card.type == AbstractCard.CardType.ATTACK && juageMagicCardAction.isDarkCard(card)){
             flash();
-            if (luckTestAction.main(0.5)){
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new DexterityPower(AbstractDungeon.player, 1), 1));
-            }
+
         }
     }
 
@@ -59,14 +51,14 @@ public class LightPower extends AbstractPower implements CloneablePowerInterface
     @Override
     public void updateDescription() {
         if (amount == 1) {
-            description = DESCRIPTIONS[0] + Left_AMT + DESCRIPTIONS[1] + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
         } else if (amount > 1) {
-            description = DESCRIPTIONS[0] + Left_AMT + DESCRIPTIONS[2] + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
         }
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new LightPower(owner, amount);
+        return new DarkPower(owner, amount);
     }
 }

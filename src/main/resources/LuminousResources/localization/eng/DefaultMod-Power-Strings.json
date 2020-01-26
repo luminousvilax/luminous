@@ -9,7 +9,15 @@
 },
         "Luminous:LightPower": {
                 "NAME": "Light Power",
-                "DESCRIPTIONS": ["Allow #blight card have buffed attack, need ", " power ", "powers", "to arrive #ybalance"]
+                "DESCRIPTIONS": ["Allow #bLight card have buffed attack, need ", " power ", "powers", "to arrive #ybalance"]
+        },
+        "Luminous:DarkPower": {
+                "NAME": "Dark Power",
+                "DESCRIPTIONS": ["Allow #rDark card have buffed attack, need ", " power ", "powers", "to arrive #ybalance"]
+        },
+        "Luminous:BalancePower": {
+                "NAME": "Balance Power",
+                "DESCRIPTIONS": ["Allow #yBalance card have buffed attack, need ", " power ", "powers", "to arrive #ybalance"]
         },
         "Luminous:MagicPowerSystem": {
                 "NAME": "Magic Power",

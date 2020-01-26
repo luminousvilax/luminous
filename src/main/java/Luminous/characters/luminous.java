@@ -72,7 +72,7 @@ public class luminous extends CustomPlayer {
 
     // =============== STRINGS =================
 
-    private static final String ID = makeID("DefaultCharacter");
+    private static final String ID = makeID("Luminous");
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
@@ -156,24 +156,17 @@ public class luminous extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        retVal.add(DefaultCommonAttack.ID);
-        retVal.add(DefaultUncommonAttack.ID);
-        retVal.add(DefaultRareAttack.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
 
-        retVal.add(DefaultCommonSkill.ID);
-        retVal.add(DefaultUncommonSkill.ID);
-        retVal.add(DefaultRareSkill.ID);
-
-        retVal.add(DefaultCommonPower.ID);
-        retVal.add(DefaultUncommonPower.ID);
-        retVal.add(DefaultRarePower.ID);
-
-        retVal.add(DefaultAttackWithVariable.ID);
-        retVal.add(DefaultSecondMagicNumberSkill.ID);
-        retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
         return retVal;
     }
 
@@ -182,8 +175,6 @@ public class luminous extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
 
         retVal.add(MirrorRelic.ID);
-        retVal.add(PlaceholderRelic2.ID);
-        retVal.add(DefaultClickableRelic.ID);
 
         UnlockTracker.markRelicAsSeen(MirrorRelic.ID);
         UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);

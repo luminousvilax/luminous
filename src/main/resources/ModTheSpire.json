@@ -3,7 +3,7 @@
   "name": "Luminous",
   "author_list": ["Vilax"],
   "description": "This is a mod for luminous the hero who comes from Maple World.",
-  "version": "${project.version}",
+  "version": "1.0.0",
   "sts_version": "${SlayTheSpire.version}",
   "mts_version": "${ModTheSpire.version}",
   "dependencies": ["basemod", "stslib"],
