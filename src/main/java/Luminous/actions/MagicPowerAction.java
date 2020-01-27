@@ -1,5 +1,8 @@
 package Luminous.actions;
 import Luminous.powers.MagicPowerSystem;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import Luminous.powers.BalancePower;
@@ -28,6 +31,26 @@ public class MagicPowerAction {
         }
         else
             return false;
+    }
+
+    public static boolean canGainLightPower(AbstractCreature player){
+        if (!player.hasPower(BalancePower.POWER_ID) && !player.hasPower(DarkPower.POWER_ID)
+            && getPowerAmtAction.main(LightPower.POWER_ID) < MagicPowerSystem.Balance_AMT){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public static boolean canGainDarkPower(AbstractCreature player){
+        if (!player.hasPower(BalancePower.POWER_ID) && !player.hasPower(LightPower.POWER_ID)
+            && getPowerAmtAction.main(DarkPower.POWER_ID) < MagicPowerSystem.Balance_AMT){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 }
