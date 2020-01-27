@@ -29,9 +29,9 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public static final int Balance_AMT = 2;
-    private static final int Balance_TURN = 1;
-    private boolean LightThrough = false;
-    private boolean DarkThrough = false;
+    private static final int Balance_TURN = 3;
+    public static boolean LightThrough = false;
+    public static boolean DarkThrough = false;
 
     public MagicPowerSystem(final AbstractCreature owner, final int amount) {
         name = NAME;
@@ -43,7 +43,7 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
         type = PowerType.BUFF;
         isTurnBased = false;
 
-        this.img = ImageMaster.loadImage(makePowerPath("LightMirror.png"));
+        this.img = ImageMaster.loadImage(makePowerPath("Mirror.png"));
 
         updateDescription();
     }
@@ -53,23 +53,21 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
 
     public void onAfterCardPlayed(final AbstractCard card) {
         if (card.type == AbstractCard.CardType.ATTACK && juageMagicCardAction.isLightCard(card)){
-            flash();
-            if (MagicPowerAction.canGainMagicPower(AbstractDungeon.player,LightPower.POWER_ID)){
+           if (MagicPowerAction.canGainLightPower(AbstractDungeon.player)){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                        new LightPower(AbstractDungeon.player, 1),1));
+                         new LightPower(AbstractDungeon.player, 1),1));
             }
             if (getPowerAmtAction.main(LightPower.POWER_ID) >= MagicPowerSystem.Balance_AMT){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                         new BalancePower(AbstractDungeon.player, Balance_TURN),Balance_TURN));
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                         LightPower.POWER_ID));
-                this.LightThrough = true;
+                MagicPowerSystem.LightThrough = true;
             }
         }
 
         if (card.type == AbstractCard.CardType.ATTACK && juageMagicCardAction.isDarkCard(card)){
-            flash();
-            if (MagicPowerAction.canGainMagicPower(AbstractDungeon.player,DarkPower.POWER_ID)){
+            if (MagicPowerAction.canGainDarkPower(AbstractDungeon.player)){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                         new DarkPower(AbstractDungeon.player, 1),1));
             }
@@ -78,29 +76,11 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
                         new BalancePower(AbstractDungeon.player, Balance_TURN),Balance_TURN));
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(
                         AbstractDungeon.player, AbstractDungeon.player, DarkPower.POWER_ID));
-                this.DarkThrough = true;
+                MagicPowerSystem.DarkThrough = true;
             }
         }
     }
 
-    public void atEndOfTurn(boolean isPlayer){
-        if (this.LightThrough || this.DarkThrough){
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new BalancePower(AbstractDungeon.player, 1),1));
-            if (getPowerAmtAction.main(BalancePower.POWER_ID) == 0){
-                if (LightThrough){
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                            new DarkPower(AbstractDungeon.player, 1),1));
-                    this.LightThrough = false;
-                }
-                else if (DarkThrough){
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                            new LightPower(AbstractDungeon.player, 1),1));
-                    this.DarkThrough = false;
-                }
-            }
-        }
-    }
 
 
     @Override
