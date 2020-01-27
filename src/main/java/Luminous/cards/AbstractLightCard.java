@@ -1,5 +1,6 @@
 package Luminous.cards;
 
+import Luminous.actions.MagicPowerAction;
 import Luminous.powers.LightPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,8 +23,10 @@ public abstract class AbstractLightCard extends AbstractDefaultCard {
         super(id, languagePack.getCardStrings(id).NAME, img, cost, languagePack.getCardStrings(id).DESCRIPTION, type, color, rarity, target);
 
     }
-//    public void use(AbstractPlayer p, AbstractMonster m) {
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-//                new LightPower(p, 1), 1));
-//    }
+    public void use(AbstractPlayer p, AbstractMonster m) {
+//        if (MagicPowerAction.canGainMagicPower(AbstractDungeon.player,LightPower.POWER_ID)){
+//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+//                    new LightPower(AbstractDungeon.player, magicNumber),magicNumber));
+//        }
+    }
 }
