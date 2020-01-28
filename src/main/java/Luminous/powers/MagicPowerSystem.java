@@ -28,7 +28,7 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final int Balance_AMT = 2;
+    public static final int Balance_AMT = 9;
     private static final int Balance_TURN = 3;
     public static boolean LightThrough = false;
     public static boolean DarkThrough = false;
@@ -52,7 +52,7 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
     // On use card, apply (amount) of Dexterity. (Go to the actual power card for the amount.)
 
     public void onAfterCardPlayed(final AbstractCard card) {
-        if (card.type == AbstractCard.CardType.ATTACK && juageMagicCardAction.isLightCard(card)){
+        if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse && juageMagicCardAction.isLightCard(card)){
            if (MagicPowerAction.canGainLightPower(AbstractDungeon.player)){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                          new LightPower(AbstractDungeon.player, 1),1));
@@ -66,7 +66,7 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
             }
         }
 
-        if (card.type == AbstractCard.CardType.ATTACK && juageMagicCardAction.isDarkCard(card)){
+        if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse && juageMagicCardAction.isDarkCard(card)){
             if (MagicPowerAction.canGainDarkPower(AbstractDungeon.player)){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                         new DarkPower(AbstractDungeon.player, 1),1));
