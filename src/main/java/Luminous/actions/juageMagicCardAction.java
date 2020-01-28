@@ -1,13 +1,13 @@
 package Luminous.actions;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import Luminous.cards.Light_Flash_Shower;
+
 import java.util.regex.*;
 
 public class juageMagicCardAction {
     private static final String patternLight = "^Luminous:Light_.*";
     private static final String patternDark = "^Luminous:Dark_.*";
-    private static final String patternBalance = "^Luminous:Balance_*";
+    private static final String patternBalance = "^Luminous:Balance_.*";
 
     public static boolean isLightCard(AbstractCard card){
         if (Pattern.matches(patternLight, card.cardID) ){
@@ -36,9 +36,4 @@ public class juageMagicCardAction {
         }
     }
 
-//    public static void main(String[] arms){
-//        if (Pattern.matches(patternLight,Light_Flash_Shower.ID)){
-//            System.out.println("Match Success");
-//        }
-//    }
 }
