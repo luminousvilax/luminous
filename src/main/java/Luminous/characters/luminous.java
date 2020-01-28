@@ -1,5 +1,7 @@
 package Luminous.characters;
 
+import Luminous.cards.Attack.Dark_Abyssal_Drop;
+import Luminous.cards.Attack.Light_Flash_Shower;
 import Luminous.relics.MirrorRelic;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
@@ -161,11 +163,11 @@ public class luminous extends CustomPlayer {
         retVal.add(Light_Flash_Shower.ID);
         retVal.add(Light_Flash_Shower.ID);
         retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Dark_Abyssal_Drop.ID);
+        retVal.add(Dark_Abyssal_Drop.ID);
+        retVal.add(Dark_Abyssal_Drop.ID);
+        retVal.add(Dark_Abyssal_Drop.ID);
+        retVal.add(Dark_Abyssal_Drop.ID);
 
         return retVal;
     }

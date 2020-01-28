@@ -41,7 +41,7 @@ public class DefaultCommonAttack extends CustomCard {
     // Setting the image as as easy as can possibly be now. You just need to provide the image name
     // and make sure it's in the correct folder. That's all.
     // There's makeCardPath, makeRelicPath, power, orb, event, etc..
-    // The list of all of them can be found in the main DefaultMod.java file in the
+    // The list of all of them can be found in the luckTestAction DefaultMod.java file in the
     // ==INPUT TEXTURE LOCATION== section under ==MAKE IMAGE PATHS==
 
 

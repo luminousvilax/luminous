@@ -8,10 +8,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 
-public abstract class AbstractLightCard extends AbstractDefaultCard {
+public abstract class AbstractMagicCard extends AbstractDefaultCard {
 
 
-    public AbstractLightCard(final String id,
+    public AbstractMagicCard(final String id,
                              final String img,
                              final int cost,
                              final CardType type,
@@ -24,9 +24,6 @@ public abstract class AbstractLightCard extends AbstractDefaultCard {
 
     }
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        if (MagicPowerAction.canGainMagicPower(AbstractDungeon.player,LightPower.POWER_ID)){
-//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-//                    new LightPower(AbstractDungeon.player, magicNumber),magicNumber));
-//        }
+
     }
 }

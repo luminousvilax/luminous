@@ -1,5 +1,7 @@
 package Luminous;
 
+import Luminous.cards.Attack.Dark_Abyssal_Drop;
+import Luminous.cards.Attack.Light_Flash_Shower;
 import Luminous.relics.MirrorRelic;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
@@ -377,7 +379,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_luminous);
         BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), luminous.Enums.COLOR_luminous);
         BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), luminous.Enums.COLOR_luminous);
-        BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_luminous);
+        //BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_luminous);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -421,6 +423,7 @@ public class DefaultMod implements
         BaseMod.addCard(new DefaultRareSkill());
         BaseMod.addCard(new DefaultRarePower());
         BaseMod.addCard(new Light_Flash_Shower());
+        BaseMod.addCard(new Dark_Abyssal_Drop());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
@@ -439,6 +442,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(DefaultRareSkill.ID);
         UnlockTracker.unlockCard(DefaultRarePower.ID);
         UnlockTracker.unlockCard(Light_Flash_Shower.ID);
+        UnlockTracker.unlockCard(Dark_Abyssal_Drop.ID);
         
         logger.info("Done adding cards!");
     }

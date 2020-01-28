@@ -1,16 +1,21 @@
-package Luminous.cards;
+package Luminous.cards.Attack;
 
 import Luminous.DefaultMod;
+import Luminous.cards.AbstractMagicCard;
 import Luminous.characters.luminous;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static Luminous.DefaultMod.makeCardPath;
 
 
-public class LightCardTemplate extends AbstractMagicCard {
+public class Dark_Abyssal_Drop extends AbstractMagicCard {
 
-    public static final String ID = DefaultMod.makeID(luminous.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID("Dark_Abyssal_Drop");
     public static final String IMG = makeCardPath("Attack.png");
 
     // STAT DECLARATION
@@ -23,21 +28,23 @@ public class LightCardTemplate extends AbstractMagicCard {
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
 
-    private static final int DAMAGE = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int DAMAGE = 5;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     // /STAT DECLARATION/
 
 
-    public LightCardTemplate() {
+    public Dark_Abyssal_Drop() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        this.purgeOnUse = false;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAction(m, new DamageInfo(p,damage,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
 
 
@@ -51,4 +58,5 @@ public class LightCardTemplate extends AbstractMagicCard {
             initializeDescription();
         }
     }
+
 }

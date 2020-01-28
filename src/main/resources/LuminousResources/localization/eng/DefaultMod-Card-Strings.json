@@ -52,6 +52,10 @@
   },
   "Luminous:Light_Flash_Shower": {
     "NAME": "Flash Shower",
-    "DESCRIPTION": "Use light to Deal !D! Damage. NL [#03e3fc]Light[]"
+    "DESCRIPTION": "Deal !D! Damage. NL [#03e3fc]Light[]"
+  },
+  "Luminous:Dark_Abyssal_Drop": {
+    "NAME": "Abyssal Drop",
+    "DESCRIPTION": "Deal !D! Damage. NL [#e60000]Dark[]"
   }
 }
