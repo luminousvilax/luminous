@@ -8,15 +8,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-public class getRandomDarkCardAction {
+public class getRandomMagicCardAction {
 
-    public static AbstractCard main(){
+    public static AbstractCard main(String Magic){
         ArrayList<AbstractCard> tmp = new ArrayList();
         Iterator var4 = AbstractDungeon.player.hand.group.iterator();
 
         while(var4.hasNext()) {
             AbstractCard c = (AbstractCard)var4.next();
-            if (juageMagicCardAction.isDarkCard(c)) {
+            if (juageMagicCardAction.isMagicCard(c,Magic)) {
                 tmp.add(c);
             }
         }

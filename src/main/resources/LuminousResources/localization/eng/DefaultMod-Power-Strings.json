@@ -8,19 +8,21 @@
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
 },
         "Luminous:LightPower": {
-                "NAME": "Light Power",
-                "DESCRIPTIONS": ["Allow #bLight card have buffed attack, need ", " power ", "powers", "to arrive #ybalance"]
+                "NAME": "Sunfire",
+                "DESCRIPTIONS": ["#bLight attack have 50% chance to deal 150% damage, need ", " power ", " powers", " to arrive #ybalance"]
         },
         "Luminous:DarkPower": {
-                "NAME": "Dark Power",
-                "DESCRIPTIONS": ["Allow #rDark card have buffed attack, need ", " power ", "powers", "to arrive #ybalance"]
+                "NAME": "Eclipse",
+                "DESCRIPTIONS": ["#rDark attack have 50% chance to reduce 1 cost of a random dark card this turn, need ",
+                        " power ", " powers", " to arrive #ybalance"]
         },
         "Luminous:BalancePower": {
-                "NAME": "Balance Power",
-                "DESCRIPTIONS": ["Allow #yBalance card have buffed attack, need ", " power ", "powers", "to arrive #ybalance"]
+                "NAME": "Equilibrium",
+                "DESCRIPTIONS": ["#yBalance attack will 100% trigger #bLight and #rDark buff, #bLight and #rDark attack triggers own buff as well, last for ",
+                        " turn ", " turns"]
         },
         "Luminous:MagicPowerSystem": {
                 "NAME": "Magic Power",
-                "DESCRIPTIONS": ["You can have effects by #blight or #rdark Power. Use special card to gain magic power."]
+                "DESCRIPTIONS": ["You can have buffed attack by #bLight or #rDark Power. Use special card to gain magic power."]
         }
 }

@@ -1,14 +1,13 @@
 package Luminous.powers;
 
 import Luminous.DefaultMod;
-import Luminous.actions.getPowerAmtAction;
-import Luminous.actions.juageMagicCardAction;
+import Luminous.actions.*;
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,9 +15,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import Luminous.actions.MagicPowerAction;
-import Luminous.powers.MagicPowerSystem;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static Luminous.DefaultMod.makePowerPath;
 
@@ -49,9 +45,30 @@ public class BalancePower extends AbstractPower implements CloneablePowerInterfa
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m)  {
-        if (card.type == AbstractCard.CardType.ATTACK && juageMagicCardAction.isBalanceCard(card)){
-            flash();
-            //clear here
+        if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse
+                && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)){
+            //flash();
+            if (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)){
+                plusDamegeAction.main(card, m, 0.5);
+            }
+        }
+        else if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse
+                && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light)){
+            plusDamegeAction.main(card, m, 0.5);
+        }
+    }
+
+    public void onAfterUseCard(AbstractCard card, UseCardAction action){
+        if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse
+                && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)){
+            //flash();
+            if (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)){
+                MagicPowerAction.DarkPowerAction(MagicPowerSystem.Magic_Balance, card);
+            }
+        }
+        else if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse
+                && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark)){
+            MagicPowerAction.DarkPowerAction(MagicPowerSystem.Magic_Dark, card);
         }
     }
 
@@ -88,9 +105,9 @@ public class BalancePower extends AbstractPower implements CloneablePowerInterfa
     @Override
     public void updateDescription() {
         if (amount == 1) {
-            description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
         } else if (amount > 1) {
-            description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
         }
     }
 
