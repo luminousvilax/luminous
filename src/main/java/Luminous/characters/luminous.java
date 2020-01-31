@@ -1,5 +1,6 @@
 package Luminous.characters;
 
+import Luminous.cards.Attack.Balance_Death_Scythe;
 import Luminous.cards.Attack.Dark_Abyssal_Drop;
 import Luminous.cards.Attack.Light_Flash_Shower;
 import Luminous.relics.MirrorRelic;
@@ -168,6 +169,8 @@ public class luminous extends CustomPlayer {
         retVal.add(Dark_Abyssal_Drop.ID);
         retVal.add(Dark_Abyssal_Drop.ID);
         retVal.add(Dark_Abyssal_Drop.ID);
+        retVal.add(Balance_Death_Scythe.ID);
+        retVal.add(Balance_Death_Scythe.ID);
 
         return retVal;
     }

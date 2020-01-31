@@ -1,5 +1,6 @@
 package Luminous;
 
+import Luminous.cards.Attack.Balance_Death_Scythe;
 import Luminous.cards.Attack.Dark_Abyssal_Drop;
 import Luminous.cards.Attack.Light_Flash_Shower;
 import Luminous.relics.MirrorRelic;
@@ -410,20 +411,21 @@ public class DefaultMod implements
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
 
-        BaseMod.addCard(new OrbSkill());
+       // BaseMod.addCard(new OrbSkill());
         BaseMod.addCard(new DefaultSecondMagicNumberSkill());
-        BaseMod.addCard(new DefaultCommonAttack());
+        //BaseMod.addCard(new DefaultCommonAttack());
         BaseMod.addCard(new DefaultAttackWithVariable());
         BaseMod.addCard(new DefaultCommonSkill());
         BaseMod.addCard(new DefaultCommonPower());
         BaseMod.addCard(new DefaultUncommonSkill());
-        BaseMod.addCard(new DefaultUncommonAttack());
+        //BaseMod.addCard(new DefaultUncommonAttack());
         BaseMod.addCard(new DefaultUncommonPower());
         BaseMod.addCard(new DefaultRareAttack());
         BaseMod.addCard(new DefaultRareSkill());
         BaseMod.addCard(new DefaultRarePower());
         BaseMod.addCard(new Light_Flash_Shower());
         BaseMod.addCard(new Dark_Abyssal_Drop());
+        BaseMod.addCard(new Balance_Death_Scythe());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
@@ -443,7 +445,8 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(DefaultRarePower.ID);
         UnlockTracker.unlockCard(Light_Flash_Shower.ID);
         UnlockTracker.unlockCard(Dark_Abyssal_Drop.ID);
-        
+        UnlockTracker.unlockCard(Balance_Death_Scythe.ID);
+
         logger.info("Done adding cards!");
     }
     
