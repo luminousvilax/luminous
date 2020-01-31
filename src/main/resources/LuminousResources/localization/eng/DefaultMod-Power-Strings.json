@@ -9,12 +9,12 @@
 },
         "Luminous:LightPower": {
                 "NAME": "Sunfire",
-                "DESCRIPTIONS": ["#bLight attack have 50% chance to deal 150% damage, need ", " power ", " powers", " to arrive #ybalance"]
+                "DESCRIPTIONS": ["#bLight attack have 50% chance to deal 150% damage, need ", " power ", " powers", " more to arrive #yBalance"]
         },
         "Luminous:DarkPower": {
                 "NAME": "Eclipse",
                 "DESCRIPTIONS": ["#rDark attack have 50% chance to reduce 1 cost of a random dark card this turn, need ",
-                        " power ", " powers", " to arrive #ybalance"]
+                        " power ", " powers", " to arrive #yBalance"]
         },
         "Luminous:BalancePower": {
                 "NAME": "Equilibrium",

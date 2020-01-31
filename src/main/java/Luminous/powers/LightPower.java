@@ -24,7 +24,7 @@ public class LightPower extends AbstractPower implements CloneablePowerInterface
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private int Left_AMT = MagicPowerSystem.Balance_AMT;
+    private static int Left_AMT = MagicPowerSystem.Balance_AMT;
 
     public LightPower(final AbstractCreature owner, final int amount) {
         name = NAME;
@@ -43,14 +43,16 @@ public class LightPower extends AbstractPower implements CloneablePowerInterface
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m)  {
-        if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light) ){
+        if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse
+                && (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light) ||
+                juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)) ){
             //flash();
             if (luckTestAction.main(0.5)){
                 plusDamegeAction.main(card, m, 0.5);
             }
+            Left_AMT = MagicPowerSystem.Balance_AMT  - getPowerAmtAction.main(LightPower.POWER_ID);
+            updateDescription();
         }
-        Left_AMT = MagicPowerSystem.Balance_AMT  - getPowerAmtAction.main(LightPower.POWER_ID);
-        updateDescription();
     }
 
 

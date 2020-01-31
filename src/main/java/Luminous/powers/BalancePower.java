@@ -47,10 +47,8 @@ public class BalancePower extends AbstractPower implements CloneablePowerInterfa
     public void onPlayCard(AbstractCard card, AbstractMonster m)  {
         if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse
                 && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)){
-            //flash();
-            if (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)){
-                plusDamegeAction.main(card, m, 0.5);
-            }
+            plusDamegeAction.main(card, m, 0.5);
+
         }
         else if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse
                 && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light)){
@@ -59,14 +57,11 @@ public class BalancePower extends AbstractPower implements CloneablePowerInterfa
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action){
-        if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse
+        if (card.type == AbstractCard.CardType.ATTACK  && !card.purgeOnUse && !card.isCostModifiedForTurn
                 && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)){
-            //flash();
-            if (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)){
-                MagicPowerAction.DarkPowerAction(MagicPowerSystem.Magic_Balance, card);
-            }
+            MagicPowerAction.DarkPowerAction(MagicPowerSystem.Magic_Balance, card);
         }
-        else if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse
+        else if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse  && !card.isCostModifiedForTurn
                 && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark)){
             MagicPowerAction.DarkPowerAction(MagicPowerSystem.Magic_Dark, card);
         }

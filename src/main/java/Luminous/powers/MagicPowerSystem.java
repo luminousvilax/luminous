@@ -17,8 +17,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import Luminous.actions.getPowerAmtAction;
 import Luminous.actions.juageMagicCardAction;
 import Luminous.actions.MagicPowerAction;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static Luminous.DefaultMod.makePowerPath;
 
@@ -28,7 +26,7 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final int Balance_AMT = 9;
+    public static final int Balance_AMT = 4;
     private static final int Balance_TURN = 3;
     public static boolean LightThrough = false;
     public static boolean DarkThrough = false;
@@ -56,7 +54,7 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
 
     public void onAfterCardPlayed(final AbstractCard card) {
         if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light)){
-           if (MagicPowerAction.canGainLightPower(AbstractDungeon.player)){
+           if (MagicPowerAction.canGainMagicPower(AbstractDungeon.player, LightPower.POWER_ID)){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                          new LightPower(AbstractDungeon.player, 1),1));
             }
@@ -69,8 +67,8 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
             }
         }
 
-        if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark)){
-            if (MagicPowerAction.canGainDarkPower(AbstractDungeon.player)){
+        if (card.type == AbstractCard.CardType.ATTACK  && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark)){
+            if (MagicPowerAction.canGainMagicPower(AbstractDungeon.player, DarkPower.POWER_ID)){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                         new DarkPower(AbstractDungeon.player, 1),1));
             }

@@ -22,7 +22,7 @@ public class DarkPower extends AbstractPower implements CloneablePowerInterface 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private int Left_AMT = MagicPowerSystem.Balance_AMT;
+    private static int Left_AMT = MagicPowerSystem.Balance_AMT;
 
     public DarkPower(final AbstractCreature owner, final int amount) {
         name = NAME;
@@ -40,14 +40,16 @@ public class DarkPower extends AbstractPower implements CloneablePowerInterface 
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action)  {
-        if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark) ){
+        if (card.type == AbstractCard.CardType.ATTACK && !card.isCostModifiedForTurn
+                && (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark) ||
+                    juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)) ){
             //flash();
-            if (luckTestAction.main(1.0)){
+            if (luckTestAction.main(0.5)){
                 MagicPowerAction.DarkPowerAction(MagicPowerSystem.Magic_Dark, card);
             }
+            Left_AMT = MagicPowerSystem.Balance_AMT  - getPowerAmtAction.main(DarkPower.POWER_ID);
+            updateDescription();
         }
-        Left_AMT = MagicPowerSystem.Balance_AMT  - getPowerAmtAction.main(DarkPower.POWER_ID);
-        updateDescription();
     }
 
 
