@@ -31,7 +31,6 @@ public class Balance_Death_Scythe extends AbstractMagicCard {
     private static final int UPGRADED_COST = 2;
 
     private static final int DAMAGE = 7;
-    private static final int UPGRADE_PLUS_DMG = 0;
 
     // /STAT DECLARATION/
 
@@ -39,8 +38,10 @@ public class Balance_Death_Scythe extends AbstractMagicCard {
     public Balance_Death_Scythe() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        this.magicNumber = 10;
+        this.magicNumber = 2;
         baseMagicNumber = this.magicNumber;
+        this.defaultSecondMagicNumber = 10;
+        defaultBaseSecondMagicNumber = this.defaultSecondMagicNumber;
     }
 
     // Actions the card should do.
@@ -53,10 +54,10 @@ public class Balance_Death_Scythe extends AbstractMagicCard {
                 p, DamageInfo.createDamageMatrix(this.damage, true), DamageInfo.DamageType.NORMAL,
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         for (AbstractMonster monster: AbstractDungeon.getMonsters().monsters){
-            int count = (monster.maxHealth - monster.currentHealth) / this.baseMagicNumber;
+            int count = (monster.maxHealth - monster.currentHealth) / this.defaultSecondMagicNumber;
             for (int i=0; i < count; i++){
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                        monster,new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                        monster,new DamageInfo(p, this.baseMagicNumber, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.FIRE));
             }
         }
@@ -68,7 +69,6 @@ public class Balance_Death_Scythe extends AbstractMagicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }

@@ -26,10 +26,9 @@ public class Dark_Abyssal_Drop extends AbstractMagicCard {
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
 
     private static final int DAMAGE = 5;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
     // /STAT DECLARATION/
 
@@ -54,7 +53,6 @@ public class Dark_Abyssal_Drop extends AbstractMagicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

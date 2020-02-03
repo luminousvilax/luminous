@@ -40,12 +40,15 @@ public class DarkPower extends AbstractPower implements CloneablePowerInterface 
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action)  {
-        if (card.type == AbstractCard.CardType.ATTACK && !card.isCostModifiedForTurn
-                && (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark) ||
-                    juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)) ){
+        if (MagicPowerAction.DarkPowerAccess(card)){
             //flash();
             if (luckTestAction.main(0.5)){
-                MagicPowerAction.DarkPowerAction(MagicPowerSystem.Magic_Dark, card);
+                if (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)){
+                    MagicPowerAction.DarkPowerAction(MagicPowerSystem.Magic_Balance);
+                }
+                else if(juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark)){
+                    MagicPowerAction.DarkPowerAction(MagicPowerSystem.Magic_Dark);
+                }
             }
             Left_AMT = MagicPowerSystem.Balance_AMT  - getPowerAmtAction.main(DarkPower.POWER_ID);
             updateDescription();

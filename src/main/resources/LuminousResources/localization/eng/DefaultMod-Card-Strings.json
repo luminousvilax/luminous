@@ -60,6 +60,6 @@
   },
   "Luminous:Balance_Death_Scythe":{
     "NAME": "Death Scythe",
-    "DESCRIPTION": "Deal !D! Damage 2 times to all enemy. Plus 1 time attack per !M! HP lose of each enemy. NL [#ff9900]Balance[]"
+    "DESCRIPTION": "Deal !D! Damage 2 times to all enemy. Plus !M! damage per !Luminous:SecondMagic! HP lose of each enemy. NL [#ff9900]Balance[]"
   }
 }

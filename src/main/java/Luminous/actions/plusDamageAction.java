@@ -6,10 +6,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 
-public class plusDamegeAction {
+public class plusDamageAction {
     public static void main(AbstractCard card, AbstractMonster m, double dmgRate){
         AbstractCard tmp = card.makeStatEquivalentCopy();
         tmp.baseDamage *= dmgRate;
+        if (tmp.baseMagicNumber > 0){
+            tmp.baseMagicNumber *= dmgRate;
+        }
         AbstractDungeon.player.limbo.addToBottom(tmp);
         tmp.current_x = card.current_x;
         tmp.current_y = card.current_y;

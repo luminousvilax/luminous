@@ -46,14 +46,14 @@ import java.util.Properties;
 //TODO: DON'T MASS RENAME/REFACTOR
 //TODO: DON'T MASS RENAME/REFACTOR
 //TODO: DON'T MASS RENAME/REFACTOR
-// Please don't just mass replace "Luminous" with "yourMod" everywhere.
+// Please don't just mass replace "LuminousClass" with "yourMod" everywhere.
 // It'll be a bigger pain for you. You only need to replace it in 3 places.
 // I comment those places below, under the place where you set your ID.
 
 //TODO: FIRST THINGS FIRST: RENAME YOUR PACKAGE AND ID NAMES FIRST-THING!!!
 // Right click the package (Open the project pane on the left. Folder with black dot on it. The name's at the very top) -> Refactor -> Rename, and name it whatever you wanna call your mod.
-// Scroll down in this file. Change the ID from "Luminous:" to "yourModName:" or whatever your heart desires (don't use spaces). Dw, you'll see it.
-// In the JSON strings (resources>localization>eng>[all them files] make sure they all go "yourModName:" rather than "Luminous". You can ctrl+R to replace in 1 file, or ctrl+shift+r to mass replace in specific files/directories (Be careful.).
+// Scroll down in this file. Change the ID from "LuminousClass:" to "yourModName:" or whatever your heart desires (don't use spaces). Dw, you'll see it.
+// In the JSON strings (resources>localization>eng>[all them files] make sure they all go "yourModName:" rather than "LuminousClass". You can ctrl+R to replace in 1 file, or ctrl+shift+r to mass replace in specific files/directories (Be careful.).
 // Start with the DefaultCommon cards - they are the most commented cards since I don't feel it's necessary to put identical comments on every card.
 // After you sorta get the hang of how to make cards, check out the card template which will make your life easier
 
@@ -97,7 +97,7 @@ public class DefaultMod implements
     
     // Colors (RGB)
     // Character Color
-    public static final Color DEFAULT_GRAY = CardHelper.getColor(3.0f,232.0f,252.0f); //color changed, lazy to change name
+    public static final Color LUMINOUS_BLUE = CardHelper.getColor(3.0f,232.0f,252.0f); //color changed, lazy to change name
     //public static final Color LIGHT = CardHelper.getColor(64.0f, 70.0f, 70.0f);
 //    public static final Color DARK = CardHelper.getColor(133,12,40);
 //    public static final Color BALANCE = CardHelper.getColor(197, 211, 217);
@@ -197,18 +197,18 @@ public class DefaultMod implements
         // yourModIDResources.
         
         // 2. Click on the localization > eng folder and press ctrl+shift+r, then select "Directory" (rather than in Project)
-        // replace all instances of Luminous with yourModID.
+        // replace all instances of LuminousClass with yourModID.
         // Because your mod ID isn't the default. Your cards (and everything else) should have Your mod id. Not mine.
         
         // 3. FINALLY and most importantly: Scroll up a bit. You may have noticed the image locations above don't use getModID()
-        // Change their locations to reflect your actual ID rather than Luminous. They get loaded before getID is a thing.
+        // Change their locations to reflect your actual ID rather than LuminousClass. They get loaded before getID is a thing.
         
         logger.info("Done subscribing");
         
         logger.info("Creating the color " + luminous.Enums.COLOR_luminous.toString());
         logger.info("==================正在注入新卡片信息=====================");
-        BaseMod.addColor(luminous.Enums.COLOR_luminous, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
-                DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
+        BaseMod.addColor(luminous.Enums.COLOR_luminous, LUMINOUS_BLUE, LUMINOUS_BLUE, LUMINOUS_BLUE,
+                LUMINOUS_BLUE, LUMINOUS_BLUE, LUMINOUS_BLUE, LUMINOUS_BLUE,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
@@ -291,13 +291,13 @@ public class DefaultMod implements
     
     @Override
     public void receiveEditCharacters() {
-        logger.info("Beginning to edit characters. " + "Add " + luminous.Enums.THE_DEFAULT.toString());
+        logger.info("Beginning to edit characters. " + "Add " + luminous.Enums.LuminousClass.toString());
         
-        BaseMod.addCharacter(new luminous("the Default", luminous.Enums.THE_DEFAULT),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, luminous.Enums.THE_DEFAULT);
+        BaseMod.addCharacter(new luminous("the Default", luminous.Enums.LuminousClass),
+                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, luminous.Enums.LuminousClass);
         
         receiveEditPotions();
-        logger.info("Added " + luminous.Enums.THE_DEFAULT.toString());
+        logger.info("Added " + luminous.Enums.LuminousClass.toString());
     }
     
     // =============== /LOAD THE CHARACTER/ =================
@@ -360,9 +360,9 @@ public class DefaultMod implements
         logger.info("Beginning to edit potions");
         
         // Class Specific Potion. If you want your potion to not be class-specific,
-        // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
+        // just remove the player class at the end (in this case the "TheDefaultEnum.LuminousClass".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, luminous.Enums.THE_DEFAULT);
+        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, luminous.Enums.LuminousClass);
         
         logger.info("Done editing potions");
     }
@@ -378,8 +378,8 @@ public class DefaultMod implements
         
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_luminous);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), luminous.Enums.COLOR_luminous);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), luminous.Enums.COLOR_luminous);
+        //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), luminous.Enums.COLOR_luminous);
+        //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), luminous.Enums.COLOR_luminous);
         //BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_luminous);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
@@ -433,12 +433,12 @@ public class DefaultMod implements
         // before playing your mod.
         //UnlockTracker.unlockCard(OrbSkill.ID);
         UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
-        UnlockTracker.unlockCard(DefaultCommonAttack.ID);
+        //UnlockTracker.unlockCard(DefaultCommonAttack.ID);
         UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
         UnlockTracker.unlockCard(DefaultCommonSkill.ID);
         UnlockTracker.unlockCard(DefaultCommonPower.ID);
         UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
-        UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
+        //UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
         UnlockTracker.unlockCard(DefaultUncommonPower.ID);
         UnlockTracker.unlockCard(DefaultRareAttack.ID);
         UnlockTracker.unlockCard(DefaultRareSkill.ID);

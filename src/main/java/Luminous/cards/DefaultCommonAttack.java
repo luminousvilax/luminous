@@ -63,7 +63,7 @@ public class DefaultCommonAttack extends CustomCard {
     private static final int UPGRADE_PLUS_DMG = 3;
 
     // Hey want a second damage/magic/block/unique number??? Great!
-    // Go check out DefaultAttackWithVariable and Luminous.variable.DefaultCustomVariable
+    // Go check out DefaultAttackWithVariable and LuminousClass.variable.DefaultCustomVariable
     // that's how you get your own custom variable that you can use for anything you like.
     // Feel free to explore other mods to see what variabls they personally have and create your own ones.
 

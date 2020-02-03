@@ -31,7 +31,6 @@ public class Light_Flash_Shower extends AbstractMagicCard {
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
 
     private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 3;
@@ -61,7 +60,6 @@ public class Light_Flash_Shower extends AbstractMagicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }
