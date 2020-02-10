@@ -40,8 +40,10 @@ public class LightPower extends AbstractPower implements CloneablePowerInterface
     public void onPlayCard(AbstractCard card, AbstractMonster m)  {
         if (MagicPowerAction.LightPowerAccess(card)){
             //flash();
+            DefaultMod.logger.info("==================== "+card.cardID+" 可以应用光明加成====================");
             if (luckTestAction.main(0.5)){
                 plusDamageAction.main(card, m, 0.5);
+                int dmg = card.baseDamage;
             }
             Left_AMT = MagicPowerSystem.Balance_AMT  - getPowerAmtAction.main(LightPower.POWER_ID);
             updateDescription();

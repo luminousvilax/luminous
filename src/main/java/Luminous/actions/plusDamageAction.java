@@ -1,6 +1,10 @@
 package Luminous.actions;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.core.Settings;
@@ -23,4 +27,38 @@ public class plusDamageAction {
         tmp.purgeOnUse = true;
         AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(tmp, m));
     }
+
+    public static void dmpPlus(AbstractCard card, AbstractMonster m, double dmgRate){
+        int dmg = card.baseDamage;
+        int count = card.baseMagicNumber;
+        dmg *= dmgRate;
+        if (card.target == AbstractCard.CardTarget.ALL_ENEMY){
+            if (count > 0){
+                for (int i=0; i<count; i++){
+                    AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
+                            AbstractDungeon.player, DamageInfo.createDamageMatrix(dmg, true), DamageInfo.DamageType.NORMAL,
+                            AbstractGameAction.AttackEffect.FIRE
+                    ));
+                }
+            }
+            else {
+                AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
+                        AbstractDungeon.player, DamageInfo.createDamageMatrix(dmg, true), DamageInfo.DamageType.NORMAL,
+                        AbstractGameAction.AttackEffect.FIRE
+                ));
+            }
+        }
+        else {
+            if (count > 0){
+                for(int i=0; i<count; i++)
+                    AbstractDungeon.actionManager.addToBottom(new DamageAction(
+                            m, new DamageInfo(AbstractDungeon.player, dmg, card.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            }
+            else {
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(
+                        m, new DamageInfo(AbstractDungeon.player, dmg, card.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            }
+        }
+    }
+
 }

@@ -16,5 +16,21 @@
       "multikeyword"
     ],
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
+  },
+  {
+    "NAMES": [
+      "balance",
+      "Balance"
+    ],
+    "DESCRIPTION": "This card can trigger Both Sunfire and Eclipse."
+  },
+  {
+    "PROPER_NAME": "Light Wash",
+    "NAMES": [
+      "Light Wash",
+      "light_wash",
+      "lightwash"
+    ],
+    "DESCRIPTION": "Ignore several Block of monsters when Attack."
   }
 ]
