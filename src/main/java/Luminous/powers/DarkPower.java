@@ -41,9 +41,9 @@ public class DarkPower extends AbstractPower implements CloneablePowerInterface 
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action)  {
         if (MagicPowerAction.DarkPowerAccess(card)){
-            //flash();
             DefaultMod.logger.info("==================== "+card.cardID+" 可以应用黑暗加成====================");
             if (luckTestAction.main(0.5)){
+                //flash();
                 if (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)){
                     MagicPowerAction.DarkPowerAction(MagicPowerSystem.Magic_Balance);
                 }

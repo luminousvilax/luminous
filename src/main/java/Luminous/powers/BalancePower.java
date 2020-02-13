@@ -47,7 +47,6 @@ public class BalancePower extends AbstractPower implements CloneablePowerInterfa
     public void onPlayCard(AbstractCard card, AbstractMonster m)  {
         if (MagicPowerAction.LightPowerAccess(card)){
             plusDamageAction.main(card, m, 0.5);
-
         }
     }
 
