@@ -50,16 +50,63 @@
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Default Orb."
   },
-  "Luminous:Light_Flash_Shower": {
-    "NAME": "Flash Shower",
-    "DESCRIPTION": "Deal !D! Damage. NL [#03e3fc]Light[]"
+
+  "Luminous:Balance_Aether_Conduit":{
+    "NAME": "Aether Conduit",
+    "DESCRIPTION": "Deal !D! Damage. Deal an additional !M! damage for each Magic Power. NL Luminous:Balance",
+    "EXTENDED_DESCRIPTION": [" NL ( !Luminous:SecondMagic! additional damage.)"]
+  },
+  "Luminous:Balance_Death_Scythe":{
+    "NAME": "Death Scythe",
+    "DESCRIPTION": "Deal !D! Damage 2 times to all enemy. Plus !M! damage per !Luminous:SecondMagic! HP lose of each enemy. Luminous:Balance"
   },
   "Luminous:Dark_Abyssal_Drop": {
     "NAME": "Abyssal Drop",
     "DESCRIPTION": "Deal !D! Damage. NL [#e60000]Dark[]"
   },
-  "Luminous:Balance_Death_Scythe":{
-    "NAME": "Death Scythe",
-    "DESCRIPTION": "Deal !D! Damage 2 times to all enemy. Plus !M! damage per !Luminous:SecondMagic! HP lose of each enemy. NL [#ff9900]Balance[]"
+  "Luminous:Dark_Pressure_Void": {
+    "NAME": "Pressure Void",
+    "DESCRIPTION": "Apply !M! Luminous:Pressure_Void to enemy. NL [#e60000]Dark[]"
+  },
+  "Luminous:Light_Flash_Shower": {
+    "NAME": "Flash Shower",
+    "DESCRIPTION": "Deal !D! Damage. NL [#03e3fc]Light[]"
+  },
+  "Luminous:Light_Spectral_Light": {
+    "NAME": "Spectral Light",
+    "DESCRIPTION": "Deal !D! Damage to all enemies X times. NL [#03e3fc]Light[]",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage to all enemies X+1 times. NL [#03e3fc]Light[]"
+  },
+  "Luminous:Light_Sylvan_Lance": {
+    "NAME": "Sylvan Lance",
+    "DESCRIPTION": "Deal !D! Damage to random enemy for every card in your hand. NL [#03e3fc]Light[]"
+  },
+
+  "Luminous:Arcane_Rage_Luminous": {
+    "NAME": "Arcane Rage",
+    "DESCRIPTION": "Apply 2 Vulnerable. NL Gain [E] [E]. Draw !M! cards. NL Exhaust."
+  },
+  "Luminous:Defend_Luminous":{
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "Luminous:Erosion_Luminous": {
+    "NAME": "Erosion",
+    "DESCRIPTION": "Ethereal. NL Lose All Block, Gain !M! Strength per !Luminous:SecondMagic! Block Lose. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Lose All Block, Gain !M! Strength per !Luminous:SecondMagic! Block Lose. NL Exhaust."
+  },
+  "Luminous:Flash_Blink_Luminous": {
+    "NAME": "Flash Blink",
+    "DESCRIPTION": "Apply !M! Intangible. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Apply !M! Intangible. NL Exhaust."
+  },
+  "Luminous:Shadow_Shell_Luminous":{
+    "NAME": "Shadow Shell",
+    "DESCRIPTION": "Apply !M! Artifact. Exhaust."
+  },
+
+  "Luminous:Light_Wash_Luminous":{
+    "NAME": "Talent of Light",
+    "DESCRIPTION": "Apply !M! Luminous:Light_Wash."
   }
 }

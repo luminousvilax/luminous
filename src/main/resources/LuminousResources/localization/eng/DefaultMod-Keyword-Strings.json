@@ -18,11 +18,12 @@
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
   },
   {
+    "PROPER_NAME": "Balance",
     "NAMES": [
       "balance",
       "Balance"
     ],
-    "DESCRIPTION": "This card can trigger Both Sunfire and Eclipse."
+    "DESCRIPTION": "This card can trigger Both #bSunfire and #rEclipse."
   },
   {
     "PROPER_NAME": "Light Wash",
@@ -32,5 +33,14 @@
       "lightwash"
     ],
     "DESCRIPTION": "Ignore several Block of monsters when Attack."
+  },
+  {
+    "PROPER_NAME": "Pressure Void",
+    "NAMES": [
+      "Pressure Void",
+      "pressure_void",
+      "pressurevoid"
+    ],
+    "DESCRIPTION": "Every time you played a attack card this turn, receive additional damage as amount of this power."
   }
 ]

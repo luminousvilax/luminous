@@ -1,8 +1,8 @@
 package Luminous;
 
-import Luminous.cards.Attack.Balance_Death_Scythe;
-import Luminous.cards.Attack.Dark_Abyssal_Drop;
-import Luminous.cards.Attack.Light_Flash_Shower;
+import Luminous.cards.Attack.*;
+import Luminous.cards.Power.Light_Wash_Luminous;
+import Luminous.cards.Skill.*;
 import Luminous.relics.MirrorRelic;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
@@ -30,7 +30,6 @@ import Luminous.characters.luminous;
 import Luminous.events.IdentityCrisisEvent;
 import Luminous.potions.PlaceholderPotion;
 import Luminous.relics.BottledPlaceholderRelic;
-import Luminous.relics.DefaultClickableRelic;
 import Luminous.relics.PlaceholderRelic2;
 import Luminous.util.IDCheckDontTouchPls;
 import Luminous.util.TextureLoader;
@@ -411,21 +410,37 @@ public class DefaultMod implements
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
 
-       // BaseMod.addCard(new OrbSkill());
+        //BaseMod.addCard(new OrbSkill());
         BaseMod.addCard(new DefaultSecondMagicNumberSkill());
         //BaseMod.addCard(new DefaultCommonAttack());
-        BaseMod.addCard(new DefaultAttackWithVariable());
-        BaseMod.addCard(new DefaultCommonSkill());
-        BaseMod.addCard(new DefaultCommonPower());
-        BaseMod.addCard(new DefaultUncommonSkill());
+        //BaseMod.addCard(new DefaultAttackWithVariable());
+        //BaseMod.addCard(new DefaultCommonSkill());
+        //BaseMod.addCard(new DefaultCommonPower());
+        //BaseMod.addCard(new DefaultUncommonSkill());
         //BaseMod.addCard(new DefaultUncommonAttack());
         BaseMod.addCard(new DefaultUncommonPower());
         BaseMod.addCard(new DefaultRareAttack());
-        BaseMod.addCard(new DefaultRareSkill());
+        //BaseMod.addCard(new DefaultRareSkill());
         BaseMod.addCard(new DefaultRarePower());
-        BaseMod.addCard(new Light_Flash_Shower());
-        BaseMod.addCard(new Dark_Abyssal_Drop());
+
+        //Attack
+        BaseMod.addCard(new Balance_Aether_Conduit());
         BaseMod.addCard(new Balance_Death_Scythe());
+        BaseMod.addCard(new Dark_Abyssal_Drop());
+        BaseMod.addCard(new Dark_Pressure_Void());
+        BaseMod.addCard(new Light_Flash_Shower());
+        BaseMod.addCard(new Light_Spectral_Light());
+        BaseMod.addCard(new Light_Sylvan_Lance());
+
+        //Skill
+        BaseMod.addCard(new Arcane_Rage_Luminous());
+        BaseMod.addCard(new Defend_Luminous());
+        BaseMod.addCard(new Erosion_Luminous());
+        BaseMod.addCard(new Flash_Blink_Luminous());
+        BaseMod.addCard(new Shadow_Shell_Luminous());
+
+        //Power
+        BaseMod.addCard(new Light_Wash_Luminous());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
@@ -434,18 +449,35 @@ public class DefaultMod implements
         //UnlockTracker.unlockCard(OrbSkill.ID);
         UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
         //UnlockTracker.unlockCard(DefaultCommonAttack.ID);
-        UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
-        UnlockTracker.unlockCard(DefaultCommonSkill.ID);
-        UnlockTracker.unlockCard(DefaultCommonPower.ID);
-        UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
+        //UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
+        //UnlockTracker.unlockCard(DefaultCommonSkill.ID);
+        //UnlockTracker.unlockCard(DefaultCommonPower.ID);
+        //UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
         //UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
         UnlockTracker.unlockCard(DefaultUncommonPower.ID);
         UnlockTracker.unlockCard(DefaultRareAttack.ID);
-        UnlockTracker.unlockCard(DefaultRareSkill.ID);
+        //UnlockTracker.unlockCard(DefaultRareSkill.ID);
         UnlockTracker.unlockCard(DefaultRarePower.ID);
-        UnlockTracker.unlockCard(Light_Flash_Shower.ID);
-        UnlockTracker.unlockCard(Dark_Abyssal_Drop.ID);
+
+        //Attack_Unlock
+        UnlockTracker.unlockCard(Balance_Aether_Conduit.ID);
         UnlockTracker.unlockCard(Balance_Death_Scythe.ID);
+        UnlockTracker.unlockCard(Dark_Abyssal_Drop.ID);
+        UnlockTracker.unlockCard(Dark_Pressure_Void.ID);
+        UnlockTracker.unlockCard(Light_Flash_Shower.ID);
+        UnlockTracker.unlockCard(Light_Spectral_Light.ID);
+        UnlockTracker.unlockCard(Light_Sylvan_Lance.ID);
+
+        //Skill_Unlock
+        UnlockTracker.unlockCard(Arcane_Rage_Luminous.ID);
+        UnlockTracker.unlockCard(Defend_Luminous.ID);
+        UnlockTracker.unlockCard(Erosion_Luminous.ID);
+        UnlockTracker.unlockCard(Flash_Blink_Luminous.ID);
+        UnlockTracker.unlockCard(Shadow_Shell_Luminous.ID);
+
+        //Power_Unlock
+        UnlockTracker.unlockCard(Light_Wash_Luminous.ID);
+
 
         logger.info("Done adding cards!");
     }

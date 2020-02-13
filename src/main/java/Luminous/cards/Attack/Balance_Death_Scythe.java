@@ -10,14 +10,13 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
 
 import static Luminous.DefaultMod.makeCardPath;
 
 
 public class Balance_Death_Scythe extends AbstractMagicCard {
 
-    public static final String ID = DefaultMod.makeID("Balance_Death_Scythe");
+    public static final String ID = DefaultMod.makeID(Balance_Death_Scythe.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
     // STAT DECLARATION
@@ -38,7 +37,7 @@ public class Balance_Death_Scythe extends AbstractMagicCard {
     public Balance_Death_Scythe() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        this.magicNumber = 2;
+        this.magicNumber = 5;
         baseMagicNumber = this.magicNumber;
         this.defaultSecondMagicNumber = 10;
         defaultBaseSecondMagicNumber = this.defaultSecondMagicNumber;
@@ -48,16 +47,16 @@ public class Balance_Death_Scythe extends AbstractMagicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
-                p, DamageInfo.createDamageMatrix(this.damage, true), DamageInfo.DamageType.NORMAL,
+                p, DamageInfo.createDamageMatrix(this.damage, true), this.damageTypeForTurn,
                 AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
-                p, DamageInfo.createDamageMatrix(this.damage, true), DamageInfo.DamageType.NORMAL,
+                p, DamageInfo.createDamageMatrix(this.damage, true), this.damageTypeForTurn,
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         for (AbstractMonster monster: AbstractDungeon.getMonsters().monsters){
-            int count = (monster.maxHealth - monster.currentHealth) / this.defaultSecondMagicNumber;
+            int count = (monster.maxHealth - monster.currentHealth) / defaultSecondMagicNumber;
             for (int i=0; i < count; i++){
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                        monster,new DamageInfo(p, this.baseMagicNumber, this.damageTypeForTurn),
+                        monster,new DamageInfo(p, magicNumber, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.FIRE));
             }
         }

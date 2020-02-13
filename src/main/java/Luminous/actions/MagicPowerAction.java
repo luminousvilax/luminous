@@ -62,7 +62,9 @@ public class MagicPowerAction {
     }
 
     public static boolean DarkPowerAccess(AbstractCard card){
-        if (card.type == AbstractCard.CardType.ATTACK ){
+        if (card.type == AbstractCard.CardType.ATTACK && (
+                juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark) ||
+                        juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance) )){
             if (card.freeToPlayOnce && !card.purgeOnUse){
                 return true;
             }

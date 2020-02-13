@@ -10,7 +10,7 @@ import static Luminous.DefaultMod.makeCardPath;
 
 public class LightCardTemplate extends AbstractMagicCard {
 
-    public static final String ID = DefaultMod.makeID(luminous.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(LightCardTemplate.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
     // STAT DECLARATION

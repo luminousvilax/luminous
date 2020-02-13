@@ -1,8 +1,8 @@
 package Luminous.characters;
 
-import Luminous.cards.Attack.Balance_Death_Scythe;
-import Luminous.cards.Attack.Dark_Abyssal_Drop;
-import Luminous.cards.Attack.Light_Flash_Shower;
+import Luminous.cards.Attack.*;
+import Luminous.cards.Power.Light_Wash_Luminous;
+import Luminous.cards.Skill.*;
 import Luminous.relics.MirrorRelic;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
@@ -161,16 +161,22 @@ public class luminous extends CustomPlayer {
 
         retVal.add(Light_Flash_Shower.ID);
         retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
+        //retVal.add(Light_Flash_Shower.ID);
         retVal.add(Dark_Abyssal_Drop.ID);
         retVal.add(Dark_Abyssal_Drop.ID);
-        retVal.add(Dark_Abyssal_Drop.ID);
-        retVal.add(Dark_Abyssal_Drop.ID);
-        retVal.add(Dark_Abyssal_Drop.ID);
-        retVal.add(Balance_Death_Scythe.ID);
-        retVal.add(Balance_Death_Scythe.ID);
+        //retVal.add(Dark_Abyssal_Drop.ID);
+        retVal.add(Defend_Luminous.ID);
+        retVal.add(Defend_Luminous.ID);
+        retVal.add(Defend_Luminous.ID);
+        retVal.add(Defend_Luminous.ID);
+        retVal.add(Arcane_Rage_Luminous.ID);
+        retVal.add(Light_Spectral_Light.ID);
+        retVal.add(Light_Sylvan_Lance.ID);
+        retVal.add(Light_Sylvan_Lance.ID);
+        retVal.add(Dark_Pressure_Void.ID);
+        retVal.add(Dark_Pressure_Void.ID);
+        retVal.add(Erosion_Luminous.ID);
+        retVal.add(Balance_Aether_Conduit.ID);
 
         return retVal;
     }

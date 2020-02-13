@@ -9,7 +9,7 @@
 },
         "Luminous:LightPower": {
                 "NAME": "Sunfire",
-                "DESCRIPTIONS": ["#bLight attack have 50% chance to deal 150% damage, need ", " power ", " powers", " more to arrive #yBalance"]
+                "DESCRIPTIONS": ["#bLight attack have 50% chance to deal 50% additional damage, need ", " power ", " powers", " more to arrive #yBalance"]
         },
         "Luminous:DarkPower": {
                 "NAME": "Eclipse",
@@ -27,6 +27,10 @@
         },
         "Luminous:LightWashPower": {
                 "NAME": "Light Wash",
-                "DESCRIPTIONS": ["Ignore ", " Block of monsters when Attack."]
+                "DESCRIPTIONS": ["If monster's Block lower than ", " Ignore it when attack"]
+        },
+        "Luminous:PressureVoidPower": {
+                "NAME": "Pressure Void",
+                "DESCRIPTIONS": ["Every time you played a attack card this turn, receive ", " additional damage."]
         }
 }

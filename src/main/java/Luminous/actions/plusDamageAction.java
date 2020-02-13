@@ -9,11 +9,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class plusDamageAction {
     public static void main(AbstractCard card, AbstractMonster m, double dmgRate){
         AbstractCard tmp = card.makeStatEquivalentCopy();
-        tmp.baseDamage *= dmgRate;
+        tmp.baseDamage = (int)(tmp.baseDamage * dmgRate - getPowerAmtAction.main(StrengthPower.POWER_ID)) ;
         if (tmp.baseMagicNumber > 0){
             tmp.baseMagicNumber *= dmgRate;
         }
@@ -29,12 +30,13 @@ public class plusDamageAction {
     }
 
     public static void dmpPlus(AbstractCard card, AbstractMonster m, double dmgRate){
-        int dmg = card.baseDamage;
-        int count = card.baseMagicNumber;
+        int dmg = card.damage;
+        int magicNumber = card.magicNumber;
         dmg *= dmgRate;
+        magicNumber *= dmgRate;
         if (card.target == AbstractCard.CardTarget.ALL_ENEMY){
-            if (count > 0){
-                for (int i=0; i<count; i++){
+            if (magicNumber > 0){
+                for (int i=0; i<magicNumber; i++){
                     AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
                             AbstractDungeon.player, DamageInfo.createDamageMatrix(dmg, true), DamageInfo.DamageType.NORMAL,
                             AbstractGameAction.AttackEffect.FIRE
@@ -49,8 +51,8 @@ public class plusDamageAction {
             }
         }
         else {
-            if (count > 0){
-                for(int i=0; i<count; i++)
+            if (magicNumber > 0){
+                for(int i=0; i<magicNumber; i++)
                     AbstractDungeon.actionManager.addToBottom(new DamageAction(
                             m, new DamageInfo(AbstractDungeon.player, dmg, card.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
             }
