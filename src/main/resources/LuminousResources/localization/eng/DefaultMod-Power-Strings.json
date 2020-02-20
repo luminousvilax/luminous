@@ -25,6 +25,19 @@
                 "NAME": "Magic Power",
                 "DESCRIPTIONS": ["You can have buffed attack by #bSunfire or #rEclipse. Use #bLight or #rDark card to gain magic power."]
         },
+        "Luminous:DuskGuardPower": {
+                "NAME": "Dusk Guard",
+                "DESCRIPTIONS": ["At end of your turn, Gain ", " Block, according to amount of MagicPower."]
+        },
+        "Luminous:BlackBlessingPower": {
+                "NAME": "Black Blessing",
+                "DESCRIPTIONS": ["This Blessing will give you #yStrength, and #yExhaust when you get HP Loss to reduce 50% Loss.",
+                                  " NL 1 Blessing: ", " NL 2 Blessing: ", " NL 3 Blessing: ", " #yStrength"]
+        },
+        "Luminous:DarkCrescendoPower": {
+                "NAME": "Dark Crescendo",
+                "DESCRIPTIONS": ["Every time you gain "," #yMagicPower, Gain ", " #yStrength. NL #yBalance will give you 1 additional #yStrength."]
+        },
         "Luminous:LightWashPower": {
                 "NAME": "Light Wash",
                 "DESCRIPTIONS": ["If monster's Block lower than ", " Ignore it when attack"]

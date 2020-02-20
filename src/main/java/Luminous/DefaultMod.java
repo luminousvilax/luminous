@@ -1,13 +1,15 @@
 package Luminous;
 
 import Luminous.cards.Attack.*;
+import Luminous.cards.Power.Dark_Crescendo_Luminous;
+import Luminous.cards.Power.Dusk_Guard_Luminous;
 import Luminous.cards.Power.Light_Wash_Luminous;
 import Luminous.cards.Skill.*;
+import Luminous.relics.BlackBlessingRelic;
 import Luminous.relics.MirrorRelic;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -29,8 +31,6 @@ import Luminous.cards.*;
 import Luminous.characters.luminous;
 import Luminous.events.IdentityCrisisEvent;
 import Luminous.potions.PlaceholderPotion;
-import Luminous.relics.BottledPlaceholderRelic;
-import Luminous.relics.PlaceholderRelic2;
 import Luminous.util.IDCheckDontTouchPls;
 import Luminous.util.TextureLoader;
 import Luminous.variables.DefaultCustomVariable;
@@ -377,15 +377,15 @@ public class DefaultMod implements
         
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_luminous);
+        BaseMod.addRelicToCustomPool(new BlackBlessingRelic(), luminous.Enums.COLOR_luminous);
         //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), luminous.Enums.COLOR_luminous);
-        //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), luminous.Enums.COLOR_luminous);
-        //BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_luminous);
+        //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), luminous.Enums.COLOR_luminous);ous);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
-        BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
+        //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
         
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
-        UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
+        //UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
         logger.info("Done adding relics!");
     }
     
@@ -418,17 +418,19 @@ public class DefaultMod implements
         //BaseMod.addCard(new DefaultCommonPower());
         //BaseMod.addCard(new DefaultUncommonSkill());
         //BaseMod.addCard(new DefaultUncommonAttack());
-        BaseMod.addCard(new DefaultUncommonPower());
-        BaseMod.addCard(new DefaultRareAttack());
+        //BaseMod.addCard(new DefaultUncommonPower());
+        //BaseMod.addCard(new DefaultRareAttack());
         //BaseMod.addCard(new DefaultRareSkill());
-        BaseMod.addCard(new DefaultRarePower());
+        //BaseMod.addCard(new DefaultRarePower());
 
         //Attack
         BaseMod.addCard(new Balance_Aether_Conduit());
         BaseMod.addCard(new Balance_Death_Scythe());
         BaseMod.addCard(new Dark_Abyssal_Drop());
+        BaseMod.addCard(new Dark_Moonlight_Spear());
         BaseMod.addCard(new Dark_Pressure_Void());
         BaseMod.addCard(new Light_Flash_Shower());
+        BaseMod.addCard(new Light_Ray_of_Redemption());
         BaseMod.addCard(new Light_Spectral_Light());
         BaseMod.addCard(new Light_Sylvan_Lance());
 
@@ -440,6 +442,8 @@ public class DefaultMod implements
         BaseMod.addCard(new Shadow_Shell_Luminous());
 
         //Power
+        BaseMod.addCard(new Dark_Crescendo_Luminous());
+        BaseMod.addCard(new Dusk_Guard_Luminous());
         BaseMod.addCard(new Light_Wash_Luminous());
         
         logger.info("Making sure the cards are unlocked.");
@@ -454,17 +458,19 @@ public class DefaultMod implements
         //UnlockTracker.unlockCard(DefaultCommonPower.ID);
         //UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
         //UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
-        UnlockTracker.unlockCard(DefaultUncommonPower.ID);
-        UnlockTracker.unlockCard(DefaultRareAttack.ID);
+        //UnlockTracker.unlockCard(DefaultUncommonPower.ID);
+        //UnlockTracker.unlockCard(DefaultRareAttack.ID);
         //UnlockTracker.unlockCard(DefaultRareSkill.ID);
-        UnlockTracker.unlockCard(DefaultRarePower.ID);
+        //UnlockTracker.unlockCard(DefaultRarePower.ID);
 
         //Attack_Unlock
         UnlockTracker.unlockCard(Balance_Aether_Conduit.ID);
         UnlockTracker.unlockCard(Balance_Death_Scythe.ID);
         UnlockTracker.unlockCard(Dark_Abyssal_Drop.ID);
+        UnlockTracker.unlockCard(Dark_Moonlight_Spear.ID);
         UnlockTracker.unlockCard(Dark_Pressure_Void.ID);
         UnlockTracker.unlockCard(Light_Flash_Shower.ID);
+        UnlockTracker.unlockCard(Light_Ray_of_Redemption.ID);
         UnlockTracker.unlockCard(Light_Spectral_Light.ID);
         UnlockTracker.unlockCard(Light_Sylvan_Lance.ID);
 
@@ -476,6 +482,8 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Shadow_Shell_Luminous.ID);
 
         //Power_Unlock
+        UnlockTracker.unlockCard(Dark_Crescendo_Luminous.ID);
+        UnlockTracker.unlockCard(Dusk_Guard_Luminous.ID);
         UnlockTracker.unlockCard(Light_Wash_Luminous.ID);
 
 

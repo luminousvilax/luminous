@@ -1,5 +1,6 @@
 package Luminous.actions;
 
+import Luminous.powers.MagicPowerSystem;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import Luminous.powers.LightPower;
 import Luminous.powers.DarkPower;
@@ -21,7 +22,7 @@ public class getPowerAmtAction {
             return (AbstractDungeon.player.getPower(DarkPower.POWER_ID)).amount;
         }
         else if (AbstractDungeon.player.hasPower(BalancePower.POWER_ID)){
-            return (AbstractDungeon.player.getPower(BalancePower.POWER_ID)).amount * 2 + 6;
+            return MagicPowerSystem.MagicAmountAtBalance;
         }
         return 0;
     }

@@ -32,10 +32,17 @@
     ]
   },
   "Luminous:MirrorRelic": {
-    "NAME": "Mirror Relic",
-    "FLAVOR": "Edit Letter",
+    "NAME": "Mirror",
+    "FLAVOR": "The meaning of Dark and Light...",
     "DESCRIPTIONS": [
-      "Enable Mirror Magic Power System"
+      "Enable Mirror Magic Power System."
+    ]
+  },
+  "Luminous:BlackBlessingRelic": {
+    "NAME": "Black Blessing",
+    "FLAVOR": "Stay Calm,I will protect you.",
+    "DESCRIPTIONS": [
+      "If you do not get HP Loss in 1 turn, receive 1 Black Blessing(Max: 3)."
     ]
   }
 }

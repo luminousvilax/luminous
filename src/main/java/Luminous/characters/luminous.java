@@ -1,8 +1,8 @@
 package Luminous.characters;
 
 import Luminous.cards.Attack.*;
-import Luminous.cards.Power.Light_Wash_Luminous;
 import Luminous.cards.Skill.*;
+import Luminous.relics.BlackBlessingRelic;
 import Luminous.relics.MirrorRelic;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
@@ -27,8 +27,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import Luminous.DefaultMod;
 import Luminous.cards.*;
-import Luminous.relics.DefaultClickableRelic;
-import Luminous.relics.PlaceholderRelic2;
 
 import java.util.ArrayList;
 
@@ -171,12 +169,12 @@ public class luminous extends CustomPlayer {
         retVal.add(Defend_Luminous.ID);
         retVal.add(Arcane_Rage_Luminous.ID);
         retVal.add(Light_Spectral_Light.ID);
-        retVal.add(Light_Sylvan_Lance.ID);
-        retVal.add(Light_Sylvan_Lance.ID);
-        retVal.add(Dark_Pressure_Void.ID);
         retVal.add(Dark_Pressure_Void.ID);
         retVal.add(Erosion_Luminous.ID);
-        retVal.add(Balance_Aether_Conduit.ID);
+        retVal.add(Light_Ray_of_Redemption.ID);
+        retVal.add(Light_Ray_of_Redemption.ID);
+        retVal.add(Dark_Moonlight_Spear.ID);
+        retVal.add(Dark_Moonlight_Spear.ID);
 
         return retVal;
     }
@@ -186,10 +184,12 @@ public class luminous extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
 
         retVal.add(MirrorRelic.ID);
+        retVal.add(BlackBlessingRelic.ID);
 
         UnlockTracker.markRelicAsSeen(MirrorRelic.ID);
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
+        UnlockTracker.markRelicAsSeen(BlackBlessingRelic.ID);
+        //UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
+        //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
 
         return retVal;
     }

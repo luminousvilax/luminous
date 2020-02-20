@@ -80,4 +80,11 @@ public class MagicPowerAction {
         }
     }
 
+    public static boolean whenApplyMagicPower(String PowerID){
+        if (PowerID.equals(LightPower.POWER_ID) || PowerID.equals(DarkPower.POWER_ID) || PowerID.equals(BalancePower.POWER_ID)){
+            return true;
+        }
+        return false;
+    }
+
 }

@@ -14,9 +14,9 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 public class plusDamageAction {
     public static void main(AbstractCard card, AbstractMonster m, double dmgRate){
         AbstractCard tmp = card.makeStatEquivalentCopy();
-        tmp.baseDamage = (int)(tmp.baseDamage * dmgRate - getPowerAmtAction.main(StrengthPower.POWER_ID)) ;
-        if (tmp.baseMagicNumber > 0){
-            tmp.baseMagicNumber *= dmgRate;
+        tmp.baseDamage = (int)((tmp.baseDamage - getPowerAmtAction.main(StrengthPower.POWER_ID)) * dmgRate) ;
+        if (tmp.magicNumber > 0){
+            tmp.magicNumber *= dmgRate;
         }
         AbstractDungeon.player.limbo.addToBottom(tmp);
         tmp.current_x = card.current_x;

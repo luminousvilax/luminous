@@ -20,10 +20,16 @@
   {
     "PROPER_NAME": "Balance",
     "NAMES": [
-      "balance",
-      "Balance"
+      "balance"
     ],
     "DESCRIPTION": "This card can trigger Both #bSunfire and #rEclipse."
+  },
+  {
+    "PROPER_NAME": "MagicPower",
+    "NAMES": [
+      "magicpower"
+    ],
+    "DESCRIPTION": "Include #bSunfire and #rEclipse, you have 10 MagicPower in Equilibrium."
   },
   {
     "PROPER_NAME": "Light Wash",
@@ -35,6 +41,23 @@
     "DESCRIPTION": "Ignore several Block of monsters when Attack."
   },
   {
+    "PROPER_NAME": "Dusk Guard",
+    "NAMES": [
+      "Dusk Guard",
+      "dusk_guard",
+      "duskguard"
+    ],
+    "DESCRIPTION": "At end of your turn, Gain Block according to amount of MagicPower."
+  },
+  {
+    "PROPER_NAME": "Dark Crescendo",
+    "NAMES": [
+      "Dark Crescendo",
+      "dark_crescendo"
+    ],
+    "DESCRIPTION": "When you Gain MagicPower for some times, Gain additional Strength."
+  },
+  {
     "PROPER_NAME": "Pressure Void",
     "NAMES": [
       "Pressure Void",
@@ -42,5 +65,14 @@
       "pressurevoid"
     ],
     "DESCRIPTION": "Every time you played a attack card this turn, receive additional damage as amount of this power."
+  },
+  {
+    "PROPER_NAME": "Black Blessing",
+    "NAMES": [
+      "Black Blessing",
+      "Black_blessing",
+      "blackblessing"
+    ],
+    "DESCRIPTION": "This Blessing will give you #yStrength, and #yExhaust when you get HP Loss to reduce 50% Loss."
   }
 ]

@@ -33,6 +33,7 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
     public static final String Magic_Light = "Light";
     public static final String Magic_Dark = "Dark";
     public static final String Magic_Balance = "Balance";
+    public static final int MagicAmountAtBalance = 10;
 
     public MagicPowerSystem(final AbstractCreature owner, final int amount) {
         name = NAME;

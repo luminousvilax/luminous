@@ -49,7 +49,7 @@ public class LightWashPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        IgnoreBlockAmount = IgnoreBlockBaseAmount * getPowerAmtAction.main(LightWashPower.POWER_ID);
+        IgnoreBlockAmount = IgnoreBlockBaseAmount * this.amount;
         updateDescription();
         if (card.type == AbstractCard.CardType.ATTACK){
             if (card.target == AbstractCard.CardTarget.ENEMY){

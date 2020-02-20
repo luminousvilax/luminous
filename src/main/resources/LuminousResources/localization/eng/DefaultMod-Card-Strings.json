@@ -53,7 +53,7 @@
 
   "Luminous:Balance_Aether_Conduit":{
     "NAME": "Aether Conduit",
-    "DESCRIPTION": "Deal !D! Damage. Deal an additional !M! damage for each Magic Power. NL Luminous:Balance",
+    "DESCRIPTION": "Deal !D! Damage. Deal an additional !M! damage for each MagicPower. NL Luminous:Balance",
     "EXTENDED_DESCRIPTION": [" NL ( !Luminous:SecondMagic! additional damage.)"]
   },
   "Luminous:Balance_Death_Scythe":{
@@ -64,13 +64,21 @@
     "NAME": "Abyssal Drop",
     "DESCRIPTION": "Deal !D! Damage. NL [#e60000]Dark[]"
   },
+  "Luminous:Dark_Moonlight_Spear": {
+    "NAME": "Moonlight Spear",
+    "DESCRIPTION": "Deal !D! Damage. Apply !M! Vulnerable. If target has Pressure_Void, Apply !M! Weak. NL [#e60000]Dark[]"
+  },
   "Luminous:Dark_Pressure_Void": {
     "NAME": "Pressure Void",
-    "DESCRIPTION": "Apply !M! Luminous:Pressure_Void to enemy. NL [#e60000]Dark[]"
+    "DESCRIPTION": "Apply !M! NL Luminous:Pressure_Void. NL [#e60000]Dark[]"
   },
   "Luminous:Light_Flash_Shower": {
     "NAME": "Flash Shower",
     "DESCRIPTION": "Deal !D! Damage. NL [#03e3fc]Light[]"
+  },
+  "Luminous:Light_Ray_of_Redemption": {
+    "NAME": "Ray of Redemption",
+    "DESCRIPTION": "Deal !D! Damage. If damage wasn't be blocked, receive Regen as 50% of damage. NL Exhaust. NL [#03e3fc]Light[]"
   },
   "Luminous:Light_Spectral_Light": {
     "NAME": "Spectral Light",
@@ -105,6 +113,15 @@
     "DESCRIPTION": "Apply !M! Artifact. Exhaust."
   },
 
+  "Luminous:Dark_Crescendo_Luminous": {
+    "NAME": "Dark Crescendo",
+    "DESCRIPTION": "Apply !M! Luminous:Dark_Crescendo.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Apply !M! Luminous:Dark_Crescendo."
+  },
+  "Luminous:Dusk_Guard_Luminous":{
+    "NAME": "Dusk Guard",
+    "DESCRIPTION": "Apply !M! Luminous:Dusk_Guard."
+  },
   "Luminous:Light_Wash_Luminous":{
     "NAME": "Talent of Light",
     "DESCRIPTION": "Apply !M! Luminous:Light_Wash."
