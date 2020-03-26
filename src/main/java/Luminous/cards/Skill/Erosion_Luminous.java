@@ -49,11 +49,10 @@ public class Erosion_Luminous extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
        int count = p.currentBlock / defaultSecondMagicNumber;
        AbstractDungeon.actionManager.addToBottom(new RemoveAllBlockAction(p, p));
-       for (int i = 0; i < count; i++){
-           AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                   p, p, new StrengthPower(p, magicNumber), magicNumber
-           ));
-       }
+       AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+               p, p, new StrengthPower(p, magicNumber * count), magicNumber * count
+       ));
+
     }
 
     //Upgraded stats.

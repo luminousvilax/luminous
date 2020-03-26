@@ -25,18 +25,31 @@
                 "NAME": "Magic Power",
                 "DESCRIPTIONS": ["You can have buffed attack by #bSunfire or #rEclipse. Use #bLight or #rDark card to gain magic power."]
         },
-        "Luminous:DuskGuardPower": {
-                "NAME": "Dusk Guard",
-                "DESCRIPTIONS": ["At end of your turn, Gain ", " Block, according to amount of MagicPower."]
-        },
+
         "Luminous:BlackBlessingPower": {
                 "NAME": "Black Blessing",
-                "DESCRIPTIONS": ["This Blessing will give you #yStrength, and #yExhaust when you get HP Loss to reduce 50% Loss.",
-                                  " NL 1 Blessing: ", " NL 2 Blessing: ", " NL 3 Blessing: ", " #yStrength"]
+                "DESCRIPTIONS": ["This Blessing will give you #yStrength, and #yExhaust to reduce 50% damage when you get HP Loss.",
+                        " NL 1 Blessing: ", " NL 2 Blessing: ", " NL 3 Blessing: ", " #yStrength"]
         },
         "Luminous:DarkCrescendoPower": {
                 "NAME": "Dark Crescendo",
                 "DESCRIPTIONS": ["Every time you gain "," #yMagicPower, Gain ", " #yStrength. NL #yBalance will give you 1 additional #yStrength."]
+        },
+        "Luminous:DateOfLightPower": {
+                "NAME": "Date of Light",
+                "DESCRIPTIONS": ["At end of your turn, Deal "," Damage to All enemies. NL Last For ", " turns."]
+        },
+        "Luminous:DuskGuardPower": {
+                "NAME": "Dusk Guard",
+                "DESCRIPTIONS": ["At end of your turn, Gain ", " Block, according to amount of MagicPower."]
+        },
+        "Luminous:EnderPower": {
+                "NAME": "Ender",
+                "DESCRIPTIONS": ["Once you have ", " Enders, add a free Baptism card to your hand."]
+        },
+        "Luminous:EtherealFormPower": {
+                "NAME": "Ethereal Form",
+                "DESCRIPTIONS": ["Every ", " Turns, Apply 1 Intangible."]
         },
         "Luminous:LightWashPower": {
                 "NAME": "Light Wash",

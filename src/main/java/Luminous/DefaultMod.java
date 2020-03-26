@@ -3,6 +3,7 @@ package Luminous;
 import Luminous.cards.Attack.*;
 import Luminous.cards.Power.Dark_Crescendo_Luminous;
 import Luminous.cards.Power.Dusk_Guard_Luminous;
+import Luminous.cards.Power.Ethereal_Form_Luminous;
 import Luminous.cards.Power.Light_Wash_Luminous;
 import Luminous.cards.Skill.*;
 import Luminous.relics.BlackBlessingRelic;
@@ -164,6 +165,10 @@ public class DefaultMod implements
     
     public static String makeEventPath(String resourcePath) {
         return getModID() + "Resources/images/events/" + resourcePath;
+    }
+
+    public static String makeAudioPath(String resourcePath) {
+        return getModID() + "Resources/audio/sounds/" + resourcePath;
     }
     
     // =============== /MAKE IMAGE PATHS/ =================
@@ -425,7 +430,9 @@ public class DefaultMod implements
 
         //Attack
         BaseMod.addCard(new Balance_Aether_Conduit());
+        BaseMod.addCard(new Balance_Baptism());
         BaseMod.addCard(new Balance_Death_Scythe());
+        BaseMod.addCard(new Balance_Ender());
         BaseMod.addCard(new Dark_Abyssal_Drop());
         BaseMod.addCard(new Dark_Moonlight_Spear());
         BaseMod.addCard(new Dark_Pressure_Void());
@@ -436,6 +443,7 @@ public class DefaultMod implements
 
         //Skill
         BaseMod.addCard(new Arcane_Rage_Luminous());
+        BaseMod.addCard(new Date_of_Light_Luminous());
         BaseMod.addCard(new Defend_Luminous());
         BaseMod.addCard(new Erosion_Luminous());
         BaseMod.addCard(new Flash_Blink_Luminous());
@@ -444,6 +452,7 @@ public class DefaultMod implements
         //Power
         BaseMod.addCard(new Dark_Crescendo_Luminous());
         BaseMod.addCard(new Dusk_Guard_Luminous());
+        BaseMod.addCard(new Ethereal_Form_Luminous());
         BaseMod.addCard(new Light_Wash_Luminous());
         
         logger.info("Making sure the cards are unlocked.");
@@ -465,7 +474,9 @@ public class DefaultMod implements
 
         //Attack_Unlock
         UnlockTracker.unlockCard(Balance_Aether_Conduit.ID);
+        UnlockTracker.unlockCard(Balance_Baptism.ID);
         UnlockTracker.unlockCard(Balance_Death_Scythe.ID);
+        UnlockTracker.unlockCard(Balance_Ender.ID);
         UnlockTracker.unlockCard(Dark_Abyssal_Drop.ID);
         UnlockTracker.unlockCard(Dark_Moonlight_Spear.ID);
         UnlockTracker.unlockCard(Dark_Pressure_Void.ID);
@@ -476,6 +487,7 @@ public class DefaultMod implements
 
         //Skill_Unlock
         UnlockTracker.unlockCard(Arcane_Rage_Luminous.ID);
+        UnlockTracker.unlockCard(Date_of_Light_Luminous.ID);
         UnlockTracker.unlockCard(Defend_Luminous.ID);
         UnlockTracker.unlockCard(Erosion_Luminous.ID);
         UnlockTracker.unlockCard(Flash_Blink_Luminous.ID);
@@ -484,6 +496,7 @@ public class DefaultMod implements
         //Power_Unlock
         UnlockTracker.unlockCard(Dark_Crescendo_Luminous.ID);
         UnlockTracker.unlockCard(Dusk_Guard_Luminous.ID);
+        UnlockTracker.unlockCard(Ethereal_Form_Luminous.ID);
         UnlockTracker.unlockCard(Light_Wash_Luminous.ID);
 
 

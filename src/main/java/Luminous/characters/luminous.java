@@ -1,6 +1,7 @@
 package Luminous.characters;
 
 import Luminous.cards.Attack.*;
+import Luminous.cards.Power.Ethereal_Form_Luminous;
 import Luminous.cards.Skill.*;
 import Luminous.relics.BlackBlessingRelic;
 import Luminous.relics.MirrorRelic;
@@ -159,22 +160,19 @@ public class luminous extends CustomPlayer {
 
         retVal.add(Light_Flash_Shower.ID);
         retVal.add(Light_Flash_Shower.ID);
-        //retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Light_Flash_Shower.ID);
         retVal.add(Dark_Abyssal_Drop.ID);
         retVal.add(Dark_Abyssal_Drop.ID);
-        //retVal.add(Dark_Abyssal_Drop.ID);
+        retVal.add(Dark_Abyssal_Drop.ID);
         retVal.add(Defend_Luminous.ID);
         retVal.add(Defend_Luminous.ID);
         retVal.add(Defend_Luminous.ID);
         retVal.add(Defend_Luminous.ID);
         retVal.add(Arcane_Rage_Luminous.ID);
-        retVal.add(Light_Spectral_Light.ID);
-        retVal.add(Dark_Pressure_Void.ID);
-        retVal.add(Erosion_Luminous.ID);
-        retVal.add(Light_Ray_of_Redemption.ID);
-        retVal.add(Light_Ray_of_Redemption.ID);
-        retVal.add(Dark_Moonlight_Spear.ID);
-        retVal.add(Dark_Moonlight_Spear.ID);
+        retVal.add(Balance_Ender.ID);
+        retVal.add(Date_of_Light_Luminous.ID);
+        retVal.add(Ethereal_Form_Luminous.ID);
+        retVal.add(Ethereal_Form_Luminous.ID);
 
         return retVal;
     }

@@ -70,9 +70,17 @@
     "PROPER_NAME": "Black Blessing",
     "NAMES": [
       "Black Blessing",
-      "Black_blessing",
+      "black_blessing",
       "blackblessing"
     ],
     "DESCRIPTION": "This Blessing will give you #yStrength, and #yExhaust when you get HP Loss to reduce 50% Loss."
+  },
+  {
+    "PROPER_NAME": "Ethereal Form",
+    "NAMES": [
+      "Ethereal Form",
+      "ethereal_form"
+    ],
+    "DESCRIPTION": "Every 3 Turns, Apply 1 Intangible."
   }
 ]

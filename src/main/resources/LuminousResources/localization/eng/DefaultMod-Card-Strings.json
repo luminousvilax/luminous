@@ -56,9 +56,18 @@
     "DESCRIPTION": "Deal !D! Damage. Deal an additional !M! damage for each MagicPower. NL Luminous:Balance",
     "EXTENDED_DESCRIPTION": [" NL ( !Luminous:SecondMagic! additional damage.)"]
   },
+  "Luminous:Balance_Baptism":{
+    "NAME": "Baptism",
+    "DESCRIPTION": "Exhaust all Ender power. Deal !D! damage for every exhausted power. Exhaust NL Luminous:Balance",
+    "EXTENDED_DESCRIPTION": ["Don't have Ender Power!"]
+  },
   "Luminous:Balance_Death_Scythe":{
     "NAME": "Death Scythe",
     "DESCRIPTION": "Deal !D! Damage 2 times to all enemy. Plus !M! damage per !Luminous:SecondMagic! HP lose of each enemy. Luminous:Balance"
+  },
+  "Luminous:Balance_Ender":{
+    "NAME": "Ender",
+    "DESCRIPTION": "Deal !D! Damage. Double Damage for Elites and Boss. NL Apply !M! Ender Power. NL Luminous:Balance"
   },
   "Luminous:Dark_Abyssal_Drop": {
     "NAME": "Abyssal Drop",
@@ -94,6 +103,12 @@
     "NAME": "Arcane Rage",
     "DESCRIPTION": "Apply 2 Vulnerable. NL Gain [E] [E]. Draw !M! cards. NL Exhaust."
   },
+  "Luminous:Date_of_Light_Luminous": {
+    "NAME": "Date of Light",
+    "DESCRIPTION": "At end of next !M! turn, Deal !Luminous:SecondMagic! damage to All enemies.(Could only play in Balance) NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL At end of next !M! turn, Deal !Luminous:SecondMagic! damage to All enemies.(Could only play in Balance) NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["Not in Balance!"]
+  },
   "Luminous:Defend_Luminous":{
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
@@ -121,6 +136,10 @@
   "Luminous:Dusk_Guard_Luminous":{
     "NAME": "Dusk Guard",
     "DESCRIPTION": "Apply !M! Luminous:Dusk_Guard."
+  },
+  "Luminous:Ethereal_Form_Luminous":{
+    "NAME": "Ethereal Form",
+    "DESCRIPTION": "Apply !M! Luminous:Ethereal_Form."
   },
   "Luminous:Light_Wash_Luminous":{
     "NAME": "Talent of Light",
