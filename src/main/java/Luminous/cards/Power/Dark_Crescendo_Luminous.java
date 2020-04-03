@@ -36,10 +36,12 @@ public class Dark_Crescendo_Luminous extends AbstractDynamicCard {
 
     private static final int COST = 2;
     private static final int MAGIC = 1;
+    private static final int SecondMagic = DarkCrescendoPower.COUNTPOINT;
 
     public Dark_Crescendo_Luminous() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = MAGIC;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = SecondMagic;
         isInnate = false;
     }
 

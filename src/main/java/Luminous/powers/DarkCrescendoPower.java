@@ -27,7 +27,7 @@ public class DarkCrescendoPower extends AbstractPower implements CloneablePowerI
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     private static int ReceiveStrengthAmount = 1;
-    private static final int COUNTPOINT = 3;
+    public static final int COUNTPOINT = 3;
     private static int MagicPowerAmount = 0;
 
     public DarkCrescendoPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {

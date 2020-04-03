@@ -160,19 +160,20 @@ public class luminous extends CustomPlayer {
 
         retVal.add(Light_Flash_Shower.ID);
         retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
+        //retVal.add(Light_Flash_Shower.ID);
         retVal.add(Dark_Abyssal_Drop.ID);
         retVal.add(Dark_Abyssal_Drop.ID);
-        retVal.add(Dark_Abyssal_Drop.ID);
+        //retVal.add(Dark_Abyssal_Drop.ID);
         retVal.add(Defend_Luminous.ID);
         retVal.add(Defend_Luminous.ID);
         retVal.add(Defend_Luminous.ID);
-        retVal.add(Defend_Luminous.ID);
+        //retVal.add(Defend_Luminous.ID);
         retVal.add(Arcane_Rage_Luminous.ID);
         retVal.add(Balance_Ender.ID);
         retVal.add(Date_of_Light_Luminous.ID);
         retVal.add(Ethereal_Form_Luminous.ID);
-        retVal.add(Ethereal_Form_Luminous.ID);
+        retVal.add(Blinding_Pillar_Luminous.ID);
+        retVal.add(Blinding_Pillar_Luminous.ID);
 
         return retVal;
     }

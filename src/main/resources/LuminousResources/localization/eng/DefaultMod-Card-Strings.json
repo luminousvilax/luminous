@@ -103,6 +103,11 @@
     "NAME": "Arcane Rage",
     "DESCRIPTION": "Apply 2 Vulnerable. NL Gain [E] [E]. Draw !M! cards. NL Exhaust."
   },
+  "Luminous:Blinding_Pillar_Luminous": {
+    "NAME": "Blinding Pillar",
+    "DESCRIPTION": "If target's intent is Attack, Give !M! Weak.",
+    "EXTENDED_DESCRIPTION": ["Not Attack!"]
+  },
   "Luminous:Date_of_Light_Luminous": {
     "NAME": "Date of Light",
     "DESCRIPTION": "At end of next !M! turn, Deal !Luminous:SecondMagic! damage to All enemies.(Could only play in Balance) NL Exhaust.",
@@ -130,19 +135,19 @@
 
   "Luminous:Dark_Crescendo_Luminous": {
     "NAME": "Dark Crescendo",
-    "DESCRIPTION": "Apply !M! Luminous:Dark_Crescendo.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Apply !M! Luminous:Dark_Crescendo."
+    "DESCRIPTION": "When you Gain MagicPower for !Luminous:SecondMagic! times, Gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL When you Gain MagicPower for !Luminous:SecondMagic! times, Gain !M! Strength."
   },
   "Luminous:Dusk_Guard_Luminous":{
     "NAME": "Dusk Guard",
-    "DESCRIPTION": "Apply !M! Luminous:Dusk_Guard."
+    "DESCRIPTION": "At end of your turn, Gain Block according to amount of MagicPower."
   },
   "Luminous:Ethereal_Form_Luminous":{
     "NAME": "Ethereal Form",
-    "DESCRIPTION": "Apply !M! Luminous:Ethereal_Form."
+    "DESCRIPTION": "Every !Luminous:SecondMagic! Turns, Apply !M! Intangible."
   },
   "Luminous:Light_Wash_Luminous":{
     "NAME": "Talent of Light",
-    "DESCRIPTION": "Apply !M! Luminous:Light_Wash."
+    "DESCRIPTION": "Ignore !Luminous:SecondMagic! Block of monsters when Attack."
   }
 }

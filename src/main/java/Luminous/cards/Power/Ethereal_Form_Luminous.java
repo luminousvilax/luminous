@@ -30,10 +30,12 @@ public class Ethereal_Form_Luminous extends AbstractDynamicCard {
     private static final int COST = 3;
     private static final int UPGRADED_COST = 2;
     private static final int MAGIC = 1;
+    private static final int SecondMagic = EtherealFormPower.ApplyTurns;
 
     public Ethereal_Form_Luminous() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = MAGIC;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = SecondMagic;
     }
 
 

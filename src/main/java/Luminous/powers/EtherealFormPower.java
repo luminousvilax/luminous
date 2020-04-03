@@ -28,7 +28,7 @@ public class EtherealFormPower extends AbstractPower implements CloneablePowerIn
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final int ApplyTurns = 3;
+    public static final int ApplyTurns = 3;
     private boolean justApplied;
 
     public EtherealFormPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {

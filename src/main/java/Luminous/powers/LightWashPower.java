@@ -27,7 +27,7 @@ public class LightWashPower extends AbstractPower implements CloneablePowerInter
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private static int IgnoreBlockAmount = 0;
-    private static int IgnoreBlockBaseAmount = 6;
+    public static int IgnoreBlockBaseAmount = 6;
 
     public LightWashPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;

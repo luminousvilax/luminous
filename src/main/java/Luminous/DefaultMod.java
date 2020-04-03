@@ -443,6 +443,7 @@ public class DefaultMod implements
 
         //Skill
         BaseMod.addCard(new Arcane_Rage_Luminous());
+        BaseMod.addCard(new Blinding_Pillar_Luminous());
         BaseMod.addCard(new Date_of_Light_Luminous());
         BaseMod.addCard(new Defend_Luminous());
         BaseMod.addCard(new Erosion_Luminous());
@@ -487,6 +488,7 @@ public class DefaultMod implements
 
         //Skill_Unlock
         UnlockTracker.unlockCard(Arcane_Rage_Luminous.ID);
+        UnlockTracker.unlockCard(Blinding_Pillar_Luminous.ID);
         UnlockTracker.unlockCard(Date_of_Light_Luminous.ID);
         UnlockTracker.unlockCard(Defend_Luminous.ID);
         UnlockTracker.unlockCard(Erosion_Luminous.ID);
