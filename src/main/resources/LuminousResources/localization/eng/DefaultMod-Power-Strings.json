@@ -55,6 +55,10 @@
                 "NAME": "Light Wash",
                 "DESCRIPTIONS": ["If monster's Block lower than ", " Ignore it when attack"]
         },
+        "Luminous:LunarTidePower": {
+                "NAME": "Lunar Tide",
+                "DESCRIPTIONS": ["If your HP higher than ", " this turn, Gain ", " #yenergy."]
+        },
         "Luminous:PressureVoidPower": {
                 "NAME": "Pressure Void",
                 "DESCRIPTIONS": ["Every time you played a attack card this turn, receive ", " additional damage."]

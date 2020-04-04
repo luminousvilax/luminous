@@ -128,6 +128,16 @@
     "DESCRIPTION": "Apply !M! Intangible. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Apply !M! Intangible. NL Exhaust."
   },
+  "Luminous:Magic_Guard_Luminous": {
+    "NAME": "Magic Guard",
+    "DESCRIPTION": "Apply !M! Block X times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Block X+1 times."
+  },
+  "Luminous:Mana_Well_Luminous":{
+    "NAME": "Mana Well",
+    "DESCRIPTION": "Gain [E] [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Exhaust."
+  },
   "Luminous:Shadow_Shell_Luminous":{
     "NAME": "Shadow Shell",
     "DESCRIPTION": "Apply !M! Artifact. Exhaust."
@@ -149,5 +159,13 @@
   "Luminous:Light_Wash_Luminous":{
     "NAME": "Talent of Light",
     "DESCRIPTION": "Ignore !Luminous:SecondMagic! Block of monsters when Attack."
+  },
+  "Luminous:Lunar_Tide_Luminous":{
+    "NAME": "Lunar Tide",
+    "DESCRIPTION": "At start of turn, if your HP higher than 90% Max HP, NL Gain !M! [E]."
+  },
+  "Luminous:Photic_Meditation_Luminous":{
+    "NAME": "Photic Meditation",
+    "DESCRIPTION": "Apply !M! Strength."
   }
 }

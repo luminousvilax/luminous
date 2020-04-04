@@ -1,10 +1,7 @@
 package Luminous;
 
 import Luminous.cards.Attack.*;
-import Luminous.cards.Power.Dark_Crescendo_Luminous;
-import Luminous.cards.Power.Dusk_Guard_Luminous;
-import Luminous.cards.Power.Ethereal_Form_Luminous;
-import Luminous.cards.Power.Light_Wash_Luminous;
+import Luminous.cards.Power.*;
 import Luminous.cards.Skill.*;
 import Luminous.relics.BlackBlessingRelic;
 import Luminous.relics.MirrorRelic;
@@ -448,6 +445,8 @@ public class DefaultMod implements
         BaseMod.addCard(new Defend_Luminous());
         BaseMod.addCard(new Erosion_Luminous());
         BaseMod.addCard(new Flash_Blink_Luminous());
+        BaseMod.addCard(new Magic_Guard_Luminous());
+        BaseMod.addCard(new Mana_Well_Luminous());
         BaseMod.addCard(new Shadow_Shell_Luminous());
 
         //Power
@@ -455,6 +454,8 @@ public class DefaultMod implements
         BaseMod.addCard(new Dusk_Guard_Luminous());
         BaseMod.addCard(new Ethereal_Form_Luminous());
         BaseMod.addCard(new Light_Wash_Luminous());
+        BaseMod.addCard(new Lunar_Tide_Luminous());
+        BaseMod.addCard(new Photic_Meditation_Luminous());
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
@@ -493,6 +494,8 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Defend_Luminous.ID);
         UnlockTracker.unlockCard(Erosion_Luminous.ID);
         UnlockTracker.unlockCard(Flash_Blink_Luminous.ID);
+        UnlockTracker.unlockCard(Magic_Guard_Luminous.ID);
+        UnlockTracker.unlockCard(Mana_Well_Luminous.ID);
         UnlockTracker.unlockCard(Shadow_Shell_Luminous.ID);
 
         //Power_Unlock
@@ -500,6 +503,8 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Dusk_Guard_Luminous.ID);
         UnlockTracker.unlockCard(Ethereal_Form_Luminous.ID);
         UnlockTracker.unlockCard(Light_Wash_Luminous.ID);
+        UnlockTracker.unlockCard(Lunar_Tide_Luminous.ID);
+        UnlockTracker.unlockCard(Photic_Meditation_Luminous.ID);
 
 
         logger.info("Done adding cards!");
