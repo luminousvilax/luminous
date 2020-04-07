@@ -431,10 +431,13 @@ public class DefaultMod implements
         BaseMod.addCard(new Balance_Death_Scythe());
         BaseMod.addCard(new Balance_Ender());
         BaseMod.addCard(new Dark_Abyssal_Drop());
+        BaseMod.addCard(new Dark_Apocalypse());
         BaseMod.addCard(new Dark_Moonlight_Spear());
+        BaseMod.addCard(new Dark_Morning_Star());
         BaseMod.addCard(new Dark_Pressure_Void());
         BaseMod.addCard(new Light_Flash_Shower());
         BaseMod.addCard(new Light_Ray_of_Redemption());
+        BaseMod.addCard(new Light_Reflection());
         BaseMod.addCard(new Light_Spectral_Light());
         BaseMod.addCard(new Light_Sylvan_Lance());
 
@@ -444,6 +447,7 @@ public class DefaultMod implements
         BaseMod.addCard(new Date_of_Light_Luminous());
         BaseMod.addCard(new Defend_Luminous());
         BaseMod.addCard(new Erosion_Luminous());
+        BaseMod.addCard(new Fast_Spell_Luminous());
         BaseMod.addCard(new Flash_Blink_Luminous());
         BaseMod.addCard(new Magic_Guard_Luminous());
         BaseMod.addCard(new Mana_Well_Luminous());
@@ -480,10 +484,13 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Balance_Death_Scythe.ID);
         UnlockTracker.unlockCard(Balance_Ender.ID);
         UnlockTracker.unlockCard(Dark_Abyssal_Drop.ID);
+        UnlockTracker.unlockCard(Dark_Apocalypse.ID);
         UnlockTracker.unlockCard(Dark_Moonlight_Spear.ID);
+        UnlockTracker.unlockCard(Dark_Morning_Star.ID);
         UnlockTracker.unlockCard(Dark_Pressure_Void.ID);
         UnlockTracker.unlockCard(Light_Flash_Shower.ID);
         UnlockTracker.unlockCard(Light_Ray_of_Redemption.ID);
+        UnlockTracker.unlockCard(Light_Reflection.ID);
         UnlockTracker.unlockCard(Light_Spectral_Light.ID);
         UnlockTracker.unlockCard(Light_Sylvan_Lance.ID);
 
@@ -493,6 +500,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Date_of_Light_Luminous.ID);
         UnlockTracker.unlockCard(Defend_Luminous.ID);
         UnlockTracker.unlockCard(Erosion_Luminous.ID);
+        UnlockTracker.unlockCard(Fast_Spell_Luminous.ID);
         UnlockTracker.unlockCard(Flash_Blink_Luminous.ID);
         UnlockTracker.unlockCard(Magic_Guard_Luminous.ID);
         UnlockTracker.unlockCard(Mana_Well_Luminous.ID);
