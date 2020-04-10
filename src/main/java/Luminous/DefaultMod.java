@@ -443,12 +443,16 @@ public class DefaultMod implements
 
         //Skill
         BaseMod.addCard(new Arcane_Rage_Luminous());
+        BaseMod.addCard(new Armageddon_Luminous());
         BaseMod.addCard(new Blinding_Pillar_Luminous());
+        BaseMod.addCard(new Concentrate_Luminous());
         BaseMod.addCard(new Date_of_Light_Luminous());
         BaseMod.addCard(new Defend_Luminous());
+        BaseMod.addCard(new Equalize_Luminous());
         BaseMod.addCard(new Erosion_Luminous());
         BaseMod.addCard(new Fast_Spell_Luminous());
         BaseMod.addCard(new Flash_Blink_Luminous());
+        BaseMod.addCard(new Hero_Will_Luminous());
         BaseMod.addCard(new Magic_Guard_Luminous());
         BaseMod.addCard(new Mana_Well_Luminous());
         BaseMod.addCard(new Shadow_Shell_Luminous());
@@ -496,12 +500,16 @@ public class DefaultMod implements
 
         //Skill_Unlock
         UnlockTracker.unlockCard(Arcane_Rage_Luminous.ID);
+        UnlockTracker.unlockCard(Armageddon_Luminous.ID);
         UnlockTracker.unlockCard(Blinding_Pillar_Luminous.ID);
+        UnlockTracker.unlockCard(Concentrate_Luminous.ID);
         UnlockTracker.unlockCard(Date_of_Light_Luminous.ID);
         UnlockTracker.unlockCard(Defend_Luminous.ID);
+        UnlockTracker.unlockCard(Equalize_Luminous.ID);
         UnlockTracker.unlockCard(Erosion_Luminous.ID);
         UnlockTracker.unlockCard(Fast_Spell_Luminous.ID);
         UnlockTracker.unlockCard(Flash_Blink_Luminous.ID);
+        UnlockTracker.unlockCard(Hero_Will_Luminous.ID);
         UnlockTracker.unlockCard(Magic_Guard_Luminous.ID);
         UnlockTracker.unlockCard(Mana_Well_Luminous.ID);
         UnlockTracker.unlockCard(Shadow_Shell_Luminous.ID);

@@ -1,6 +1,8 @@
 package Luminous.actions;
 import Luminous.DefaultMod;
 import Luminous.powers.MagicPowerSystem;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,21 +19,18 @@ public class MagicPowerAction {
 
     public static boolean canGainMagicPower(AbstractCreature player, String PowerID){
         for (String magicPower: MagicPower){
-            if (PowerID == BalancePower.POWER_ID){
+            if (PowerID.equals(BalancePower.POWER_ID)){
                 break;
             }
-            if (player.hasPower(magicPower) && magicPower != PowerID){
+            if (player.hasPower(magicPower) && !magicPower.equals(PowerID)){
                 return false;
             }
         }
-        if (PowerID == BalancePower.POWER_ID){
-            return true;
-        }
-        else if (getPowerAmtAction.main(PowerID) < MagicPowerSystem.Balance_AMT){
+        if (PowerID.equals(BalancePower.POWER_ID)){
             return true;
         }
         else
-            return false;
+            return (getPowerAmtAction.main(PowerID) < MagicPowerSystem.Balance_AMT);
     }
 
     public static void DarkPowerAction(String Magic){
@@ -49,12 +48,7 @@ public class MagicPowerAction {
         if (card.type == AbstractCard.CardType.ATTACK &&
                 (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light) ||
                 juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance))){
-            if (!card.purgeOnUse){
-                return true;
-            }
-            else {
-                return false;
-            }
+            return !card.purgeOnUse;
         }
         else {
             return false;
@@ -68,12 +62,8 @@ public class MagicPowerAction {
             if (card.freeToPlayOnce && !card.purgeOnUse){
                 return true;
             }
-            else if (card.isCostModifiedForTurn && card.costForTurn < card.cost){
-                return false;
-            }
-            else {
-                return true;
-            }
+            else
+                return !(card.isCostModifiedForTurn && card.costForTurn < card.cost);
         }
         else {
             return false;
@@ -81,10 +71,13 @@ public class MagicPowerAction {
     }
 
     public static boolean whenApplyMagicPower(String PowerID){
-        if (PowerID.equals(LightPower.POWER_ID) || PowerID.equals(DarkPower.POWER_ID) || PowerID.equals(BalancePower.POWER_ID)){
-            return true;
-        }
-        return false;
+        return (PowerID.equals(LightPower.POWER_ID) || PowerID.equals(DarkPower.POWER_ID) || PowerID.equals(BalancePower.POWER_ID));
     }
 
+    public static void toBalance(String currentPower, int turns) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                new BalancePower(AbstractDungeon.player, turns), turns));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                currentPower));
+    }
 }

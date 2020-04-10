@@ -54,8 +54,6 @@ public class Light_Ray_of_Redemption extends AbstractMagicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        AbstractDungeon.actionManager.addToBottom(
-//                new VFXAction(new WhirlwindEffect(), 0.1f));
         if (m.currentBlock < this.damage || this.damageTypeForTurn == DamageInfo.DamageType.HP_LOSS){
             int RegenAmount = (this.damage - m.currentBlock) / 2;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(

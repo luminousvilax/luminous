@@ -96,7 +96,7 @@
   },
   "Luminous:Light_Ray_of_Redemption": {
     "NAME": "Ray of Redemption",
-    "DESCRIPTION": "Deal !D! Damage. If damage wasn't be blocked, receive Regen as 50% of damage. NL Exhaust. NL [#03e3fc]Light[]"
+    "DESCRIPTION": "Deal !D! Damage. Receive Regen as 50% of the damage which wasn't be blocked. NL Exhaust. NL [#03e3fc]Light[]"
   },
   "Luminous:Light_Reflection": {
     "NAME": "Reflection",
@@ -117,10 +117,18 @@
     "NAME": "Arcane Rage",
     "DESCRIPTION": "Apply 2 Vulnerable. NL Gain [E] [E]. Draw !M! cards. NL Exhaust."
   },
+  "Luminous:Armageddon_Luminous": {
+    "NAME": "Armageddon",
+    "DESCRIPTION": "Stun All monsters for !M! turn(s). NL Exhaust."
+  },
   "Luminous:Blinding_Pillar_Luminous": {
     "NAME": "Blinding Pillar",
     "DESCRIPTION": "If target's intent is Attack, Apply !M! Weak.",
     "EXTENDED_DESCRIPTION": ["Not Attack!"]
+  },
+  "Luminous:Concentrate_Luminous":{
+    "NAME": "Concentrate",
+    "DESCRIPTION": "Gain !B! Block, NL Draw !M! card."
   },
   "Luminous:Date_of_Light_Luminous": {
     "NAME": "Date of Light",
@@ -131,6 +139,10 @@
   "Luminous:Defend_Luminous":{
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "Luminous:Equalize_Luminous":{
+    "NAME": "Equalize",
+    "DESCRIPTION": "Puts you in Equilibrium mode immediately upon use. NL Exhaust."
   },
   "Luminous:Erosion_Luminous": {
     "NAME": "Erosion",
@@ -146,6 +158,11 @@
     "NAME": "Flash Blink",
     "DESCRIPTION": "Gain !M! Intangible. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Intangible. NL Exhaust."
+  },
+  "Luminous:Hero_Will_Luminous": {
+    "NAME": "Hero's Will",
+    "DESCRIPTION": "Remove all Debuff. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Remove all Debuff. NL Heal !M! HP. NL Exhaust."
   },
   "Luminous:Magic_Guard_Luminous": {
     "NAME": "Magic Guard",

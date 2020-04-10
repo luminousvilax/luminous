@@ -26,8 +26,8 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final int Balance_AMT = 4;
-    private static final int Balance_TURN = 3;
+    public static final int Balance_AMT = 9;
+    public static final int Balance_TURN = 3;
     public static boolean LightThrough = false;
     public static boolean DarkThrough = false;
     public static final String Magic_Light = "Light";
@@ -44,6 +44,8 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
 
         type = PowerType.BUFF;
         isTurnBased = false;
+        LightThrough = false;
+        DarkThrough = false;
 
         this.img = ImageMaster.loadImage(makePowerPath("Mirror.png"));
 
@@ -51,38 +53,28 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
     }
 
 
-    // On use card, apply (amount) of Dexterity. (Go to the actual power card for the amount.)
-
     public void onAfterCardPlayed(final AbstractCard card) {
         if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light)){
            if (MagicPowerAction.canGainMagicPower(AbstractDungeon.player, LightPower.POWER_ID)){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                          new LightPower(AbstractDungeon.player, 1),1));
             }
-            if (getPowerAmtAction.main(LightPower.POWER_ID) >= MagicPowerSystem.Balance_AMT){
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                        new BalancePower(AbstractDungeon.player, Balance_TURN),Balance_TURN));
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                        LightPower.POWER_ID));
-                MagicPowerSystem.LightThrough = true;
+            if (getPowerAmtAction.main(LightPower.POWER_ID) >= Balance_AMT){
+                MagicPowerAction.toBalance(LightPower.POWER_ID, Balance_TURN);
+                LightThrough = true;
             }
         }
-
-        if (card.type == AbstractCard.CardType.ATTACK  && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark)){
+        else if (card.type == AbstractCard.CardType.ATTACK  && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark)){
             if (MagicPowerAction.canGainMagicPower(AbstractDungeon.player, DarkPower.POWER_ID)){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                         new DarkPower(AbstractDungeon.player, 1),1));
             }
-            if (getPowerAmtAction.main(DarkPower.POWER_ID) >= MagicPowerSystem.Balance_AMT){
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                        new BalancePower(AbstractDungeon.player, Balance_TURN),Balance_TURN));
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(
-                        AbstractDungeon.player, AbstractDungeon.player, DarkPower.POWER_ID));
-                MagicPowerSystem.DarkThrough = true;
+            if (getPowerAmtAction.main(DarkPower.POWER_ID) >= Balance_AMT){
+                MagicPowerAction.toBalance(DarkPower.POWER_ID, Balance_TURN);
+                DarkThrough = true;
             }
         }
     }
-
 
 
     @Override
