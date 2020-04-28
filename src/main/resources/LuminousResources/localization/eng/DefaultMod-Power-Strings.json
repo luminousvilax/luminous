@@ -59,6 +59,10 @@
                 "NAME": "Lunar Tide",
                 "DESCRIPTIONS": ["If your HP higher than ", " this turn, Gain ", " #yenergy."]
         },
+        "Luminous:ManaOverloadPower": {
+                "NAME": "Mana Overload",
+                "DESCRIPTIONS": ["Use 1 additional cost to deal ", " more damage when attack."]
+        },
         "Luminous:PressureVoidPower": {
                 "NAME": "Pressure Void",
                 "DESCRIPTIONS": ["Every time you played a attack card this turn, receive ", " additional damage."]

@@ -456,6 +456,7 @@ public class DefaultMod implements
         BaseMod.addCard(new Magic_Guard_Luminous());
         BaseMod.addCard(new Mana_Well_Luminous());
         BaseMod.addCard(new Shadow_Shell_Luminous());
+        BaseMod.addCard(new Tune_Luminous());
 
         //Power
         BaseMod.addCard(new Dark_Crescendo_Luminous());
@@ -463,6 +464,7 @@ public class DefaultMod implements
         BaseMod.addCard(new Ethereal_Form_Luminous());
         BaseMod.addCard(new Light_Wash_Luminous());
         BaseMod.addCard(new Lunar_Tide_Luminous());
+        BaseMod.addCard(new Mana_Overload_Luminous());
         BaseMod.addCard(new Photic_Meditation_Luminous());
         
         logger.info("Making sure the cards are unlocked.");
@@ -513,6 +515,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Magic_Guard_Luminous.ID);
         UnlockTracker.unlockCard(Mana_Well_Luminous.ID);
         UnlockTracker.unlockCard(Shadow_Shell_Luminous.ID);
+        UnlockTracker.unlockCard(Tune_Luminous.ID);
 
         //Power_Unlock
         UnlockTracker.unlockCard(Dark_Crescendo_Luminous.ID);
@@ -520,6 +523,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Ethereal_Form_Luminous.ID);
         UnlockTracker.unlockCard(Light_Wash_Luminous.ID);
         UnlockTracker.unlockCard(Lunar_Tide_Luminous.ID);
+        UnlockTracker.unlockCard(Mana_Overload_Luminous.ID);
         UnlockTracker.unlockCard(Photic_Meditation_Luminous.ID);
 
 

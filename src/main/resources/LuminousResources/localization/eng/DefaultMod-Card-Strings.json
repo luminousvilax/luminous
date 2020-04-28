@@ -178,6 +178,10 @@
     "NAME": "Shadow Shell",
     "DESCRIPTION": "Gain !M! Artifact. Exhaust."
   },
+  "Luminous:Tune_Luminous":{
+    "NAME": "Tune",
+    "DESCRIPTION": "Draw !M! cards, NL Discard !Luminous:SecondMagic! cards."
+  },
 
   "Luminous:Dark_Crescendo_Luminous": {
     "NAME": "Dark Crescendo",
@@ -199,6 +203,10 @@
   "Luminous:Lunar_Tide_Luminous":{
     "NAME": "Lunar Tide",
     "DESCRIPTION": "At start of turn, if your HP higher than 90% Max HP, NL Gain !M! [E]."
+  },
+  "Luminous:Mana_Overload_Luminous":{
+    "NAME": "Mana Overload",
+    "DESCRIPTION": "Use 1 additional cost to deal more damage when attack. NL (Base: !M! )"
   },
   "Luminous:Photic_Meditation_Luminous":{
     "NAME": "Photic Meditation",

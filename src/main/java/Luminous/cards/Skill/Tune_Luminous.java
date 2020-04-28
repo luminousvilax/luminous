@@ -4,6 +4,8 @@ import Luminous.DefaultMod;
 import Luminous.cards.AbstractMagicCard;
 import Luminous.characters.luminous;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,13 +16,10 @@ import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import static Luminous.DefaultMod.makeCardPath;
 
 
-public class Flash_Blink_Luminous extends AbstractMagicCard {
+public class Tune_Luminous extends AbstractMagicCard {
 
-    public static final String ID = DefaultMod.makeID(Flash_Blink_Luminous.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(Tune_Luminous.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
-
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // STAT DECLARATION
 
@@ -31,22 +30,21 @@ public class Flash_Blink_Luminous extends AbstractMagicCard {
 
     private static final int COST = 1;
 
-    private static final int AMOUNT = 1;
+    private static final int DRAW = 2, UPGRADE_PLUS_DRAW = 1;
+    private static final int DISCARD = 1, UPGRADE_PLUS_DISCARD = 1;
+
     // /STAT DECLARATION/
-
-
-    public Flash_Blink_Luminous() {
+    public Tune_Luminous() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = AMOUNT;
-        baseMagicNumber = this.magicNumber;
-        exhaust = true;
+        baseMagicNumber = magicNumber = DRAW;
+        defaultBaseSecondMagicNumber = defaultSecondMagicNumber = DISCARD;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                p, p, new IntangiblePlayerPower(p, baseMagicNumber),baseMagicNumber));
+       AbstractDungeon.actionManager.addToBottom(new DrawCardAction(magicNumber));
+       AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, defaultSecondMagicNumber, false));
     }
 
 
@@ -55,8 +53,8 @@ public class Flash_Blink_Luminous extends AbstractMagicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.retain = true;
-            rawDescription = UPGRADE_DESCRIPTION;
+            upgradeMagicNumber(UPGRADE_PLUS_DRAW);
+            upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_DISCARD);
             initializeDescription();
         }
     }
