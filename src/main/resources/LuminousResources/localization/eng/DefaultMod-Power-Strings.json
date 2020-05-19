@@ -31,9 +31,17 @@
                 "DESCRIPTIONS": ["This Blessing will give you #yStrength, and #yExhaust to reduce 50% damage when you get HP Loss.",
                         " NL 1 Blessing: ", " NL 2 Blessing: ", " NL 3 Blessing: ", " #yStrength"]
         },
+        "Luminous:BossDamagePower": {
+                "NAME": "Boss Damage",
+                "DESCRIPTIONS": ["Give additional "," #ydamage to Boss and Elite when attack."]
+        },
         "Luminous:DarkCrescendoPower": {
                 "NAME": "Dark Crescendo",
                 "DESCRIPTIONS": ["Every time you gain "," #yMagicPower, Gain ", " #yStrength. NL #yBalance will give you 1 additional #yStrength."]
+        },
+        "Luminous:DarknessMasteryPower": {
+                "NAME": "Darkness Mastery",
+                "DESCRIPTIONS": ["Gain additional  "," turn(s) Balance power."]
         },
         "Luminous:DateOfLightPower": {
                 "NAME": "Date of Light",
@@ -50,6 +58,10 @@
         "Luminous:EtherealFormPower": {
                 "NAME": "Ethereal Form",
                 "DESCRIPTIONS": ["Every ", " Turns, Apply 1 Intangible."]
+        },
+        "Luminous:FreudInvinciblePower": {
+                "NAME": "Freud's Wisdom",
+                "DESCRIPTIONS": ["Be invincible for ", " Turn(s)"]
         },
         "Luminous:LightWashPower": {
                 "NAME": "Light Wash",

@@ -159,6 +159,30 @@
     "DESCRIPTION": "Gain !M! Intangible. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Intangible. NL Exhaust."
   },
+  "Luminous:Freud_Wisdom1_Luminous":{
+    "NAME": "Freud's Wisdom",
+    "DESCRIPTION": "Reduce !Luminous:SecondMagic! cost for !M! random cards this turn. NL Add Freud's Protection to hand."
+  },
+  "Luminous:Freud_Wisdom2_Luminous":{
+    "NAME": "Freud's Protection",
+    "DESCRIPTION": "Gain !M! Plated Armor. NL Add Freud's Healing to hand."
+  },
+  "Luminous:Freud_Wisdom3_Luminous":{
+    "NAME": "Freud's Healing",
+    "DESCRIPTION": "Receive !M! Regen. NL Add Freud's Increment to hand."
+  },
+  "Luminous:Freud_Wisdom4_Luminous":{
+    "NAME": "Freud's Increment",
+    "DESCRIPTION": "Gain !M! Strength, !M! Dexterity. NL Add Freud's Perseverance to hand."
+  },
+  "Luminous:Freud_Wisdom5_Luminous":{
+    "NAME": "Freud's Perseverance",
+    "DESCRIPTION": "Give additional !M! damage to Boss and Elite. NL Add Freud's Blessing to hand."
+  },
+  "Luminous:Freud_Wisdom6_Luminous":{
+    "NAME": "Freud's Blessing",
+    "DESCRIPTION": "Receive !M! Invincible."
+  },
   "Luminous:Hero_Will_Luminous": {
     "NAME": "Hero's Will",
     "DESCRIPTION": "Remove all Debuff. NL Exhaust.",
@@ -187,6 +211,11 @@
     "NAME": "Dark Crescendo",
     "DESCRIPTION": "When you Gain MagicPower for !Luminous:SecondMagic! times, Gain !M! Strength.",
     "UPGRADE_DESCRIPTION": "Innate. NL When you Gain MagicPower for !Luminous:SecondMagic! times, Gain !M! Strength."
+  },
+  "Luminous:Darkness_Mastery_Luminous": {
+    "NAME": "Darkness Mastery",
+    "DESCRIPTION": "Gain !M! additional Balance power when you arrive Balance.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! additional Balance power when you arrive Balance."
   },
   "Luminous:Dusk_Guard_Luminous":{
     "NAME": "Dusk Guard",

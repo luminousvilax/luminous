@@ -26,9 +26,9 @@ public class Arcane_Rage_Luminous extends AbstractDynamicCard {
     private static final int COST = 0;
 
     private int AMOUNT = 3;
-    private final int UPGRADE_AMOUT = 2;
-    private final int ENERGY_AMOUT = 2;
-    private final int Vulnerable_AMOUT = 2;
+    private static final int UPGRADE_AMOUNT = 2;
+    private static final int ENERGY_AMOUNT = 2;
+    private static final int Vulnerable_AMOUNT = 2;
 
 
     public Arcane_Rage_Luminous() {
@@ -41,7 +41,7 @@ public class Arcane_Rage_Luminous extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int currentDrawPileCardAmount = p.drawPile.group.size();
-        p.gainEnergy(ENERGY_AMOUT);
+        p.gainEnergy(ENERGY_AMOUNT);
         if (currentDrawPileCardAmount < magicNumber){
             for (int i = 0; i < magicNumber - currentDrawPileCardAmount; i++){
                 AbstractCard card = p.discardPile.getRandomCard(true);
@@ -51,7 +51,7 @@ public class Arcane_Rage_Luminous extends AbstractDynamicCard {
         }
         p.draw(magicNumber);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                p,p, new VulnerablePower(p, Vulnerable_AMOUT, false)));
+                p,p, new VulnerablePower(p, Vulnerable_AMOUNT, false)));
     }
 
     //Upgraded stats.
@@ -59,8 +59,8 @@ public class Arcane_Rage_Luminous extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_AMOUT);
-            this.AMOUNT = UPGRADE_AMOUT;
+            upgradeMagicNumber(UPGRADE_AMOUNT);
+            this.AMOUNT = UPGRADE_AMOUNT;
             initializeDescription();
         }
     }

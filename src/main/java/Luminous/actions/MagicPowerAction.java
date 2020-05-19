@@ -1,14 +1,12 @@
 package Luminous.actions;
 import Luminous.DefaultMod;
-import Luminous.powers.MagicPowerSystem;
+import Luminous.cards.Power.Darkness_Mastery_Luminous;
+import Luminous.powers.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import Luminous.powers.BalancePower;
-import Luminous.powers.LightPower;
-import Luminous.powers.DarkPower;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -75,6 +73,7 @@ public class MagicPowerAction {
     }
 
     public static void toBalance(String currentPower, int turns) {
+        turns += getPowerAmtAction.main(DarknessMasteryPower.POWER_ID);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                 new BalancePower(AbstractDungeon.player, turns), turns));
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player,

@@ -452,6 +452,12 @@ public class DefaultMod implements
         BaseMod.addCard(new Erosion_Luminous());
         BaseMod.addCard(new Fast_Spell_Luminous());
         BaseMod.addCard(new Flash_Blink_Luminous());
+        BaseMod.addCard(new Freud_Wisdom1_Luminous());    // They are derivatives
+            BaseMod.addCard(new Freud_Wisdom2_Luminous());
+            BaseMod.addCard(new Freud_Wisdom3_Luminous());
+            BaseMod.addCard(new Freud_Wisdom4_Luminous());
+            BaseMod.addCard(new Freud_Wisdom5_Luminous());
+            BaseMod.addCard(new Freud_Wisdom6_Luminous());
         BaseMod.addCard(new Hero_Will_Luminous());
         BaseMod.addCard(new Magic_Guard_Luminous());
         BaseMod.addCard(new Mana_Well_Luminous());
@@ -460,6 +466,7 @@ public class DefaultMod implements
 
         //Power
         BaseMod.addCard(new Dark_Crescendo_Luminous());
+        BaseMod.addCard(new Darkness_Mastery_Luminous());
         BaseMod.addCard(new Dusk_Guard_Luminous());
         BaseMod.addCard(new Ethereal_Form_Luminous());
         BaseMod.addCard(new Light_Wash_Luminous());
@@ -511,6 +518,12 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Erosion_Luminous.ID);
         UnlockTracker.unlockCard(Fast_Spell_Luminous.ID);
         UnlockTracker.unlockCard(Flash_Blink_Luminous.ID);
+        UnlockTracker.unlockCard(Freud_Wisdom1_Luminous.ID);
+            UnlockTracker.unlockCard(Freud_Wisdom2_Luminous.ID);
+            UnlockTracker.unlockCard(Freud_Wisdom3_Luminous.ID);
+            UnlockTracker.unlockCard(Freud_Wisdom4_Luminous.ID);
+            UnlockTracker.unlockCard(Freud_Wisdom5_Luminous.ID);
+            UnlockTracker.unlockCard(Freud_Wisdom6_Luminous.ID);
         UnlockTracker.unlockCard(Hero_Will_Luminous.ID);
         UnlockTracker.unlockCard(Magic_Guard_Luminous.ID);
         UnlockTracker.unlockCard(Mana_Well_Luminous.ID);
@@ -519,6 +532,7 @@ public class DefaultMod implements
 
         //Power_Unlock
         UnlockTracker.unlockCard(Dark_Crescendo_Luminous.ID);
+        UnlockTracker.unlockCard(Darkness_Mastery_Luminous.ID);
         UnlockTracker.unlockCard(Dusk_Guard_Luminous.ID);
         UnlockTracker.unlockCard(Ethereal_Form_Luminous.ID);
         UnlockTracker.unlockCard(Light_Wash_Luminous.ID);
