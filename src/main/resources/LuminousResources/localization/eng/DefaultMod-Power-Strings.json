@@ -14,7 +14,7 @@
         "Luminous:DarkPower": {
                 "NAME": "Eclipse",
                 "DESCRIPTIONS": ["#rDark attack have 50% chance to reduce 1 cost of a random dark card this turn, need ",
-                        " power ", " powers", " to arrive #yBalance"]
+                        " power ", " powers", " more to arrive #yBalance"]
         },
         "Luminous:BalancePower": {
                 "NAME": "Equilibrium",
@@ -26,6 +26,10 @@
                 "DESCRIPTIONS": ["You can have buffed attack by #bSunfire or #rEclipse. Use #bLight or #rDark card to gain magic power."]
         },
 
+        "Luminous:ArcanePitchPower": {
+                "NAME": "Arcane Pitch",
+                "DESCRIPTIONS": ["Gain additional "," #yMagicPower this turn."]
+        },
         "Luminous:BlackBlessingPower": {
                 "NAME": "Black Blessing",
                 "DESCRIPTIONS": ["This Blessing will give you #yStrength, and #yExhaust to reduce 50% damage when you get HP Loss.",
@@ -75,8 +79,16 @@
                 "NAME": "Mana Overload",
                 "DESCRIPTIONS": ["Use 1 additional cost to deal ", " more damage when attack."]
         },
+        "Luminous:MirrorForcePower": {
+                "NAME": "Mirror Force",
+                "DESCRIPTIONS": ["In next ", " attacked time(s), #yReflect damage to All enemies."]
+        },
         "Luminous:PressureVoidPower": {
                 "NAME": "Pressure Void",
                 "DESCRIPTIONS": ["Every time you played a attack card this turn, receive ", " additional damage."]
+        },
+        "Luminous:SympathyPower": {
+                "NAME": "Pressure Void",
+                "DESCRIPTIONS": ["In ", " turn(s), Gain #yMagicPower no matter attack type."]
         }
 }

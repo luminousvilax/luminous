@@ -1,11 +1,12 @@
-package Luminous.cards.Power;
+package Luminous.cards.Skill;
 
 import Luminous.DefaultMod;
-import Luminous.cards.AbstractDynamicCard;
+import Luminous.cards.AbstractMagicCard;
 import Luminous.characters.luminous;
-import Luminous.powers.DarknessMasteryPower;
-import Luminous.powers.DuskGuardPower;
+import Luminous.powers.SympathyPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,49 +15,49 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static Luminous.DefaultMod.makeCardPath;
 
-//Gain 1 Darkness Mastery power after played.
-public class Darkness_Mastery_Luminous extends AbstractDynamicCard {
 
-    // TEXT DECLARATION
+public class Sympathy_Luminous extends AbstractMagicCard {
 
-    public static final String ID = DefaultMod.makeID(Darkness_Mastery_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String ID = DefaultMod.makeID(Sympathy_Luminous.class.getSimpleName());
+    public static final String IMG = makeCardPath("Skill.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
-
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
     private static final int COST = 1;
-    private static final int MAGIC = 1;
 
-    public Darkness_Mastery_Luminous() {
+    private static final int AMOUNT = 1;
+    private static final int UPGRADE_AMOUNT = 1;
+    // /STAT DECLARATION/
+
+
+    public Sympathy_Luminous() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = MAGIC;
-        isInnate = false;
+        baseMagicNumber = magicNumber = AMOUNT;
     }
-
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new DarknessMasteryPower(p, p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                p, p, new SympathyPower(p, p,  magicNumber), magicNumber
+        ));
     }
 
-    //Upgraded stats.
+
+    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.isInnate = true;
-            rawDescription = UPGRADE_DESCRIPTION;
+            upgradeMagicNumber(UPGRADE_AMOUNT);
             initializeDescription();
         }
     }

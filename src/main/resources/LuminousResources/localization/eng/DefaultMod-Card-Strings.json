@@ -78,6 +78,10 @@
     "DESCRIPTION": "Deal !D! Damage to All enemies !Luminous:SecondMagic! times. NL [#e60000]Dark[]",
     "UPGRADE_DESCRIPTION": "Deal !D! Damage to All enemies !Luminous:SecondMagic! times, NL plus !M! Luminous:Pressure_Void. NL [#e60000]Dark[]"
   },
+  "Luminous:Dark_Arcane_Pitch": {
+    "NAME": "Arcane Pitch",
+    "DESCRIPTION": "Deal !D! Damage. Gain additional !M! [#ff9900]MagicPower[] this turn. NL [#e60000]Dark[]"
+  },
   "Luminous:Dark_Moonlight_Spear": {
     "NAME": "Moonlight Spear",
     "DESCRIPTION": "Deal !D! Damage. Apply !M! Vulnerable. If target has Pressure_Void, Apply !M! Weak. NL [#e60000]Dark[]"
@@ -90,13 +94,25 @@
     "NAME": "Pressure Void",
     "DESCRIPTION": "Apply !M! NL Luminous:Pressure_Void. NL [#e60000]Dark[]"
   },
+  "Luminous:Dark_Raid": {
+    "NAME": "Raid",
+    "DESCRIPTION": "Deal !D! damage, if target's HP is full, Apply !M! Weak. NL [#e60000]Dark[]"
+  },
   "Luminous:Light_Flash_Shower": {
     "NAME": "Flash Shower",
     "DESCRIPTION": "Deal !D! Damage. NL [#03e3fc]Light[]"
   },
+  "Luminous:Light_Gather": {
+    "NAME": "Gather",
+    "DESCRIPTION": "Deal !D! Damage. Gain Block as half of damage. NL [#03e3fc]Light[]"
+  },
+  "Luminous:Light_Glare": {
+    "NAME": "Glare",
+    "DESCRIPTION": "Deal !D! Damage. If target's HP is full, Deal damage once more. NL [#03e3fc]Light[]"
+  },
   "Luminous:Light_Ray_of_Redemption": {
     "NAME": "Ray of Redemption",
-    "DESCRIPTION": "Deal !D! Damage. Receive Regen as 50% of the damage which wasn't be blocked. NL Exhaust. NL [#03e3fc]Light[]"
+    "DESCRIPTION": "Deal !D! Damage. Receive Heal as 50% of the damage which wasn't be blocked. NL Exhaust. NL [#03e3fc]Light[]"
   },
   "Luminous:Light_Reflection": {
     "NAME": "Reflection",
@@ -113,6 +129,12 @@
     "DESCRIPTION": "Deal !D! Damage to random enemy for every card in your hand. NL [#03e3fc]Light[]"
   },
 
+  "Luminous:Accumulation_Luminous": {
+    "NAME": "Accumulation",
+    "DESCRIPTION": "End Turn, Gain [E] as remaining next turn.",
+    "UPGRADE_DESCRIPTION": "End Turn, Gain [E] as remaining+1 next turn.",
+    "EXTENDED_DESCRIPTION": ["No Energy to retain."]
+  },
   "Luminous:Arcane_Rage_Luminous": {
     "NAME": "Arcane Rage",
     "DESCRIPTION": "Apply 2 Vulnerable. NL Gain [E] [E]. Draw !M! cards. NL Exhaust."
@@ -125,6 +147,12 @@
     "NAME": "Blinding Pillar",
     "DESCRIPTION": "If target's intent is Attack, Apply !M! Weak.",
     "EXTENDED_DESCRIPTION": ["Not Attack!"]
+  },
+  "Luminous:Chase_Spell_Luminous": {
+    "NAME": "Chase Spell",
+    "DESCRIPTION": "Play out the top card of Discard Pile, then Exhaust it. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Play out the top card of Discard Pile, then Exhaust it.",
+    "EXTENDED_DESCRIPTION": ["No card in Discard Pile!"]
   },
   "Luminous:Concentrate_Luminous":{
     "NAME": "Concentrate",
@@ -161,23 +189,23 @@
   },
   "Luminous:Freud_Wisdom1_Luminous":{
     "NAME": "Freud's Wisdom",
-    "DESCRIPTION": "Reduce !Luminous:SecondMagic! cost for !M! random cards this turn. NL Add Freud's Protection to hand."
+    "DESCRIPTION": "Reduce !Luminous:SecondMagic! cost for !M! random cards this turn. NL Add Freud's Protection to top of draw pile."
   },
   "Luminous:Freud_Wisdom2_Luminous":{
     "NAME": "Freud's Protection",
-    "DESCRIPTION": "Gain !M! Plated Armor. NL Add Freud's Healing to hand."
+    "DESCRIPTION": "Gain !M! Plated Armor. NL Add Freud's Healing to top of draw pile."
   },
   "Luminous:Freud_Wisdom3_Luminous":{
     "NAME": "Freud's Healing",
-    "DESCRIPTION": "Receive !M! Regen. NL Add Freud's Increment to hand."
+    "DESCRIPTION": "Receive !M! Regen. NL Add Freud's Increment to top of draw pile."
   },
   "Luminous:Freud_Wisdom4_Luminous":{
     "NAME": "Freud's Increment",
-    "DESCRIPTION": "Gain !M! Strength, !M! Dexterity. NL Add Freud's Perseverance to hand."
+    "DESCRIPTION": "Gain !M! Strength, !M! Dexterity. NL Add Freud's Perseverance to top of draw pile."
   },
   "Luminous:Freud_Wisdom5_Luminous":{
     "NAME": "Freud's Perseverance",
-    "DESCRIPTION": "Give additional !M! damage to Boss and Elite. NL Add Freud's Blessing to hand."
+    "DESCRIPTION": "Give additional !M! damage to Boss and Elite. NL Add Freud's Blessing to top of draw pile."
   },
   "Luminous:Freud_Wisdom6_Luminous":{
     "NAME": "Freud's Blessing",
@@ -198,9 +226,29 @@
     "DESCRIPTION": "Gain [E] [E]. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Exhaust."
   },
+  "Luminous:Mirror_Force_Luminous":{
+    "NAME": "Mirror Force",
+    "DESCRIPTION": "This turn, Reflect damage to All enemies when first attacked. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "This turn, Reflect damage to All enemies when first attacked."
+  },
+  "Luminous:Phantom_Treasure_Luminous":{
+    "NAME": "Phantom's Treasure",
+    "DESCRIPTION": "Choose an Attack card to copy. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Chose an Attack card to copy, [#00e600]free[] to play it once. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["Choose an Attack card.", "No card to copy!"]
+  },
+  "Luminous:Reverse_Spell_Luminous":{
+    "NAME": "Reverse Spell",
+    "DESCRIPTION": "Exchange the top card of Draw Pile and Discard Pile.",
+    "EXTENDED_DESCRIPTION": ["No card in Draw Pile or Discard Pile!"]
+  },
   "Luminous:Shadow_Shell_Luminous":{
     "NAME": "Shadow Shell",
     "DESCRIPTION": "Gain !M! Artifact. Exhaust."
+  },
+  "Luminous:Sympathy_Luminous":{
+    "NAME": "Sympathy",
+    "DESCRIPTION": "In !M! turn(s), NL Gain [#ff9900]MagicPower[] no matter attack type."
   },
   "Luminous:Tune_Luminous":{
     "NAME": "Tune",
