@@ -1,7 +1,6 @@
 package Luminous.characters;
 
 import Luminous.cards.Attack.*;
-import Luminous.cards.Power.Ethereal_Form_Luminous;
 import Luminous.cards.Skill.*;
 import Luminous.relics.BlackBlessingRelic;
 import Luminous.relics.MirrorRelic;
@@ -159,21 +158,27 @@ public class luminous extends CustomPlayer {
         logger.info("Begin loading starter Deck Strings");
 
         retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Light_Flash_Shower.ID);
+        //retVal.add(Light_Flash_Shower.ID);
         //retVal.add(Light_Flash_Shower.ID);
         retVal.add(Dark_Abyssal_Drop.ID);
-        retVal.add(Dark_Abyssal_Drop.ID);
         //retVal.add(Dark_Abyssal_Drop.ID);
-        retVal.add(Defend_Luminous.ID);
-        retVal.add(Defend_Luminous.ID);
-        retVal.add(Defend_Luminous.ID);
+        //retVal.add(Dark_Abyssal_Drop.ID);
         //retVal.add(Defend_Luminous.ID);
-        retVal.add(Arcane_Rage_Luminous.ID);
-        retVal.add(Balance_Ender.ID);
-        retVal.add(Date_of_Light_Luminous.ID);
-        retVal.add(Ethereal_Form_Luminous.ID);
-        retVal.add(Blinding_Pillar_Luminous.ID);
-        retVal.add(Blinding_Pillar_Luminous.ID);
+        //retVal.add(Defend_Luminous.ID);
+        //retVal.add(Defend_Luminous.ID);
+        //retVal.add(Defend_Luminous.ID);
+        retVal.add(Concentrate_Luminous.ID);
+        retVal.add(Mana_Well_Luminous.ID);
+        retVal.add(Light_Reflection.ID);
+        retVal.add(Dark_Morning_Star.ID);
+        retVal.add(Fast_Spell_Luminous.ID);
+        retVal.add(Freud_Wisdom1_Luminous.ID);
+        retVal.add(Light_Gather.ID);
+        retVal.add(Accumulation_Luminous.ID);
+        retVal.add(Chase_Spell_Luminous.ID);
+        retVal.add(Mirror_Force_Luminous.ID);
+        retVal.add(Phantom_Treasure_Luminous.ID);
+
 
         return retVal;
     }
