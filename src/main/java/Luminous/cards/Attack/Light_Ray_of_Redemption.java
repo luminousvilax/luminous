@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -55,10 +56,8 @@ public class Light_Ray_of_Redemption extends AbstractMagicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m.currentBlock < this.damage || this.damageTypeForTurn == DamageInfo.DamageType.HP_LOSS){
-            int RegenAmount = (this.damage - m.currentBlock) / 2;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                    p, p, new RegenPower(p, RegenAmount), RegenAmount
-            ));
+            int HealAmount = (this.damage - m.currentBlock) / 2;
+            AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, HealAmount));
         }
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));

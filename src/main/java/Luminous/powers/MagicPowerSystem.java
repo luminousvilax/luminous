@@ -28,6 +28,7 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public static final int Balance_AMT = 9;
     public static final int Balance_TURN = 2;
+    private static final int BaseMagicAmount = 1;
     public static final int MagicAmountAtBalance = 10;
     public static boolean LightThrough = false;
     public static boolean DarkThrough = false;
@@ -54,20 +55,28 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
 
 
     public void onAfterCardPlayed(final AbstractCard card) {
-        if (card.type == AbstractCard.CardType.ATTACK && !card.purgeOnUse && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light)){
+        int MagicAmount = BaseMagicAmount + getPowerAmtAction.main(ArcanePitchPower.POWER_ID);
+        if (card.type != AbstractCard.CardType.ATTACK)
+            return;
+        if ((!card.purgeOnUse && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light)) ||
+                        AbstractDungeon.player.hasPower(SympathyPower.POWER_ID)){
            if (MagicPowerAction.canGainMagicPower(AbstractDungeon.player, LightPower.POWER_ID)){
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                         new LightPower(AbstractDungeon.player, 1),1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                        AbstractDungeon.player, AbstractDungeon.player,
+                        new LightPower(AbstractDungeon.player, MagicAmount),MagicAmount
+                ));
             }
             if (getPowerAmtAction.main(LightPower.POWER_ID) >= Balance_AMT){
                 MagicPowerAction.toBalance(LightPower.POWER_ID, Balance_TURN);
                 LightThrough = true;
             }
         }
-        else if (card.type == AbstractCard.CardType.ATTACK  && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark)){
+        if (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark) ||
+                        AbstractDungeon.player.hasPower(SympathyPower.POWER_ID)){
             if (MagicPowerAction.canGainMagicPower(AbstractDungeon.player, DarkPower.POWER_ID)){
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                        new DarkPower(AbstractDungeon.player, 1),1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                        AbstractDungeon.player, AbstractDungeon.player,
+                        new DarkPower(AbstractDungeon.player, MagicAmount),MagicAmount));
             }
             if (getPowerAmtAction.main(DarkPower.POWER_ID) >= Balance_AMT){
                 MagicPowerAction.toBalance(DarkPower.POWER_ID, Balance_TURN);

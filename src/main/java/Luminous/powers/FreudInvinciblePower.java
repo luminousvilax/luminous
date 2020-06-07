@@ -38,7 +38,7 @@ public class FreudInvinciblePower extends AbstractPower implements CloneablePowe
         this.source = source;
 
         type = PowerType.BUFF;
-        isTurnBased = false;
+        isTurnBased = true;
 
         this.img = ImageMaster.loadImage(makePowerPath("FreudWisdom.png"));
 

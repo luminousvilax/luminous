@@ -29,7 +29,7 @@ public class Freud_Wisdom1_Luminous extends AbstractMagicCard {
     private static final int COST = 1;
 
     private static final int EFFECT_CARDS = 2;
-    private static final int UPGRADE_EFFECT_CARDS = 3;
+    private static final int UPGRADE_EFFECT_CARDS = 1;
     private static final int COST_DOWN = 1;
 
     // /STAT DECLARATION/
@@ -45,7 +45,7 @@ public class Freud_Wisdom1_Luminous extends AbstractMagicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardGroup cardGroup = new CardGroup(CardGroup.CardGroupType.HAND);
         for (int i = 0; i < magicNumber; i++) {
-            cardGroup.group.add(AbstractDungeon.player.hand.getRandomCard(true));
+            cardGroup.group.add(AbstractDungeon.player.hand.getRandomCard(false));
         }
         AbstractDungeon.actionManager.addToBottom(new reduceCardCostAction(cardGroup, defaultSecondMagicNumber));
 
@@ -53,7 +53,7 @@ public class Freud_Wisdom1_Luminous extends AbstractMagicCard {
         if (upgraded){
             freud_wisdom2.upgrade();
         }
-        AbstractDungeon.player.hand.addToHand(freud_wisdom2);
+        AbstractDungeon.player.drawPile.addToTop(freud_wisdom2);
     }
 
 

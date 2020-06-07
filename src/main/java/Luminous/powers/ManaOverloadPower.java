@@ -65,7 +65,7 @@ public class ManaOverloadPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0]+ BaseDamage + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0]+ (BaseDamage + getPowerAmtAction.main(StrengthPower.POWER_ID)) + DESCRIPTIONS[1];
     }
 
     @Override

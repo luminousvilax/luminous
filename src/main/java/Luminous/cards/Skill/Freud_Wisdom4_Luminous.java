@@ -54,7 +54,7 @@ public class Freud_Wisdom4_Luminous extends AbstractMagicCard {
         if (upgraded){
             freud_wisdom5.upgrade();
         }
-        AbstractDungeon.player.hand.addToHand(freud_wisdom5);
+        AbstractDungeon.player.drawPile.addToTop(freud_wisdom5);
     }
 
 

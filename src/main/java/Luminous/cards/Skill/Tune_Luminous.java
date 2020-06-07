@@ -31,7 +31,7 @@ public class Tune_Luminous extends AbstractMagicCard {
     private static final int COST = 1;
 
     private static final int DRAW = 2, UPGRADE_PLUS_DRAW = 1;
-    private static final int DISCARD = 1, UPGRADE_PLUS_DISCARD = 1;
+    private static final int DISCARD = 2, UPGRADE_PLUS_DISCARD = 1;
 
     // /STAT DECLARATION/
     public Tune_Luminous() {
