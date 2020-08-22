@@ -15,7 +15,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Shadow_Shell_Luminous extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Shadow_Shell_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Shadow_Shell.png");
 
     // STAT DECLARATION
 

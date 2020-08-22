@@ -23,7 +23,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Accumulation_Luminous extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Accumulation_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Accumulation.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

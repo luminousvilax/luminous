@@ -24,7 +24,7 @@ public class Light_Spectral_Light extends AbstractMagicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Light_Spectral_Light.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Spectral_Light.png");
 
     // /TEXT DECLARATION/
 

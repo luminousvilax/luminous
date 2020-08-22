@@ -18,7 +18,7 @@ public class Light_Flash_Shower extends AbstractMagicCard {
 
     // TEXT DECLARATION
     public static final String ID = DefaultMod.makeID(Light_Flash_Shower.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Flash_Shower.png");
 
 
     // /TEXT DECLARATION/

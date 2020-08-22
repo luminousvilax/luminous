@@ -1,13 +1,13 @@
 package Luminous.cards.Skill;
 
 import Luminous.DefaultMod;
+import Luminous.actions.FreudAddCardAction;
 import Luminous.cards.AbstractMagicCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RegenPower;
-import com.megacrit.cardcrawl.powers.watcher.BlockReturnPower;
 
 import static Luminous.DefaultMod.makeCardPath;
 
@@ -15,7 +15,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Freud_Wisdom3_Luminous extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Freud_Wisdom3_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Freud3.png");
 
     // STAT DECLARATION
 
@@ -43,11 +43,7 @@ public class Freud_Wisdom3_Luminous extends AbstractMagicCard {
                 p, p, new RegenPower(p, magicNumber), magicNumber
         ));
 
-        Freud_Wisdom4_Luminous freud_wisdom4 = new Freud_Wisdom4_Luminous();
-        if (upgraded) {
-            freud_wisdom4.upgrade();
-        }
-        AbstractDungeon.player.drawPile.addToTop(freud_wisdom4);
+        AbstractDungeon.actionManager.addToBottom(new FreudAddCardAction(new Freud_Wisdom4_Luminous(), this.timesUpgraded, 4));
     }
 
 

@@ -19,7 +19,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Tune_Luminous extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Tune_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Tune.png");
 
     // STAT DECLARATION
 
@@ -31,7 +31,7 @@ public class Tune_Luminous extends AbstractMagicCard {
     private static final int COST = 1;
 
     private static final int DRAW = 2, UPGRADE_PLUS_DRAW = 1;
-    private static final int DISCARD = 2, UPGRADE_PLUS_DISCARD = 1;
+    private static final int DISCARD = 1;
 
     // /STAT DECLARATION/
     public Tune_Luminous() {
@@ -54,7 +54,6 @@ public class Tune_Luminous extends AbstractMagicCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_DRAW);
-            upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_DISCARD);
             initializeDescription();
         }
     }

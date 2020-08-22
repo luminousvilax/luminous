@@ -17,7 +17,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Mirror_Force_Luminous extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Mirror_Force_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Mirror_Force.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

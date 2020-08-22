@@ -24,7 +24,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Balance_Ender extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Balance_Ender.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Ender.png");
 
     // STAT DECLARATION
 
@@ -58,7 +58,7 @@ public class Balance_Ender extends AbstractMagicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int plusDamage = 0;
         if (m.type == AbstractMonster.EnemyType.BOSS || m.type == AbstractMonster.EnemyType.ELITE) {
-            plusDamage = damage;
+            plusDamage = (int)(baseDamage * 0.5);
         }
         AbstractDungeon.actionManager.addToBottom(new SFXAction((String) SoundEffect.Ender.getKey()));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new GoldenSlashEffect(m.hb.cX, m.hb.cY, true), 0.1f));

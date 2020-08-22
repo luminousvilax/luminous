@@ -20,7 +20,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Dark_Apocalypse extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Dark_Apocalypse.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Apocalypse.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
@@ -32,6 +32,7 @@ public class Dark_Apocalypse extends AbstractMagicCard {
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
     private static final int COST = 3;
+    private static final int UPGRADE_COST = 2;
     private static final int MAGIC = 2;
     private static final int SECOND_MAGIC = 3;
     private static final int DAMAGE = 6;
@@ -72,6 +73,7 @@ public class Dark_Apocalypse extends AbstractMagicCard {
         if (!upgraded) {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
+            upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }
     }

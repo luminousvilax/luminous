@@ -18,7 +18,7 @@ public class Light_Glare extends AbstractMagicCard {
 
     // TEXT DECLARATION
     public static final String ID = DefaultMod.makeID(Light_Glare.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Glare.png");
 
 
     // /TEXT DECLARATION/

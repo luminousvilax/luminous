@@ -19,7 +19,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Dark_Arcane_Pitch extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Dark_Arcane_Pitch.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Arcane_Pitch.png");
 
     // STAT DECLARATION
 

@@ -19,7 +19,7 @@ public class Light_Gather extends AbstractMagicCard {
 
     // TEXT DECLARATION
     public static final String ID = DefaultMod.makeID(Light_Gather.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Gather.png");
 
 
     // /TEXT DECLARATION/

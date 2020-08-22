@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -43,13 +44,8 @@ public class BalancePower extends AbstractPower implements CloneablePowerInterfa
         updateDescription();
     }
 
-    @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m)  {
-        if (MagicPowerAction.LightPowerAccess(card)){
-            plusDamageAction.main(card, m, 0.5);
-        }
-    }
 
+    @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action){
         if (MagicPowerAction.DarkPowerAccess(card)){
             if (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance)){
@@ -61,6 +57,15 @@ public class BalancePower extends AbstractPower implements CloneablePowerInterfa
         }
     }
 
+    @Override
+    public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
+        if (MagicPowerAction.LightPowerAccess(card)) {
+                damage += (int)(card.baseDamage * 0.5);
+        }
+        return this.atDamageGive(damage, type);
+    }
+
+    @Override
     public void atEndOfRound(){
         if (this.justApplied) {
             this.justApplied = false;

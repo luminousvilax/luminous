@@ -55,10 +55,10 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
 
 
     public void onAfterCardPlayed(final AbstractCard card) {
-        int MagicAmount = BaseMagicAmount + getPowerAmtAction.main(ArcanePitchPower.POWER_ID);
         if (card.type != AbstractCard.CardType.ATTACK)
             return;
-        if ((!card.purgeOnUse && juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light)) ||
+        int MagicAmount = BaseMagicAmount + getPowerAmtAction.main(ArcanePitchPower.POWER_ID);
+        if ((juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light)) ||
                         AbstractDungeon.player.hasPower(SympathyPower.POWER_ID)){
            if (MagicPowerAction.canGainMagicPower(AbstractDungeon.player, LightPower.POWER_ID)){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(

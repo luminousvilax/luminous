@@ -18,7 +18,7 @@ public class Date_of_Light_Luminous extends AbstractDynamicCard {
 
 
     public static final String ID = DefaultMod.makeID(Date_of_Light_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Date_of_Light.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

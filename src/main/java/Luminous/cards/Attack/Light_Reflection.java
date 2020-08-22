@@ -20,7 +20,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Light_Reflection extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Light_Reflection.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Reflection.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 

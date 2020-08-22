@@ -1,6 +1,8 @@
 package Luminous.characters;
 
 import Luminous.cards.Attack.*;
+import Luminous.cards.Power.Abyss_Heart_Luminous;
+import Luminous.cards.Power.Lania_Blessing_Luminous;
 import Luminous.cards.Skill.*;
 import Luminous.relics.BlackBlessingRelic;
 import Luminous.relics.MirrorRelic;
@@ -157,27 +159,36 @@ public class luminous extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
+        //retVal.add(Light_Flash_Shower.ID);
         retVal.add(Light_Flash_Shower.ID);
-        //retVal.add(Light_Flash_Shower.ID);
-        //retVal.add(Light_Flash_Shower.ID);
-        retVal.add(Dark_Abyssal_Drop.ID);
+        retVal.add(Light_Flash_Shower.ID);
         //retVal.add(Dark_Abyssal_Drop.ID);
         //retVal.add(Dark_Abyssal_Drop.ID);
+        //retVal.add(Dark_Abyssal_Drop.ID);
         //retVal.add(Defend_Luminous.ID);
         //retVal.add(Defend_Luminous.ID);
         //retVal.add(Defend_Luminous.ID);
         //retVal.add(Defend_Luminous.ID);
+        //retVal.add(Switch_Luminous.ID);
         retVal.add(Concentrate_Luminous.ID);
         retVal.add(Mana_Well_Luminous.ID);
         retVal.add(Light_Reflection.ID);
-        retVal.add(Dark_Morning_Star.ID);
-        retVal.add(Fast_Spell_Luminous.ID);
-        retVal.add(Freud_Wisdom1_Luminous.ID);
+        //retVal.add(Dark_Morning_Star.ID);
+//        retVal.add(Fast_Spell_Luminous.ID);
+        //retVal.add(Freud_Wisdom1_Luminous.ID);
+//        retVal.add(Light_Gather.ID);
+        //retVal.add(Chaos_Field_Luminous.ID);
+        //retVal.add(Darks_Surge_Luminous.ID);
+        retVal.add(Lights_Protection_Luminous.ID);
+
+        retVal.add(Light_Disperse.ID);
+        //retVal.add(Dark_Dim_Erosion.ID);
+        retVal.add(Light_Track.ID);
         retVal.add(Light_Gather.ID);
-        retVal.add(Accumulation_Luminous.ID);
-        retVal.add(Chase_Spell_Luminous.ID);
-        retVal.add(Mirror_Force_Luminous.ID);
-        retVal.add(Phantom_Treasure_Luminous.ID);
+        retVal.add(Light_Ray_of_Redemption.ID);
+        //retVal.add(Dark_Extract.ID);
+        //retVal.add(Dark_Moonlight_Spear.ID);
+        //retVal.add(Dark_Pressure_Void.ID);
 
 
         return retVal;
@@ -247,7 +258,7 @@ public class luminous extends CustomPlayer {
     //Which card should be obtainable from the Match and Keep event?
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new DefaultCommonAttack();
+        return new Light_Flash_Shower();
     }
 
     // The class name as it appears next to your player name in-game

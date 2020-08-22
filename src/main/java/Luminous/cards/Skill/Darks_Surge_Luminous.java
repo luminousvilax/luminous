@@ -1,9 +1,9 @@
-package Luminous.cards.Power;
+package Luminous.cards.Skill;
 
 import Luminous.DefaultMod;
-import Luminous.cards.AbstractDynamicCard;
+import Luminous.cards.AbstractMagicCard;
 import Luminous.characters.luminous;
-import Luminous.powers.ManaOverloadPower;
+import Luminous.powers.DarkSurgePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,44 +11,46 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static Luminous.DefaultMod.makeCardPath;
 
-public class Mana_Overload_Luminous extends AbstractDynamicCard {
 
-    // TEXT DECLARATION
+public class Darks_Surge_Luminous extends AbstractMagicCard {
 
-    public static final String ID = DefaultMod.makeID(Mana_Overload_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Mana_Overload.png");
+    public static final String ID = DefaultMod.makeID(Darks_Surge_Luminous.class.getSimpleName());
+    public static final String IMG = makeCardPath("Dark_Surge.png");
 
 
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
-    private static final int MAGIC = ManaOverloadPower.BaseDamage;
+    private static final int UPGRADE_COST = 0;
+    private static final int AMOUNT = 1;
+    // /STAT DECLARATION/
 
-    public Mana_Overload_Luminous() {
+
+    public Darks_Surge_Luminous() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = MAGIC;
+        baseMagicNumber = magicNumber = AMOUNT;
     }
-
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new ManaOverloadPower(p, p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                p, p, new DarkSurgePower(p, p,  magicNumber), magicNumber
+        ));
     }
 
-    //Upgraded stats.
+
+    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }
     }

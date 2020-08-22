@@ -17,7 +17,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Balance_Death_Scythe extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Balance_Death_Scythe.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Death_Scythe.png");
 
     // STAT DECLARATION
 
@@ -30,7 +30,7 @@ public class Balance_Death_Scythe extends AbstractMagicCard {
     private static final int UPGRADED_COST = 2;
 
     private static final int DAMAGE = 7;
-
+    private static final int LIMIT = 7;
     // /STAT DECLARATION/
 
 
@@ -54,7 +54,7 @@ public class Balance_Death_Scythe extends AbstractMagicCard {
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         for (AbstractMonster monster: AbstractDungeon.getMonsters().monsters){
             int count = (monster.maxHealth - monster.currentHealth) / defaultSecondMagicNumber;
-            for (int i=0; i < count; i++){
+            for (int i=0; i < count && i < LIMIT; i++){
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(
                         monster,new DamageInfo(p, magicNumber, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.FIRE));

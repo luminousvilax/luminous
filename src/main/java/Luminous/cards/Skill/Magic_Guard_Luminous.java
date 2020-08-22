@@ -24,7 +24,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Magic_Guard_Luminous extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Magic_Guard_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Magic_Guard.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

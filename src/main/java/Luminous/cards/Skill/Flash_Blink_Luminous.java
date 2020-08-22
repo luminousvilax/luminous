@@ -17,7 +17,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Flash_Blink_Luminous extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Flash_Blink_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Flash_Blink.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

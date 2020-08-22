@@ -3,6 +3,7 @@ package Luminous.powers;
 import Luminous.DefaultMod;
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -40,16 +41,21 @@ public class LightPower extends AbstractPower implements CloneablePowerInterface
     public void onPlayCard(AbstractCard card, AbstractMonster m)  {
         if (MagicPowerAction.LightPowerAccess(card)){
             DefaultMod.logger.info("==================== "+card.cardID+" 可以应用光明加成====================");
-            if (luckTestAction.main(0.5)){
-                //flash();
-                plusDamageAction.main(card, m, 0.5);
-                int dmg = card.baseDamage;
-            }
             Left_AMT = MagicPowerSystem.Balance_AMT  - getPowerAmtAction.main(LightPower.POWER_ID);
             updateDescription();
         }
     }
 
+    @Override
+    public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
+        if (MagicPowerAction.LightPowerAccess(card)) {
+            if (luckTestAction.main(0.5)) {
+                //flash();
+                damage += (int)(card.baseDamage * 0.5);
+            }
+        }
+        return this.atDamageGive(damage, type);
+    }
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override

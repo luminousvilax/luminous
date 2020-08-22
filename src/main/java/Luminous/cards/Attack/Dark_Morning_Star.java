@@ -15,7 +15,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Dark_Morning_Star extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Dark_Morning_Star.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Morning_Star.png");
 
     // STAT DECLARATION
 

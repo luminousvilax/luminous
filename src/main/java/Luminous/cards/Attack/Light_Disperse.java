@@ -14,11 +14,16 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static Luminous.DefaultMod.makeCardPath;
 
+public class Light_Disperse extends AbstractMagicCard {
 
-public class Dark_Raid extends AbstractMagicCard {
 
-    public static final String ID = DefaultMod.makeID(Dark_Raid.class.getSimpleName());
-    public static final String IMG = makeCardPath("Raid.png");
+    // TEXT DECLARATION
+    public static final String ID = DefaultMod.makeID(Light_Disperse.class.getSimpleName());
+    public static final String IMG = makeCardPath("Disperse.png");
+
+
+    // /TEXT DECLARATION/
+
 
     // STAT DECLARATION
 
@@ -27,31 +32,31 @@ public class Dark_Raid extends AbstractMagicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
-    private static final int DAMAGE = 7;
-    private static final int MAGIC = 2;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int DAMAGE = 10;
+    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int WEAK_AMOUNT = 2;
+
 
     // /STAT DECLARATION/
 
 
-    public Dark_Raid() {
+    public Light_Disperse() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
+        baseMagicNumber = magicNumber = WEAK_AMOUNT;
     }
+
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m.currentHealth == m.maxHealth) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                    m, p, new WeakPower(m, magicNumber, false), magicNumber
-            ));
-        }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                m, new DamageInfo(p,damage,damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE
+                m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY
+        ));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                m, p, new WeakPower(m, magicNumber, false), magicNumber
         ));
     }
 
@@ -61,9 +66,8 @@ public class Dark_Raid extends AbstractMagicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
+            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }
-
 }

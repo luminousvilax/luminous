@@ -2,31 +2,27 @@ package Luminous.powers;
 
 import Luminous.DefaultMod;
 import basemod.interfaces.CloneablePowerInterface;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static Luminous.DefaultMod.makePowerPath;
 
-public class PressureVoidPower extends AbstractPower implements CloneablePowerInterface {
+public class TrackPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID(PressureVoidPower.class.getSimpleName());
+    public static final String POWER_ID = DefaultMod.makeID(TrackPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public PressureVoidPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public TrackPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -37,26 +33,22 @@ public class PressureVoidPower extends AbstractPower implements CloneablePowerIn
         type = PowerType.DEBUFF;
         isTurnBased = true;
 
-        this.img = ImageMaster.loadImage(makePowerPath("PressureVoid.png"));
+        this.img = ImageMaster.loadImage(makePowerPath("Track.png"));
 
         updateDescription();
     }
 
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (card.type == AbstractCard.CardType.ATTACK){
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                    owner, new DamageInfo(owner, amount), AbstractGameAction.AttackEffect.FIRE
-            ));
-        }
+    @Override
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(
+                this.source, this.source, this.amount
+        ));
+        return damageAmount;
     }
 
+    @Override
     public void atEndOfRound(){
-        if (this.amount == 0){
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, PressureVoidPower.POWER_ID));
-        }
-        else {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, PressureVoidPower.POWER_ID, 2));
-        }
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, TrackPower.POWER_ID));
         updateDescription();
     }
 
@@ -67,6 +59,6 @@ public class PressureVoidPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public AbstractPower makeCopy() {
-        return new PressureVoidPower(owner, source, amount);
+        return new TrackPower(owner, source, amount);
     }
 }

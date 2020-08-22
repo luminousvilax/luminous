@@ -20,7 +20,7 @@ public class Light_Sylvan_Lance extends AbstractMagicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Light_Sylvan_Lance.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Sylvan_Lance.png");
 
     // /TEXT DECLARATION/
 

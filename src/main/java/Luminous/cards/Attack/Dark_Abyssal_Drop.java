@@ -17,7 +17,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Dark_Abyssal_Drop extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Dark_Abyssal_Drop.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Abyss_Drop.png");
 
     // STAT DECLARATION
 

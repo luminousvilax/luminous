@@ -15,7 +15,7 @@ public class Defend_Luminous extends AbstractDynamicCard {
 
 
     public static final String ID = DefaultMod.makeID(Defend_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Defend.png");
 
 
     private static final CardRarity RARITY = CardRarity.BASIC;

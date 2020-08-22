@@ -409,21 +409,6 @@ public class DefaultMod implements
         
         logger.info("Adding cards");
         // Add the cards
-        // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
-        // when generating card rewards/shop screen items.
-
-        //BaseMod.addCard(new OrbSkill());
-        BaseMod.addCard(new DefaultSecondMagicNumberSkill());
-        //BaseMod.addCard(new DefaultCommonAttack());
-        //BaseMod.addCard(new DefaultAttackWithVariable());
-        //BaseMod.addCard(new DefaultCommonSkill());
-        //BaseMod.addCard(new DefaultCommonPower());
-        //BaseMod.addCard(new DefaultUncommonSkill());
-        //BaseMod.addCard(new DefaultUncommonAttack());
-        //BaseMod.addCard(new DefaultUncommonPower());
-        //BaseMod.addCard(new DefaultRareAttack());
-        //BaseMod.addCard(new DefaultRareSkill());
-        //BaseMod.addCard(new DefaultRarePower());
 
         //Attack
         BaseMod.addCard(new Balance_Aether_Conduit());
@@ -433,10 +418,13 @@ public class DefaultMod implements
         BaseMod.addCard(new Dark_Abyssal_Drop());
         BaseMod.addCard(new Dark_Apocalypse());
         BaseMod.addCard(new Dark_Arcane_Pitch());
+        BaseMod.addCard(new Dark_Dim_Erosion());
+        BaseMod.addCard(new Dark_Extract());
         BaseMod.addCard(new Dark_Moonlight_Spear());
         BaseMod.addCard(new Dark_Morning_Star());
         BaseMod.addCard(new Dark_Pressure_Void());
         BaseMod.addCard(new Dark_Raid());
+        BaseMod.addCard(new Light_Disperse());
         BaseMod.addCard(new Light_Flash_Shower());
         BaseMod.addCard(new Light_Gather());
         BaseMod.addCard(new Light_Glare());
@@ -444,14 +432,17 @@ public class DefaultMod implements
         BaseMod.addCard(new Light_Reflection());
         BaseMod.addCard(new Light_Spectral_Light());
         BaseMod.addCard(new Light_Sylvan_Lance());
+        BaseMod.addCard(new Light_Track());
 
         //Skill
         BaseMod.addCard(new Accumulation_Luminous());
         BaseMod.addCard(new Arcane_Rage_Luminous());
         BaseMod.addCard(new Armageddon_Luminous());
         BaseMod.addCard(new Blinding_Pillar_Luminous());
+        BaseMod.addCard(new Chaos_Field_Luminous());
         BaseMod.addCard(new Chase_Spell_Luminous());
         BaseMod.addCard(new Concentrate_Luminous());
+        BaseMod.addCard(new Darks_Surge_Luminous());
         BaseMod.addCard(new Date_of_Light_Luminous());
         BaseMod.addCard(new Defend_Luminous());
         BaseMod.addCard(new Equalize_Luminous());
@@ -465,20 +456,24 @@ public class DefaultMod implements
             BaseMod.addCard(new Freud_Wisdom5_Luminous());
             BaseMod.addCard(new Freud_Wisdom6_Luminous());
         BaseMod.addCard(new Hero_Will_Luminous());
+        BaseMod.addCard(new Lights_Protection_Luminous());
         BaseMod.addCard(new Magic_Guard_Luminous());
         BaseMod.addCard(new Mana_Well_Luminous());
         BaseMod.addCard(new Mirror_Force_Luminous());
         BaseMod.addCard(new Phantom_Treasure_Luminous());
         BaseMod.addCard(new Reverse_Spell_Luminous());
         BaseMod.addCard(new Shadow_Shell_Luminous());
+        BaseMod.addCard(new Switch_Luminous());
         BaseMod.addCard(new Sympathy_Luminous());
         BaseMod.addCard(new Tune_Luminous());
 
         //Power
+        BaseMod.addCard(new Abyss_Heart_Luminous());
         BaseMod.addCard(new Dark_Crescendo_Luminous());
         BaseMod.addCard(new Darkness_Mastery_Luminous());
         BaseMod.addCard(new Dusk_Guard_Luminous());
         BaseMod.addCard(new Ethereal_Form_Luminous());
+        BaseMod.addCard(new Lania_Blessing_Luminous());
         BaseMod.addCard(new Light_Wash_Luminous());
         BaseMod.addCard(new Lunar_Tide_Luminous());
         BaseMod.addCard(new Mana_Overload_Luminous());
@@ -486,20 +481,6 @@ public class DefaultMod implements
         
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
-        // This is so that they are all "seen" in the library, for people who like to look at the card list
-        // before playing your mod.
-        //UnlockTracker.unlockCard(OrbSkill.ID);
-        UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
-        //UnlockTracker.unlockCard(DefaultCommonAttack.ID);
-        //UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
-        //UnlockTracker.unlockCard(DefaultCommonSkill.ID);
-        //UnlockTracker.unlockCard(DefaultCommonPower.ID);
-        //UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
-        //UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
-        //UnlockTracker.unlockCard(DefaultUncommonPower.ID);
-        //UnlockTracker.unlockCard(DefaultRareAttack.ID);
-        //UnlockTracker.unlockCard(DefaultRareSkill.ID);
-        //UnlockTracker.unlockCard(DefaultRarePower.ID);
 
         //Attack_Unlock
         UnlockTracker.unlockCard(Balance_Aether_Conduit.ID);
@@ -509,10 +490,13 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Dark_Abyssal_Drop.ID);
         UnlockTracker.unlockCard(Dark_Apocalypse.ID);
         UnlockTracker.unlockCard(Dark_Arcane_Pitch.ID);
+        UnlockTracker.unlockCard(Dark_Dim_Erosion.ID);
+        UnlockTracker.unlockCard(Dark_Extract.ID);
         UnlockTracker.unlockCard(Dark_Moonlight_Spear.ID);
         UnlockTracker.unlockCard(Dark_Morning_Star.ID);
         UnlockTracker.unlockCard(Dark_Pressure_Void.ID);
         UnlockTracker.unlockCard(Dark_Raid.ID);
+        UnlockTracker.unlockCard(Light_Disperse.ID);
         UnlockTracker.unlockCard(Light_Flash_Shower.ID);
         UnlockTracker.unlockCard(Light_Gather.ID);
         UnlockTracker.unlockCard(Light_Glare.ID);
@@ -520,14 +504,17 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Light_Reflection.ID);
         UnlockTracker.unlockCard(Light_Spectral_Light.ID);
         UnlockTracker.unlockCard(Light_Sylvan_Lance.ID);
+        UnlockTracker.unlockCard(Light_Track.ID);
 
         //Skill_Unlock
         UnlockTracker.addCard(Accumulation_Luminous.ID);
         UnlockTracker.unlockCard(Arcane_Rage_Luminous.ID);
         UnlockTracker.unlockCard(Armageddon_Luminous.ID);
         UnlockTracker.unlockCard(Blinding_Pillar_Luminous.ID);
+        UnlockTracker.unlockCard(Chaos_Field_Luminous.ID);
         UnlockTracker.unlockCard(Chase_Spell_Luminous.ID);
         UnlockTracker.unlockCard(Concentrate_Luminous.ID);
+        UnlockTracker.unlockCard(Darks_Surge_Luminous.ID);
         UnlockTracker.unlockCard(Date_of_Light_Luminous.ID);
         UnlockTracker.unlockCard(Defend_Luminous.ID);
         UnlockTracker.unlockCard(Equalize_Luminous.ID);
@@ -541,20 +528,24 @@ public class DefaultMod implements
             UnlockTracker.unlockCard(Freud_Wisdom5_Luminous.ID);
             UnlockTracker.unlockCard(Freud_Wisdom6_Luminous.ID);
         UnlockTracker.unlockCard(Hero_Will_Luminous.ID);
+        UnlockTracker.unlockCard(Lights_Protection_Luminous.ID);
         UnlockTracker.unlockCard(Magic_Guard_Luminous.ID);
         UnlockTracker.unlockCard(Mana_Well_Luminous.ID);
         UnlockTracker.unlockCard(Mirror_Force_Luminous.ID);
         UnlockTracker.unlockCard(Phantom_Treasure_Luminous.ID);
         UnlockTracker.unlockCard(Reverse_Spell_Luminous.ID);
         UnlockTracker.unlockCard(Shadow_Shell_Luminous.ID);
+        UnlockTracker.unlockCard(Switch_Luminous.ID);
         UnlockTracker.unlockCard(Sympathy_Luminous.ID);
         UnlockTracker.unlockCard(Tune_Luminous.ID);
 
         //Power_Unlock
+        UnlockTracker.unlockCard(Abyss_Heart_Luminous.ID);
         UnlockTracker.unlockCard(Dark_Crescendo_Luminous.ID);
         UnlockTracker.unlockCard(Darkness_Mastery_Luminous.ID);
         UnlockTracker.unlockCard(Dusk_Guard_Luminous.ID);
         UnlockTracker.unlockCard(Ethereal_Form_Luminous.ID);
+        UnlockTracker.unlockCard(Lania_Blessing_Luminous.ID);
         UnlockTracker.unlockCard(Light_Wash_Luminous.ID);
         UnlockTracker.unlockCard(Lunar_Tide_Luminous.ID);
         UnlockTracker.unlockCard(Mana_Overload_Luminous.ID);
@@ -577,34 +568,44 @@ public class DefaultMod implements
     public void receiveEditStrings() {
         logger.info("You seeing this?");
         logger.info("Beginning to edit strings for mod with ID: " + getModID());
-        
+
+        String language = null;
+        switch (Settings.language) {
+            case ZHS:
+                language = "zhs";
+                break;
+            default:
+                language = "eng";
+                break;
+        }
+
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Card-Strings.json");
+                getModID() + "Resources/localization/"+ language + "/DefaultMod-Card-Strings.json");
         
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Power-Strings.json");
+                getModID() + "Resources/localization/"+ language + "/DefaultMod-Power-Strings.json");
         
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Relic-Strings.json");
+                getModID() + "Resources/localization/"+ language + "/DefaultMod-Relic-Strings.json");
         
         // Event Strings
         BaseMod.loadCustomStringsFile(EventStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Event-Strings.json");
+                getModID() + "Resources/localization/"+ language + "/DefaultMod-Event-Strings.json");
         
         // PotionStrings
         BaseMod.loadCustomStringsFile(PotionStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Potion-Strings.json");
+                getModID() + "Resources/localization/"+ language + "/DefaultMod-Potion-Strings.json");
         
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Character-Strings.json");
+                getModID() + "Resources/localization/"+ language + "/DefaultMod-Character-Strings.json");
         
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Orb-Strings.json");
+                getModID() + "Resources/localization/"+ language + "/DefaultMod-Orb-Strings.json");
         
         logger.info("Done edittting strings");
     }
@@ -622,9 +623,19 @@ public class DefaultMod implements
         // If you're using multiword keywords, the first element in your NAMES array in your keywords-strings.json has to be the same as the PROPER_NAME.
         // That is, in Card-Strings.json you would have #yA_Long_Keyword (#y highlights the keyword in yellow).
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
-        
+
+        String language = null;
+        switch (Settings.language) {
+            case ZHS:
+                language = "zhs";
+                break;
+            default:
+                language = "eng";
+                break;
+        }
+
         Gson gson = new Gson();
-        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/DefaultMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String json = Gdx.files.internal(getModID() + "Resources/localization/"+ language +"/DefaultMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
         
         if (keywords != null) {

@@ -24,7 +24,7 @@ public class Light_Ray_of_Redemption extends AbstractMagicCard {
 
     // TEXT DECLARATION
     public static final String ID = DefaultMod.makeID(Light_Ray_of_Redemption.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Ray_of_Redemption.png");
 
 
     // /TEXT DECLARATION/
@@ -49,6 +49,7 @@ public class Light_Ray_of_Redemption extends AbstractMagicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         exhaust = true;
+        tags.add(CardTags.HEALING);
     }
 
 

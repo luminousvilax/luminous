@@ -1,6 +1,7 @@
 package Luminous.cards.Skill;
 
 import Luminous.DefaultMod;
+import Luminous.actions.FreudAddCardAction;
 import Luminous.cards.AbstractMagicCard;
 import Luminous.characters.luminous;
 import basemod.helpers.BaseModCardTags;
@@ -19,7 +20,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Freud_Wisdom2_Luminous extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Freud_Wisdom2_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Freud2.png");
 
     // STAT DECLARATION
 
@@ -47,11 +48,7 @@ public class Freud_Wisdom2_Luminous extends AbstractMagicCard {
                 p, p, new PlatedArmorPower(p, magicNumber), magicNumber
         ));
 
-        Freud_Wisdom3_Luminous freud_wisdom3 = new Freud_Wisdom3_Luminous();
-        if (upgraded) {
-            freud_wisdom3.upgrade();
-        }
-        AbstractDungeon.player.drawPile.addToTop(freud_wisdom3);
+        AbstractDungeon.actionManager.addToBottom(new FreudAddCardAction(new Freud_Wisdom3_Luminous(), this.timesUpgraded, 3));
     }
 
 

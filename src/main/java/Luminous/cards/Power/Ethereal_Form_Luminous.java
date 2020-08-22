@@ -17,7 +17,7 @@ public class Ethereal_Form_Luminous extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Ethereal_Form_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("Ethereal_Form.png");
 
 
     // STAT DECLARATION

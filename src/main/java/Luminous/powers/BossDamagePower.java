@@ -47,15 +47,19 @@ public class BossDamagePower extends AbstractPower implements CloneablePowerInte
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         if (card.type == AbstractCard.CardType.ATTACK) {
-            if (card.target == AbstractCard.CardTarget.ENEMY) {
+            if (card.target == AbstractCard.CardTarget.ENEMY && (m.type == AbstractMonster.EnemyType.ELITE || m.type == AbstractMonster.EnemyType.BOSS)) {
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(
                         m, new DamageInfo(owner, this.amount, card.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY
                 ));
             }
             else {
-                AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
-                        AbstractDungeon.player, this.amount, card.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY
-                ));
+                for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                    if (monster.type == AbstractMonster.EnemyType.ELITE || monster.type == AbstractMonster.EnemyType.BOSS) {
+                        AbstractDungeon.actionManager.addToBottom(new DamageAction(
+                                monster, new DamageInfo(owner, this.amount, card.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY
+                        ));
+                    }
+                }
             }
         }
     }

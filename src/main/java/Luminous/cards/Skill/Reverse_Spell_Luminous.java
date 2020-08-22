@@ -17,7 +17,7 @@ public class Reverse_Spell_Luminous extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Reverse_Spell_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Reverse_Spell.png");
 
     // /TEXT DECLARATION/
 

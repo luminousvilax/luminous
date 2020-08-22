@@ -23,7 +23,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Balance_Baptism extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Balance_Baptism.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Baptism.png");
 
     // STAT DECLARATION
 

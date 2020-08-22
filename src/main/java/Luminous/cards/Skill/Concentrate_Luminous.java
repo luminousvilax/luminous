@@ -15,7 +15,7 @@ public class Concentrate_Luminous extends AbstractDynamicCard {
 
 
     public static final String ID = DefaultMod.makeID(Concentrate_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Concentrate.png");
 
 
     private static final CardRarity RARITY = CardRarity.COMMON;

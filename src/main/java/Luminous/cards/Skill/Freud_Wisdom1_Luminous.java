@@ -1,13 +1,14 @@
 package Luminous.cards.Skill;
 
 import Luminous.DefaultMod;
+import Luminous.actions.FreudAddCardAction;
 import Luminous.cards.AbstractMagicCard;
 import Luminous.characters.luminous;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import Luminous.actions.reduceCardCostAction;
 
@@ -17,7 +18,8 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Freud_Wisdom1_Luminous extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Freud_Wisdom1_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Freud1.png");
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     // STAT DECLARATION
 
@@ -38,22 +40,21 @@ public class Freud_Wisdom1_Luminous extends AbstractMagicCard {
         exhaust = true;
         baseMagicNumber = magicNumber = EFFECT_CARDS;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = COST_DOWN;
+        this.timesUpgraded = 0;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardGroup cardGroup = new CardGroup(CardGroup.CardGroupType.HAND);
+        CardGroup hand = AbstractDungeon.player.hand;
+        hand.removeCard(this.cardID);
         for (int i = 0; i < magicNumber; i++) {
-            cardGroup.group.add(AbstractDungeon.player.hand.getRandomCard(false));
+            cardGroup.group.add(hand.getRandomCard(false));
         }
         AbstractDungeon.actionManager.addToBottom(new reduceCardCostAction(cardGroup, defaultSecondMagicNumber));
 
-        Freud_Wisdom2_Luminous freud_wisdom2 = new Freud_Wisdom2_Luminous();
-        if (upgraded){
-            freud_wisdom2.upgrade();
-        }
-        AbstractDungeon.player.drawPile.addToTop(freud_wisdom2);
+        AbstractDungeon.actionManager.addToBottom(new FreudAddCardAction(new Freud_Wisdom2_Luminous(), this.timesUpgraded, 2));
     }
 
 
@@ -61,9 +62,16 @@ public class Freud_Wisdom1_Luminous extends AbstractMagicCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
-            upgradeName();
             upgradeMagicNumber(UPGRADE_EFFECT_CARDS);
             initializeDescription();
         }
+        this.timesUpgraded++;
+        this.upgraded = true;
+        this.name = cardStrings.NAME + "+" + this.timesUpgraded;
+        initializeTitle();
+    }
+
+    public boolean canUpgrade() {
+        return true;
     }
 }

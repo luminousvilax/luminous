@@ -3,13 +3,10 @@ package Luminous.cards.Power;
 import Luminous.DefaultMod;
 import Luminous.cards.AbstractDynamicCard;
 import Luminous.characters.luminous;
-import Luminous.powers.CommonPower;
 import Luminous.powers.LightWashPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static Luminous.DefaultMod.makeCardPath;
@@ -20,7 +17,7 @@ public class Light_Wash_Luminous extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Light_Wash_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("Talent_of_Light.png");
 
     // /TEXT DECLARATION/
 

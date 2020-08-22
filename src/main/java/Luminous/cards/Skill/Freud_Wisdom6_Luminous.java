@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.InvinciblePower;
 
 import static Luminous.DefaultMod.makeCardPath;
 
@@ -15,7 +14,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Freud_Wisdom6_Luminous extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Freud_Wisdom6_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Freud6.png");
 
     // STAT DECLARATION
 

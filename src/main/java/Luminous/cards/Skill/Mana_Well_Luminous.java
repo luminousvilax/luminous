@@ -18,7 +18,7 @@ import static Luminous.DefaultMod.makeCardPath;
 public class Mana_Well_Luminous extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Mana_Well_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Mana_Well.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final String upgradeDescription = cardStrings.UPGRADE_DESCRIPTION;

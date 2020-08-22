@@ -18,7 +18,7 @@ public class Armageddon_Luminous extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Armageddon_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Armageddon.png");
 
     // /TEXT DECLARATION/
 

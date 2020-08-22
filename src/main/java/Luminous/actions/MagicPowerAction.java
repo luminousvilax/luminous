@@ -1,6 +1,4 @@
 package Luminous.actions;
-import Luminous.DefaultMod;
-import Luminous.cards.Power.Darkness_Mastery_Luminous;
 import Luminous.powers.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -78,5 +76,35 @@ public class MagicPowerAction {
                 new BalancePower(AbstractDungeon.player, turns), turns));
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                 currentPower));
+    }
+
+    public static void toSwitch(int toBalanceAmount, int turns) {
+        int lightAmount = getPowerAmtAction.main(LightPower.POWER_ID);
+        int darkAmount = getPowerAmtAction.main(DarkPower.POWER_ID);
+        if (lightAmount > toBalanceAmount) {
+            MagicPowerAction.toBalance(LightPower.POWER_ID, turns);
+            MagicPowerSystem.LightThrough = true;
+        }
+        else if (lightAmount > 0) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, LightPower.POWER_ID
+            ));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, new DarkPower(AbstractDungeon.player, lightAmount), lightAmount
+            ));
+        }
+
+        if (darkAmount > toBalanceAmount) {
+            MagicPowerAction.toBalance(DarkPower.POWER_ID, turns);
+            MagicPowerSystem.DarkThrough = true;
+        }
+        else if (darkAmount > 0) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, DarkPower.POWER_ID
+            ));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, new LightPower(AbstractDungeon.player, darkAmount), darkAmount
+            ));
+        }
     }
 }

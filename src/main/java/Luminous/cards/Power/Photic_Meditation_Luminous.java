@@ -17,7 +17,7 @@ public class Photic_Meditation_Luminous extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Photic_Meditation_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("Photic_Meditation.png");
 
 
     // STAT DECLARATION

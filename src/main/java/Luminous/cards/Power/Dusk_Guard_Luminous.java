@@ -20,7 +20,7 @@ public class Dusk_Guard_Luminous extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Dusk_Guard_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("Dusk_Guard.png");
 
 
     // STAT DECLARATION
