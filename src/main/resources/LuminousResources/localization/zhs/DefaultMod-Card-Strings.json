@@ -1,0 +1,283 @@
+{
+  "Luminous:Balance_Aether_Conduit":{
+    "NAME": "共鸣",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每1点 [#ff9900]魔力[] 造成额外的 !M! 点伤害。 NL Luminous:平衡",
+    "EXTENDED_DESCRIPTION": [" NL ( !Luminous:SecondMagic! 点额外伤害。)"]
+  },
+  "Luminous:Balance_Baptism":{
+    "NAME": "光暗洗礼",
+    "DESCRIPTION": "消耗所有真理之剑。 NL 每消耗一把，造成 !D! 点伤害。 NL 消耗 NL Luminous:平衡",
+    "EXTENDED_DESCRIPTION": ["没有真理之剑!"]
+  },
+  "Luminous:Balance_Death_Scythe":{
+    "NAME": "死亡之刃",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害2次。 NL 目标每失去 !Luminous:SecondMagic! 点HP, 追加 !M! 点伤害(最多7次)。 Luminous:平衡"
+  },
+  "Luminous:Balance_Ender":{
+    "NAME": "绝对死亡",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对精英或首领造成150%的伤害。 NL 获得 !M! 层真理之剑。 NL Luminous:平衡"
+  },
+  "Luminous:Dark_Abyssal_Drop": {
+    "NAME": "黑暗降临",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL [#e60000]暗[]"
+  },
+  "Luminous:Dark_Apocalypse": {
+    "NAME": "启示录",
+    "DESCRIPTION": "对所有敌人 NL 造成 !D! 点伤害 !Luminous:SecondMagic! 次。 NL [#e60000]暗[]",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !Luminous:SecondMagic! 次, NL 附加 !M! 层 Luminous:重压 。 NL [#e60000]暗[]"
+  },
+  "Luminous:Dark_Arcane_Pitch": {
+    "NAME": "黑暗巫术",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 回合内可获得额外的 !M! 层 [#ff9900]魔力[] 。 NL [#e60000]暗[]"
+  },
+  "Luminous:Dark_Dim_Erosion": {
+    "NAME": "暗蚀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL [#e60000]暗[]"
+  },
+  "Luminous:Dark_Extract": {
+    "NAME": "提取",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标带有重压, 移除它并获得 [E] NL [#e60000]暗[]",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标带有重压, 移除它并获得 [E] [E] NL [#e60000]暗[]"
+  },
+  "Luminous:Dark_Moonlight_Spear": {
+    "NAME": "暗锁突刺",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标带有重压, 给予 !M! 层 易伤 , 获得 [E] 。 NL [#e60000]暗[]"
+  },
+  "Luminous:Dark_Morning_Star": {
+    "NAME": "晨星陨落",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标死亡, 获得 [E] 并抽 !M! 张牌。 NL [#e60000]暗[]"
+  },
+  "Luminous:Dark_Pressure_Void": {
+    "NAME": "重压",
+    "DESCRIPTION": "给予 !M! 层 NL Luminous:重压 。 NL [#e60000]暗[]"
+  },
+  "Luminous:Dark_Raid": {
+    "NAME": "突袭",
+    "DESCRIPTION": "造成 !D! 点伤害, NL 若攻击时目标满血, 给予 !M! 层 虚弱 。 NL [#e60000]暗[]"
+  },
+  "Luminous:Light_Disperse": {
+    "NAME": "驱散",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。 NL [#03e3fc]光[]"
+  },
+  "Luminous:Light_Flash_Shower": {
+    "NAME": "耀眼光球",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL [#03e3fc]光[]"
+  },
+  "Luminous:Light_Gather": {
+    "NAME": "聚集",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得伤害一半数量的 格挡 。 NL [#03e3fc]光[]"
+  },
+  "Luminous:Light_Glare": {
+    "NAME": "强光",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若攻击时目标满血, 再造成一次伤害。 NL [#03e3fc]光[]"
+  },
+  "Luminous:Light_Ray_of_Redemption": {
+    "NAME": "闪耀救赎",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得未被格挡伤害50%的生命回复。 NL 消耗 。 NL [#03e3fc]光[]"
+  },
+  "Luminous:Light_Reflection": {
+    "NAME": "闪电反射",
+    "DESCRIPTION": "对目标造成 !D! 点伤害, NL 再造成2次 !Luminous:SecondMagic! 点随机目标伤害。 NL (每次伤害降低 !M! 点) NL [#03e3fc]光[]",
+    "UPGRADE_DESCRIPTION": "对目标造成 !D! 点伤害, NL 再造成2次 !Luminous:SecondMagic! 点随机目标伤害。 NL [#03e3fc]光[]"
+  },
+  "Luminous:Light_Spectral_Light": {
+    "NAME": "超级光谱",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害X次。 NL [#03e3fc]光[]",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害X+1次。 NL [#03e3fc]光[]"
+  },
+  "Luminous:Light_Sylvan_Lance": {
+    "NAME": "仙女发射",
+    "DESCRIPTION": "每有一张手牌, NL 对一个随机敌人造成 !D! 点伤害。 NL [#03e3fc]光[]"
+  },
+  "Luminous:Light_Track": {
+    "NAME": "追踪",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 标记目标, 回合内对其造成伤害时, 获得 !M! 点 格挡 。 NL [#03e3fc]光[]"
+  },
+
+  "Luminous:Accumulation_Luminous": {
+    "NAME": "蓄势",
+    "DESCRIPTION": "结束回合, 下回合额外获得当前剩余的 [E] 。",
+    "UPGRADE_DESCRIPTION": "结束回合, 下回合额外获得当前剩余+1的 [E] 。",
+    "EXTENDED_DESCRIPTION": ["没有剩余的能量"]
+  },
+  "Luminous:Arcane_Rage_Luminous": {
+    "NAME": "奥术之怒",
+    "DESCRIPTION": "获得2层 易伤 。 NL 获得 [E] [E] 。 抽 !M! 张牌。 NL 消耗 。"
+  },
+  "Luminous:Armageddon_Luminous": {
+    "NAME": "末日审判",
+    "DESCRIPTION": "眩晕所有敌人 !M! 回合。 NL 消耗 。"
+  },
+  "Luminous:Blinding_Pillar_Luminous": {
+    "NAME": "闪爆光柱",
+    "DESCRIPTION": "如果目标的意图是攻击, 给予 !M! 层 虚弱 。",
+    "EXTENDED_DESCRIPTION": ["不是攻击!"]
+  },
+  "Luminous:Chase_Spell_Luminous": {
+    "NAME": "追击咒文",
+    "DESCRIPTION": "打出弃牌堆顶端的一张牌, 并 消耗 它。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "打出弃牌堆顶端的一张牌, 并 消耗 它。",
+    "EXTENDED_DESCRIPTION": ["弃牌堆没有牌"]
+  },
+  "Luminous:Chaos_Field_Luminous":{
+    "NAME": "混沌结界",
+    "DESCRIPTION": "随机加入 !M! 张 [#ff9900]平衡[] 卡到手牌中, 此回合费用为0。 NL 消耗 。"
+  },
+  "Luminous:Concentrate_Luminous":{
+    "NAME": "集中",
+    "DESCRIPTION": "获得 !B! 点 格挡 , NL 抽 !M! 张牌。"
+  },
+  "Luminous:Darks_Surge_Luminous":{
+    "NAME": "暗之涌动",
+    "DESCRIPTION": "此回合内, 攻击时获得 !M! 点 力量 。 NL 回合结束时失去获得的力量。"
+  },
+  "Luminous:Date_of_Light_Luminous": {
+    "NAME": "真理之门",
+    "DESCRIPTION": "在接下来的 !M! 回合, 回合结束时对所有敌人造成 !Luminous:SecondMagic! 点伤害。(只能在平衡时打出) NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 在接下来的 !M! 回合, 回合结束时对所有敌人造成 !Luminous:SecondMagic! 点伤害。(只能在平衡时打出) NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["未处于平衡状态!"]
+  },
+  "Luminous:Defend_Luminous":{
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "Luminous:Equalize_Luminous":{
+    "NAME": "记录",
+    "DESCRIPTION": "立即进入平衡。 NL 消耗 。"
+  },
+  "Luminous:Erosion_Luminous": {
+    "NAME": "侵蚀",
+    "DESCRIPTION": " 虚无 。 NL 失去所有 格挡 , 每失去 !Luminous:SecondMagic! 点格挡, 获得 !M! 点 力量 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "失去所有 格挡 , 每失去 !Luminous:SecondMagic! 点格挡, 获得 !M! 点 力量 。 NL 消耗 。"
+  },
+  "Luminous:Fast_Spell_Luminous":{
+    "NAME": "速攻魔法",
+    "DESCRIPTION": " 虚无 。 NL 立即打出抽牌堆顶端的一张牌。",
+    "UPGRADE_DESCRIPTION": "立即打出抽牌堆顶端的一张牌。"
+  },
+  "Luminous:Flash_Blink_Luminous": {
+    "NAME": "光束瞬移",
+    "DESCRIPTION": "获得 !M! 层 无实体 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 获得 !M! 层 无实体 。 NL 消耗 。"
+  },
+  "Luminous:Freud_Wisdom1_Luminous":{
+    "NAME": "弗里德的智慧",
+    "DESCRIPTION": "为 !M! 张手牌减少 !Luminous:SecondMagic! 点费用。 NL 将 [#ff9900]弗里德的加护[] NL 放到抽牌堆顶端。"
+  },
+  "Luminous:Freud_Wisdom2_Luminous":{
+    "NAME": "弗里德的加护",
+    "DESCRIPTION": "获得 !M! 层 多层护甲 。 NL 将 [#ff9900]弗里德的治愈[] NL 放到抽牌堆顶端。"
+  },
+  "Luminous:Freud_Wisdom3_Luminous":{
+    "NAME": "弗里德的治愈",
+    "DESCRIPTION": "获得 !M! 层 再生 。 NL 将 [#ff9900]弗里德的增益[] NL 放到抽牌堆顶端。"
+  },
+  "Luminous:Freud_Wisdom4_Luminous":{
+    "NAME": "弗里德的增益",
+    "DESCRIPTION": "获得 !M! 点 力量 , !M! 点 敏捷 。 NL 将 [#ff9900]弗里德的坚毅[] NL 放到抽牌堆顶端。"
+  },
+  "Luminous:Freud_Wisdom5_Luminous":{
+    "NAME": "弗里德的坚毅",
+    "DESCRIPTION": "对精英和首领造成 !M! 点额外伤害。 NL 将 [#ff9900]弗里德的祝福[] NL 放到抽牌堆顶端。"
+  },
+  "Luminous:Freud_Wisdom6_Luminous":{
+    "NAME": "弗里德的祝福",
+    "DESCRIPTION": "获得 !M! 层无敌。"
+  },
+  "Luminous:Lights_Protection_Luminous":{
+    "NAME": "光之护佑",
+    "DESCRIPTION": "此回合内, 使用技能卡时获得 !M! 点 格挡 。"
+  },
+  "Luminous:Hero_Will_Luminous": {
+    "NAME": "勇士的意志",
+    "DESCRIPTION": "移除所有负面状态。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "移除所有负面状态。 NL 回复 !M! 点生命。 NL 消耗 。"
+  },
+  "Luminous:Magic_Guard_Luminous": {
+    "NAME": "魔法盾",
+    "DESCRIPTION": "获得 !M! 点 格挡 X次。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 格挡 X+1次。"
+  },
+  "Luminous:Mana_Well_Luminous":{
+    "NAME": "魔力延伸",
+    "DESCRIPTION": "获得 [E] [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] 。 NL 消耗 。"
+  },
+  "Luminous:Mirror_Force_Luminous":{
+    "NAME": "反射镜力",
+    "DESCRIPTION": "此回合, 将第一次受到的攻击伤害反弹给所有敌人。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "此回合, 将第一次受到的攻击伤害反弹给所有敌人。"
+  },
+  "Luminous:Phantom_Treasure_Luminous":{
+    "NAME": "幻影的宝札",
+    "DESCRIPTION": "复制手中的一张攻击卡 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "复制手中的一张攻击卡 NL 可 [#00e600]0费[] 打出一次。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["选择一张卡牌。", "没有可复制的卡牌!"]
+  },
+  "Luminous:Reverse_Spell_Luminous":{
+    "NAME": "反转奥术",
+    "DESCRIPTION": "交换抽牌堆与弃牌堆顶端的一张牌。",
+    "EXTENDED_DESCRIPTION": ["抽牌堆或弃牌堆中没有卡牌"]
+  },
+  "Luminous:Shadow_Shell_Luminous":{
+    "NAME": "抵抗之魔法盾",
+    "DESCRIPTION": "获得 !M! 层 人工制品 。 NL 消耗 。"
+  },
+  "Luminous:Switch_Luminous":{
+    "NAME": "切换",
+    "DESCRIPTION": "在光暗之间切换。 NL 如果 [#ff9900]魔力[] 高于 !M! 点, 进入一回合的 Luminous:平衡 。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "在光暗之间切换。 NL 如果 [#ff9900]魔力[] 高于 !M! 点, 进入一回合的 Luminous:平衡 "
+  },
+  "Luminous:Sympathy_Luminous":{
+    "NAME": "和鸣",
+    "DESCRIPTION": "在以下 !M! 回合内, NL 获得 [#ffad33]魔力[] 时不受卡牌光暗属性限制。"
+  },
+  "Luminous:Tune_Luminous":{
+    "NAME": "调谐",
+    "DESCRIPTION": "抽 !M! 张牌, NL 弃 !Luminous:SecondMagic! 张牌。"
+  },
+
+  "Luminous:Abyss_Heart_Luminous": {
+    "NAME": "深渊之心",
+    "DESCRIPTION": "回合开始时, 如果带有负面状态, 获得 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 回合开始时, 如果带有负面状态, 获得 !M! 点 力量 。"
+  },
+  "Luminous:Dark_Crescendo_Luminous": {
+    "NAME": "黑暗高潮",
+    "DESCRIPTION": "获得 !Luminous:SecondMagic! 次 [#ffad33]魔力[] 时, 获得 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 获得 !Luminous:SecondMagic! 次 [#ffad33]魔力[] 时, 获得 !M! 点 力量 。"
+  },
+  "Luminous:Darkness_Mastery_Luminous": {
+    "NAME": "暗光精通",
+    "DESCRIPTION": "平衡的时间增加 !M! 回合",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 平衡的时间增加 !M! 回合"
+  },
+  "Luminous:Dusk_Guard_Luminous":{
+    "NAME": "光影防护",
+    "DESCRIPTION": "回合结束时, 获得与 [#ffad33]魔力[] 数量相同的 格挡 。"
+  },
+  "Luminous:Ethereal_Form_Luminous":{
+    "NAME": "次元神隐",
+    "DESCRIPTION": "每过 !Luminous:SecondMagic! 回合, NL 获得 !M! 层 无实体 。"
+  },
+  "Luminous:Lania_Blessing_Luminous":{
+    "NAME": "拉尼娅的祝福",
+    "DESCRIPTION": "回合开始时, 随机获得5点回复, 10点 格挡 , 2点 力量 之一。"
+  },
+  "Luminous:Light_Wash_Luminous":{
+    "NAME": "穿透",
+    "DESCRIPTION": "攻击时, 如果目标的格挡低于 !Luminous:SecondMagic! 点, 则无视格挡。"
+  },
+  "Luminous:Lunar_Tide_Luminous":{
+    "NAME": "黑暗潮汐",
+    "DESCRIPTION": "回合开始时,如果你的生命高于最大值的90%, NL 获得额外的 !M! 点 [E] 。"
+  },
+  "Luminous:Mana_Overload_Luminous":{
+    "NAME": "超压魔力",
+    "DESCRIPTION": "攻击时,花费额外的1点能量造成更多伤害。 NL (基础: !M! )"
+  },
+  "Luminous:Photic_Meditation_Luminous":{
+    "NAME": "光照精神力",
+    "DESCRIPTION": "获得 !M! 点 力量 。"
+  }
+}

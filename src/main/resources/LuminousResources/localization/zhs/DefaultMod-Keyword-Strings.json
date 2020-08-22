@@ -1,0 +1,63 @@
+[
+  {
+    "PROPER_NAME": "平衡",
+    "NAMES": [
+      "平衡"
+    ],
+    "DESCRIPTION": "这张卡牌可以触发 #b太阳火焰 以及 #r日蚀 。"
+  },
+  {
+    "PROPER_NAME": "魔力",
+    "NAMES": [
+      "魔力"
+    ],
+    "DESCRIPTION": "包括 #b太阳火焰 和 #r日蚀, 平衡时按10魔力计算."
+  },
+  {
+    "PROPER_NAME": "穿透",
+    "NAMES": [
+      "穿透"
+    ],
+    "DESCRIPTION": "攻击时无视一定数量的护甲"
+  },
+  {
+    "PROPER_NAME": "Dusk Guard",
+    "NAMES": [
+      "Dusk Guard",
+      "dusk_guard",
+      "duskguard"
+    ],
+    "DESCRIPTION": "At end of your turn, Gain Block according to amount of MagicPower."
+  },
+  {
+    "PROPER_NAME": "Dark Crescendo",
+    "NAMES": [
+      "Dark Crescendo",
+      "dark_crescendo"
+    ],
+    "DESCRIPTION": "When you Gain MagicPower for some times, Gain additional Strength."
+  },
+  {
+    "PROPER_NAME": "重压",
+    "NAMES": [
+      "重压"
+    ],
+    "DESCRIPTION": "该回合每当你打出攻击卡时，受到与层数相同的伤害."
+  },
+  {
+    "PROPER_NAME": "黑暗祝福",
+    "NAMES": [
+      "黑暗祝福",
+      "祝福"
+    ],
+    "DESCRIPTION": "这个祝福会给予你 #y力量 , 受伤时 #y消耗 一层祝福, 减少50%的伤害."
+  },
+  {
+    "PROPER_NAME": "Ethereal Form",
+    "NAMES": [
+      "Ethereal Form",
+      "ethereal_form"
+    ],
+    "DESCRIPTION": "Every 3 Turns, Apply 1 Intangible."
+  }
+]

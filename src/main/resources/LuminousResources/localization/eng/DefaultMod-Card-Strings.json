@@ -1,56 +1,4 @@
 {
-  "Luminous:DefaultCommonAttack": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! Damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
-  },
-  "Luminous:DefaultCommonSkill": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block. NL Luminous:Multiword_Keyword."
-  },
-  "Luminous:DefaultCommonPower": {
-    "NAME": "Hold Place",
-    "DESCRIPTION": "Gain !M! Luminous:Keyword.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Luminous:Keywords."
-  },
-  "Luminous:DefaultUncommonAttack": {
-    "NAME": "Big slap",
-    "DESCRIPTION": "Deal !D! Damage."
-  },
-  "Luminous:DefaultUncommonSkill": {
-    "NAME": "A Better Defend",
-    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
-  },
-  "Luminous:DefaultUncommonPower": {
-    "NAME": "Weirdness",
-    "DESCRIPTION": "Gain X Luminous:Keywords.",
-    "UPGRADE_DESCRIPTION": "Gain X +1 Luminous:Keywords."
-  },
-  "Luminous:DefaultRareAttack": {
-    "NAME": "TOUCH",
-    "DESCRIPTION": "Deal !D! Damage."
-  },
-  "Luminous:DefaultRareSkill": {
-    "NAME": "For Each Loop x2",
-    "DESCRIPTION": "Apply !M! vulnerable to all enemies, 2 times.",
-    "UPGRADE_DESCRIPTION": "Apply !M! vulnerable to all enemies, 3 times."
-  },
-  "Luminous:DefaultRarePower": {
-    "NAME": "In-Progress Form",
-    "DESCRIPTION": "At the start of your turn, play a TOUCH."
-  },
-  "Luminous:DefaultAttackWithVariable": {
-    "NAME": "Special Strike",
-    "DESCRIPTION": "Deal !D! Damage [E] times. NL (Deal !Luminous:ENERGY_DAMAGE! damage total.)"
-  },
-  "Luminous:DefaultSecondMagicNumberSkill": {
-    "NAME": "Cool 2 Number Card",
-    "DESCRIPTION": "Apply !M! vulnerable and !Luminous:SecondMagic! poison to an enemy."
-  },
-  "Luminous:OrbSkill": {
-    "NAME": "Get Orb",
-    "DESCRIPTION": "Channel 1 Default Orb."
-  },
-
   "Luminous:Balance_Aether_Conduit":{
     "NAME": "Aether Conduit",
     "DESCRIPTION": "Deal !D! Damage. Deal an additional !M! damage for each MagicPower. NL Luminous:Balance",
@@ -63,11 +11,11 @@
   },
   "Luminous:Balance_Death_Scythe":{
     "NAME": "Death Scythe",
-    "DESCRIPTION": "Deal !D! Damage 2 times to all enemy. Plus !M! damage per !Luminous:SecondMagic! HP lose of each enemy. Luminous:Balance"
+    "DESCRIPTION": "Deal !D! Damage 2 times to all enemy. Plus !M! damage per !Luminous:SecondMagic! HP lose of each enemy(Max 7 times). Luminous:Balance"
   },
   "Luminous:Balance_Ender":{
     "NAME": "Ender",
-    "DESCRIPTION": "Deal !D! Damage. Double Damage for Elites and Boss. NL Apply !M! Ender Power. NL Luminous:Balance"
+    "DESCRIPTION": "Deal !D! Damage. 150% Damage for Elites and Boss. NL Apply !M! Ender Power. NL Luminous:Balance"
   },
   "Luminous:Dark_Abyssal_Drop": {
     "NAME": "Abyssal Drop",
@@ -82,9 +30,18 @@
     "NAME": "Arcane Pitch",
     "DESCRIPTION": "Deal !D! Damage. Gain additional !M! [#ff9900]MagicPower[] this turn. NL [#e60000]Dark[]"
   },
+  "Luminous:Dark_Dim_Erosion": {
+    "NAME": "Dim Erosion",
+    "DESCRIPTION": "Deal !D! Damage. NL Apply !M! Vulnerable. NL [#e60000]Dark[]"
+  },
+  "Luminous:Dark_Extract": {
+    "NAME": "Extract",
+    "DESCRIPTION": "Deal !D! Damage. NL If target has Pressure_Void, Remove it and Gain [E] NL [#e60000]Dark[]",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL If target has Pressure_Void, Remove it and Gain [E] [E] NL [#e60000]Dark[]"
+  },
   "Luminous:Dark_Moonlight_Spear": {
     "NAME": "Moonlight Spear",
-    "DESCRIPTION": "Deal !D! Damage. Apply !M! Vulnerable. If target has Pressure_Void, Apply !M! Weak. NL [#e60000]Dark[]"
+    "DESCRIPTION": "Deal !D! Damage. NL If target has Pressure_Void, Apply !M! Vulnerable, Gain [E] . NL [#e60000]Dark[]"
   },
   "Luminous:Dark_Morning_Star": {
     "NAME": "Morning Star",
@@ -97,6 +54,10 @@
   "Luminous:Dark_Raid": {
     "NAME": "Raid",
     "DESCRIPTION": "Deal !D! damage, if target's HP is full, Apply !M! Weak. NL [#e60000]Dark[]"
+  },
+  "Luminous:Light_Disperse": {
+    "NAME": "Disperse",
+    "DESCRIPTION": "Deal !D! Damage. NL Apply !M! Weak. NL [#03e3fc]Light[]"
   },
   "Luminous:Light_Flash_Shower": {
     "NAME": "Flash Shower",
@@ -128,6 +89,10 @@
     "NAME": "Sylvan Lance",
     "DESCRIPTION": "Deal !D! Damage to random enemy for every card in your hand. NL [#03e3fc]Light[]"
   },
+  "Luminous:Light_Track": {
+    "NAME": "Track",
+    "DESCRIPTION": "Deal !D! Damage. NL Mark the target, When you attack it this turn, Gain !M! Block. NL [#03e3fc]Light[]"
+  },
 
   "Luminous:Accumulation_Luminous": {
     "NAME": "Accumulation",
@@ -154,9 +119,17 @@
     "UPGRADE_DESCRIPTION": "Play out the top card of Discard Pile, then Exhaust it.",
     "EXTENDED_DESCRIPTION": ["No card in Discard Pile!"]
   },
+  "Luminous:Chaos_Field_Luminous":{
+    "NAME": "Chaos Field",
+    "DESCRIPTION": "Add !M! random Balance card to hand, cost 0 for this turn. NL Exhaust."
+  },
   "Luminous:Concentrate_Luminous":{
     "NAME": "Concentrate",
     "DESCRIPTION": "Gain !B! Block, NL Draw !M! card."
+  },
+  "Luminous:Darks_Surge_Luminous":{
+    "NAME": "Dark Surge",
+    "DESCRIPTION": "In this turn, Gain !M! Strength while using Attack card. NL Lose that many Strength at end of turn."
   },
   "Luminous:Date_of_Light_Luminous": {
     "NAME": "Date of Light",
@@ -178,7 +151,7 @@
     "UPGRADE_DESCRIPTION": "Lose All Block, Gain !M! Strength per !Luminous:SecondMagic! Block Lose. NL Exhaust."
   },
   "Luminous:Fast_Spell_Luminous":{
-    "NAME": "Fast Spell",
+    "NAME": "Fast Magic",
     "DESCRIPTION": "Ethereal. NL Play out the top card of draw pile immediately.",
     "UPGRADE_DESCRIPTION": "Play out the top card of draw pile immediately."
   },
@@ -211,6 +184,10 @@
     "NAME": "Freud's Blessing",
     "DESCRIPTION": "Receive !M! Invincible."
   },
+  "Luminous:Lights_Protection_Luminous":{
+    "NAME": "Light Protection",
+    "DESCRIPTION": "In this turn, Gain !M! Block while using Skill card."
+  },
   "Luminous:Hero_Will_Luminous": {
     "NAME": "Hero's Will",
     "DESCRIPTION": "Remove all Debuff. NL Exhaust.",
@@ -238,7 +215,7 @@
     "EXTENDED_DESCRIPTION": ["Choose an Attack card.", "No card to copy!"]
   },
   "Luminous:Reverse_Spell_Luminous":{
-    "NAME": "Reverse Spell",
+    "NAME": "Reverse Arcane",
     "DESCRIPTION": "Exchange the top card of Draw Pile and Discard Pile.",
     "EXTENDED_DESCRIPTION": ["No card in Draw Pile or Discard Pile!"]
   },
@@ -246,15 +223,25 @@
     "NAME": "Shadow Shell",
     "DESCRIPTION": "Gain !M! Artifact. Exhaust."
   },
+  "Luminous:Switch_Luminous":{
+    "NAME": "Switch",
+    "DESCRIPTION": "Switch between Light and Dark. NL If [#ff9900]MagicPower[] > !M!, Gain 1 turn Luminous:Balance. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Switch between Light and Dark. NL If [#ffad33]MagicPower[] > !M!, Gain 1 turn Luminous:Balance."
+  },
   "Luminous:Sympathy_Luminous":{
     "NAME": "Sympathy",
-    "DESCRIPTION": "In !M! turn(s), NL Gain [#ff9900]MagicPower[] no matter attack type."
+    "DESCRIPTION": "In !M! turn(s), NL Gain [#ffad33]MagicPower[] no matter attack type."
   },
   "Luminous:Tune_Luminous":{
     "NAME": "Tune",
     "DESCRIPTION": "Draw !M! cards, NL Discard !Luminous:SecondMagic! cards."
   },
 
+  "Luminous:Abyss_Heart_Luminous": {
+    "NAME": "Abyss Heart",
+    "DESCRIPTION": "At start of turn, if you have debuff, Gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At start of turn, if you have debuff, Gain !M! Strength."
+  },
   "Luminous:Dark_Crescendo_Luminous": {
     "NAME": "Dark Crescendo",
     "DESCRIPTION": "When you Gain MagicPower for !Luminous:SecondMagic! times, Gain !M! Strength.",
@@ -272,6 +259,10 @@
   "Luminous:Ethereal_Form_Luminous":{
     "NAME": "Ethereal Form",
     "DESCRIPTION": "Every !Luminous:SecondMagic! Turns, Gain !M! Intangible."
+  },
+  "Luminous:Lania_Blessing_Luminous":{
+    "NAME": "Lania Blessing",
+    "DESCRIPTION": "At start of turn, Randomly Gain 5 Heal, 10 Block, or 2 Strength."
   },
   "Luminous:Light_Wash_Luminous":{
     "NAME": "Talent of Light",

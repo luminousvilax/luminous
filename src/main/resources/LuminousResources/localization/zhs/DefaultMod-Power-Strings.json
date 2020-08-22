@@ -1,0 +1,114 @@
+{
+"Luminous:CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+},
+"Luminous:RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+        "Luminous:LightPower": {
+                "NAME": "太阳火焰",
+                "DESCRIPTIONS": ["#b光 属性攻击有 #b50% 的几率造成 #b50% 的额外伤害, 还需要 ", " 层 ", " 层", " 到达 #y平衡"]
+        },
+        "Luminous:DarkPower": {
+                "NAME": "日蚀",
+                "DESCRIPTIONS": ["#r暗 属性攻击有 #b50% 的几率在本回合为一张随机手牌减少 #b1 费用, 还需要 ",
+                        " 层 ", " 层", " 到达 #y平衡"]
+        },
+        "Luminous:BalancePower": {
+                "NAME": "平衡",
+                "DESCRIPTIONS": ["#y平衡 属性的攻击 #b100% 触发 #b太阳火焰 与 #r日蚀 , #b光 与 #r暗 属性的攻击同样触发各自的增益, 持续 ",
+                        " 回合。 ", " 回合。"]
+        },
+        "Luminous:MagicPowerSystem": {
+                "NAME": "魔力",
+                "DESCRIPTIONS": ["可通过 #b太阳火焰 或 #r日蚀 增益攻击. 使用 #b光 或 #r暗 属性的攻击卡来获得 #y魔力 。"]
+        },
+
+        "Luminous:AbyssHeartPower": {
+                "NAME": "深渊之心",
+                "DESCRIPTIONS": ["回合开始时, 如果带有 #b负面状态 , 获得 "," #y力量 "]
+        },
+        "Luminous:ArcanePitchPower": {
+                "NAME": "黑暗巫术",
+                "DESCRIPTIONS": ["此回合获得额外的 "," #y魔力 。"]
+        },
+        "Luminous:BlackBlessingPower": {
+                "NAME": "黑暗祝福",
+                "DESCRIPTIONS": ["这个祝福会带给你 #y力量 , 并在你受伤时 #y消耗 掉, 减少 #b50% 的伤害",
+                        " NL 1层祝福: ", " NL 2层祝福: ", " NL 3层祝福: ", " #y力量 "]
+        },
+        "Luminous:BossDamagePower": {
+                "NAME": " Boss 伤害",
+                "DESCRIPTIONS": ["对精英和 Boss 造成 "," 点 #y额外伤害 "]
+        },
+        "Luminous:DarkCrescendoPower": {
+                "NAME": "黑暗高潮",
+                "DESCRIPTIONS": ["每当你获得 "," 点 #y魔力 时, 获得 ", " 点 #y力量 . NL 进入 #y平衡 会给你额外的1点 #y力量 。"]
+        },
+        "Luminous:DarknessMasteryPower": {
+                "NAME": "暗光精通",
+                "DESCRIPTIONS": ["平衡的时间增加  "," 回合。"]
+        },
+        "Luminous:DarkSurgePower": {
+                "NAME": "暗之涌动",
+                "DESCRIPTIONS": ["回合内, 使用 #b攻击 卡时，获得暂时的 "," 点 #y力量 。"]
+        },
+        "Luminous:DateOfLightPower": {
+                "NAME": "真理之门",
+                "DESCRIPTIONS": ["回合结束时, 对所有敌人造成 "," 伤害. NL 持续 ", " 回合."]
+        },
+        "Luminous:DuskGuardPower": {
+                "NAME": "光影防护",
+                "DESCRIPTIONS": ["回合结束时, 获得 ", " #y格挡 。(与 #b魔力 数量相同)"]
+        },
+        "Luminous:EnderPower": {
+                "NAME": "真理之剑",
+                "DESCRIPTIONS": ["一旦拥有 ", " 把真理之剑, 将一张0费的真理洗礼添加到手牌中."]
+        },
+        "Luminous:EtherealFormPower": {
+                "NAME": "次元神隐",
+                "DESCRIPTIONS": ["每 ", " 回合, 获得1层 #y无实体 。"]
+        },
+        "Luminous:FreudInvinciblePower": {
+                "NAME": "弗里德的祝福",
+                "DESCRIPTIONS": ["不受任何伤害, 持续 ", " 回合。"]
+        },
+        "Luminous:LaniaBlessingPower": {
+                "NAME": "拉尼娅的祝福",
+                "DESCRIPTIONS": ["回合开始时, 随机获得 ", " #y治疗 , ", " #y格挡 , 或 ", " #y力量 。"]
+        },
+        "Luminous:LightProtectionPower": {
+                "NAME": "光之护佑",
+                "DESCRIPTIONS": ["在这一回合, 使用 #b技能 卡时 获得 ", " 点 #y格挡 ."]
+        },
+        "Luminous:LightWashPower": {
+                "NAME": "穿透",
+                "DESCRIPTIONS": ["如果目标的格挡低于 ", " , 则无视它."]
+        },
+        "Luminous:LunarTidePower": {
+                "NAME": "黑暗潮汐",
+                "DESCRIPTIONS": ["如果这回合你的HP高于 ", " , 获得 ", " #y能量 。"]
+        },
+        "Luminous:ManaOverloadPower": {
+                "NAME": "超压魔力",
+                "DESCRIPTIONS": ["攻击时, 使用额外的1费造成 ", " 点额外伤害."]
+        },
+        "Luminous:MirrorForcePower": {
+                "NAME": "反射镜力",
+                "DESCRIPTIONS": ["在接下来的 ", " 次被攻击时, #y反射 伤害给所有敌人。"]
+        },
+        "Luminous:PressureVoidPower": {
+                "NAME": "重压",
+                "DESCRIPTIONS": ["每当你打出 #b攻击 卡时, 这个敌人会受到 ", " 点伤害."]
+        },
+        "Luminous:SympathyPower": {
+                "NAME": "和鸣",
+                "DESCRIPTIONS": ["在 ", " 回合内, 获得 #y魔力 时不受攻击属性限制。"]
+        },
+        "Luminous:TrackPower": {
+                "NAME": "标记",
+                "DESCRIPTIONS": ["当你攻击这个敌人时, 获得 ", " 点 #y格挡 。"]
+        }
+}

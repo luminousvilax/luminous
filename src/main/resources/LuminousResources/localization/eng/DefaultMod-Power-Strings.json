@@ -26,6 +26,10 @@
                 "DESCRIPTIONS": ["You can have buffed attack by #bSunfire or #rEclipse. Use #bLight or #rDark card to gain magic power."]
         },
 
+        "Luminous:AbyssHeartPower": {
+                "NAME": "Abyss Heart",
+                "DESCRIPTIONS": ["At start of turn, if you have debuff, Gain "," #yStrength"]
+        },
         "Luminous:ArcanePitchPower": {
                 "NAME": "Arcane Pitch",
                 "DESCRIPTIONS": ["Gain additional "," #yMagicPower this turn."]
@@ -47,6 +51,10 @@
                 "NAME": "Darkness Mastery",
                 "DESCRIPTIONS": ["Gain additional  "," turn(s) Balance power."]
         },
+        "Luminous:DarkSurgePower": {
+                "NAME": "Dark Surge",
+                "DESCRIPTIONS": ["This turn, every time played #yAttack card  "," Gain #yStrength temporarily."]
+        },
         "Luminous:DateOfLightPower": {
                 "NAME": "Date of Light",
                 "DESCRIPTIONS": ["At end of your turn, Deal "," Damage to All enemies. NL Last For ", " turns."]
@@ -67,9 +75,17 @@
                 "NAME": "Freud's Wisdom",
                 "DESCRIPTIONS": ["Be invincible for ", " Turn(s)"]
         },
+        "Luminous:LaniaBlessingPower": {
+                "NAME": "Lania Blessing",
+                "DESCRIPTIONS": ["At start of turn, Randomly gain ", " #yHeal, ", " #yBlock, or ", " #yStrength."]
+        },
+        "Luminous:LightProtectionPower": {
+                "NAME": "Light Protection",
+                "DESCRIPTIONS": ["In this turn, Gain ", " #yBlock while using #ySkill card."]
+        },
         "Luminous:LightWashPower": {
                 "NAME": "Light Wash",
-                "DESCRIPTIONS": ["If monster's Block lower than ", " Ignore it when attack"]
+                "DESCRIPTIONS": ["If monster's Block lower than ", " Ignore it when attack."]
         },
         "Luminous:LunarTidePower": {
                 "NAME": "Lunar Tide",
@@ -88,7 +104,11 @@
                 "DESCRIPTIONS": ["Every time you played a attack card this turn, receive ", " additional damage."]
         },
         "Luminous:SympathyPower": {
-                "NAME": "Pressure Void",
+                "NAME": "Sympathy",
                 "DESCRIPTIONS": ["In ", " turn(s), Gain #yMagicPower no matter attack type."]
+        },
+        "Luminous:TrackPower": {
+                "NAME": "Track",
+                "DESCRIPTIONS": ["When you #yAttack the monster this turn, Gain ", " #yBlock."]
         }
 }
