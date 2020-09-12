@@ -4,6 +4,7 @@ import Luminous.DefaultMod;
 import Luminous.actions.FreudAddCardAction;
 import Luminous.cards.AbstractMagicCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -39,8 +40,11 @@ public class Freud_Wisdom3_Luminous extends AbstractMagicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                p, p, new RegenPower(p, magicNumber), magicNumber
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+//                p, p, new RegenPower(p, magicNumber), magicNumber
+//        ));
+        AbstractDungeon.actionManager.addToBottom(new HealAction(
+                p, p, magicNumber
         ));
 
         AbstractDungeon.actionManager.addToBottom(new FreudAddCardAction(new Freud_Wisdom4_Luminous(), this.timesUpgraded, 4));

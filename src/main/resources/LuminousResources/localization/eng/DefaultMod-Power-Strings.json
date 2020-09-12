@@ -108,7 +108,7 @@
                 "DESCRIPTIONS": ["In ", " turn(s), Gain #yMagicPower no matter attack type."]
         },
         "Luminous:TrackPower": {
-                "NAME": "Track",
-                "DESCRIPTIONS": ["When you #yAttack the monster this turn, Gain ", " #yBlock."]
+                "NAME": "Mark",
+                "DESCRIPTIONS": ["When you #yAttack the monster this turn, Gain ", " #yBlock, if you deal more than 10 accumulative damage, then keep the power."]
         }
 }

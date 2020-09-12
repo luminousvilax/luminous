@@ -4,6 +4,7 @@ import Luminous.DefaultMod;
 import Luminous.actions.FreudAddCardAction;
 import Luminous.cards.AbstractMagicCard;
 import Luminous.characters.luminous;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -47,10 +48,18 @@ public class Freud_Wisdom1_Luminous extends AbstractMagicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardGroup cardGroup = new CardGroup(CardGroup.CardGroupType.HAND);
-        CardGroup hand = AbstractDungeon.player.hand;
+        CardGroup hand = new CardGroup(CardGroup.CardGroupType.HAND);
+        for (AbstractCard card: AbstractDungeon.player.hand.group) {
+            hand.addToBottom(card);
+        }
         hand.removeCard(this.cardID);
-        for (int i = 0; i < magicNumber; i++) {
-            cardGroup.group.add(hand.getRandomCard(false));
+        for (int i = 0; cardGroup.size() < magicNumber; i++) {
+            AbstractCard randomCard = hand.getRandomCard(false);
+            //DefaultMod.logger.info("=========弗里德1随机到了手牌 "+ randomCard.name + " ===========");
+            if (randomCard.costForTurn > 0) {
+                hand.removeCard(randomCard);
+                cardGroup.group.add(randomCard);
+            }
         }
         AbstractDungeon.actionManager.addToBottom(new reduceCardCostAction(cardGroup, defaultSecondMagicNumber));
 

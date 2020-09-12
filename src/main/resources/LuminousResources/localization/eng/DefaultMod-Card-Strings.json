@@ -11,7 +11,7 @@
   },
   "Luminous:Balance_Death_Scythe":{
     "NAME": "Death Scythe",
-    "DESCRIPTION": "Deal !D! Damage 2 times to all enemy. Plus !M! damage per !Luminous:SecondMagic! HP lose of each enemy(Max 7 times). Luminous:Balance"
+    "DESCRIPTION": "Deal !D! Damage 2 times to all enemy. Plus !M! damage per !Luminous:SecondMagic! damaged. Luminous:Balance"
   },
   "Luminous:Balance_Ender":{
     "NAME": "Ender",
@@ -69,7 +69,7 @@
   },
   "Luminous:Light_Glare": {
     "NAME": "Glare",
-    "DESCRIPTION": "Deal !D! Damage. If target's HP is full, Deal damage once more. NL [#03e3fc]Light[]"
+    "DESCRIPTION": "Deal !D! Damage. If target's HP is full, Apply 2 [#03e3fc]Mark[] . NL [#03e3fc]Light[]"
   },
   "Luminous:Light_Ray_of_Redemption": {
     "NAME": "Ray of Redemption",
@@ -91,7 +91,7 @@
   },
   "Luminous:Light_Track": {
     "NAME": "Track",
-    "DESCRIPTION": "Deal !D! Damage. NL Mark the target, When you attack it this turn, Gain !M! Block. NL [#03e3fc]Light[]"
+    "DESCRIPTION": "Deal !D! Damage. NL Mark the target, When you attack it, Gain !M! Block. NL [#03e3fc]Light[]"
   },
 
   "Luminous:Accumulation_Luminous": {
@@ -170,7 +170,7 @@
   },
   "Luminous:Freud_Wisdom3_Luminous":{
     "NAME": "Freud's Healing",
-    "DESCRIPTION": "Receive !M! Regen. NL Add Freud's Increment to top of draw pile."
+    "DESCRIPTION": "Heal !M! HP. NL Add Freud's Increment to top of draw pile."
   },
   "Luminous:Freud_Wisdom4_Luminous":{
     "NAME": "Freud's Increment",
@@ -225,8 +225,7 @@
   },
   "Luminous:Switch_Luminous":{
     "NAME": "Switch",
-    "DESCRIPTION": "Switch between Light and Dark. NL If [#ff9900]MagicPower[] > !M!, Gain 1 turn Luminous:Balance. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Switch between Light and Dark. NL If [#ffad33]MagicPower[] > !M!, Gain 1 turn Luminous:Balance."
+    "DESCRIPTION": "Switch between Light and Dark. Gain !B! Block. NL If [#ffad33]MagicPower[] > !M!, Gain 1 turn Luminous:Balance."
   },
   "Luminous:Sympathy_Luminous":{
     "NAME": "Sympathy",

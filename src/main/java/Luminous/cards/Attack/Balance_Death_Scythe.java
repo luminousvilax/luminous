@@ -53,8 +53,9 @@ public class Balance_Death_Scythe extends AbstractMagicCard {
                 p, DamageInfo.createDamageMatrix(this.damage, true), this.damageTypeForTurn,
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         for (AbstractMonster monster: AbstractDungeon.getMonsters().monsters){
-            int count = (monster.maxHealth - monster.currentHealth) / defaultSecondMagicNumber;
-            for (int i=0; i < count && i < LIMIT; i++){
+            //int count = (monster.maxHealth - monster.currentHealth) / defaultSecondMagicNumber;
+            int count = (this.damage * 2) / defaultSecondMagicNumber;
+            for (int i=0; i < count; i++){
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(
                         monster,new DamageInfo(p, magicNumber, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.FIRE));

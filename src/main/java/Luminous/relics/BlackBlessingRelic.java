@@ -18,7 +18,7 @@ public class BlackBlessingRelic extends CustomRelic {
 
     public static final String ID = DefaultMod.makeID(BlackBlessingRelic.class.getSimpleName());
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BlessingRelic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
 
     private static boolean isAvailable;

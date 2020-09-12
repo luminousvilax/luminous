@@ -30,7 +30,7 @@ public class Freud_Wisdom2_Luminous extends AbstractMagicCard {
     public static final CardColor COLOR = CardColor.COLORLESS;
 
     private static final int COST = 1;
-    private static final int BLOCK_RETURN = 6;
+    private static final int BLOCK_RETURN = 4;
     private static final int UPGRADE_BLOCK_RETURN = 2;
 
 

@@ -55,7 +55,7 @@ public class Flash_Blink_Luminous extends AbstractMagicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.retain = true;
+            this.selfRetain = true;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

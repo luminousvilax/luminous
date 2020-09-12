@@ -38,7 +38,7 @@ public class Balance_Ender extends AbstractMagicCard {
 
     private static final int COST = 2;
 
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 14;
     private static final int UPGRADED_PLUS_DAMAGE = 4;
 
     public static final int BapNumber = 7;

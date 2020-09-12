@@ -3,6 +3,7 @@ import Luminous.powers.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -35,7 +36,12 @@ public class MagicPowerAction {
             randomCard.setCostForTurn(randomCard.costForTurn - 1);
         }
         else {
-            randomCard =  AbstractDungeon.player.hand.getRandomCard( true);
+            int i = 0;
+            CardGroup hand = AbstractDungeon.player.hand;
+            randomCard =  hand.getRandomCard( false);
+            while (randomCard.costForTurn == 0 && i < hand.size()) {
+                randomCard = hand.getRandomCard( false);
+            }
             randomCard.setCostForTurn(randomCard.costForTurn - 1);
         }
     }
@@ -44,7 +50,8 @@ public class MagicPowerAction {
         if (card.type == AbstractCard.CardType.ATTACK &&
                 (juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light) ||
                 juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance))){
-            return !card.purgeOnUse;
+            //return !card.purgeOnUse;
+            return true;
         }
         else {
             return false;
@@ -55,11 +62,12 @@ public class MagicPowerAction {
         if (card.type == AbstractCard.CardType.ATTACK && (
                 juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Dark) ||
                         juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Balance) )){
-            if (card.freeToPlayOnce && !card.purgeOnUse){
-                return true;
-            }
-            else
-                return !(card.isCostModifiedForTurn && card.costForTurn < card.cost);
+//            if (card.freeToPlayOnce && !card.purgeOnUse){
+//                return true;
+//            }
+//            else
+//                return !(card.isCostModifiedForTurn && card.costForTurn < card.cost);
+            return true;
         }
         else {
             return false;
@@ -81,7 +89,7 @@ public class MagicPowerAction {
     public static void toSwitch(int toBalanceAmount, int turns) {
         int lightAmount = getPowerAmtAction.main(LightPower.POWER_ID);
         int darkAmount = getPowerAmtAction.main(DarkPower.POWER_ID);
-        if (lightAmount > toBalanceAmount) {
+        if (lightAmount >= toBalanceAmount) {
             MagicPowerAction.toBalance(LightPower.POWER_ID, turns);
             MagicPowerSystem.LightThrough = true;
         }
@@ -94,7 +102,7 @@ public class MagicPowerAction {
             ));
         }
 
-        if (darkAmount > toBalanceAmount) {
+        if (darkAmount >= toBalanceAmount) {
             MagicPowerAction.toBalance(DarkPower.POWER_ID, turns);
             MagicPowerSystem.DarkThrough = true;
         }

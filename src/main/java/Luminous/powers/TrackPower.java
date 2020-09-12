@@ -22,6 +22,9 @@ public class TrackPower extends AbstractPower implements CloneablePowerInterface
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    private static final int DMG_LIMIT = 10;
+    private int dmgOfTurn;
+
     public TrackPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
@@ -43,12 +46,17 @@ public class TrackPower extends AbstractPower implements CloneablePowerInterface
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(
                 this.source, this.source, this.amount
         ));
+        this.dmgOfTurn += damageAmount;
         return damageAmount;
     }
 
     @Override
     public void atEndOfRound(){
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, TrackPower.POWER_ID));
+        DefaultMod.logger.info("=======标记的目标受到伤害为 "+this.dmgOfTurn+" ==========");
+        if (this.dmgOfTurn < DMG_LIMIT) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, TrackPower.POWER_ID));
+        }
+        this.dmgOfTurn = 0;
         updateDescription();
     }
 

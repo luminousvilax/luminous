@@ -16,7 +16,7 @@ public class getRandomMagicCardAction {
 
         while(var4.hasNext()) {
             AbstractCard c = (AbstractCard)var4.next();
-            if (juageMagicCardAction.isMagicCard(c,Magic)) {
+            if (juageMagicCardAction.isMagicCard(c,Magic) && c.costForTurn > 0) {
                 tmp.add(c);
             }
         }

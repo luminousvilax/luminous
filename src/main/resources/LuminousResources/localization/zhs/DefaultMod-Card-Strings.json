@@ -11,7 +11,7 @@
   },
   "Luminous:Balance_Death_Scythe":{
     "NAME": "死亡之刃",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害2次。 NL 目标每失去 !Luminous:SecondMagic! 点HP, 追加 !M! 点伤害(最多7次)。 Luminous:平衡"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害2次。 NL 每造成 !Luminous:SecondMagic! 点伤害, 追加 !M! 点伤害。 Luminous:平衡"
   },
   "Luminous:Balance_Ender":{
     "NAME": "绝对死亡",
@@ -69,7 +69,7 @@
   },
   "Luminous:Light_Glare": {
     "NAME": "强光",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若攻击时目标满血, 再造成一次伤害。 NL [#03e3fc]光[]"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若攻击时目标满血, 给予 !M! 层 [#03e3fc]标记[] 。 NL [#03e3fc]光[]"
   },
   "Luminous:Light_Ray_of_Redemption": {
     "NAME": "闪耀救赎",
@@ -91,7 +91,7 @@
   },
   "Luminous:Light_Track": {
     "NAME": "追踪",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 标记目标, 回合内对其造成伤害时, 获得 !M! 点 格挡 。 NL [#03e3fc]光[]"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 标记目标, 对其造成伤害时, 获得 !M! 点 格挡 。 NL [#03e3fc]光[]"
   },
 
   "Luminous:Accumulation_Luminous": {
@@ -170,7 +170,7 @@
   },
   "Luminous:Freud_Wisdom3_Luminous":{
     "NAME": "弗里德的治愈",
-    "DESCRIPTION": "获得 !M! 层 再生 。 NL 将 [#ff9900]弗里德的增益[] NL 放到抽牌堆顶端。"
+    "DESCRIPTION": "获得 !M! 点回复 。 NL 将 [#ff9900]弗里德的增益[] NL 放到抽牌堆顶端。"
   },
   "Luminous:Freud_Wisdom4_Luminous":{
     "NAME": "弗里德的增益",
@@ -225,8 +225,7 @@
   },
   "Luminous:Switch_Luminous":{
     "NAME": "切换",
-    "DESCRIPTION": "在光暗之间切换。 NL 如果 [#ff9900]魔力[] 高于 !M! 点, 进入一回合的 Luminous:平衡 。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "在光暗之间切换。 NL 如果 [#ff9900]魔力[] 高于 !M! 点, 进入一回合的 Luminous:平衡 "
+    "DESCRIPTION": "在光暗之间切换。获得 !B! 点 格挡 。 NL 如果 [#ff9900]魔力[] 高于 !M! 点, 进入一回合的 Luminous:平衡 "
   },
   "Luminous:Sympathy_Luminous":{
     "NAME": "和鸣",
@@ -269,7 +268,7 @@
     "DESCRIPTION": "攻击时, 如果目标的格挡低于 !Luminous:SecondMagic! 点, 则无视格挡。"
   },
   "Luminous:Lunar_Tide_Luminous":{
-    "NAME": "黑暗潮汐",
+    "NAME": "月光潮汐",
     "DESCRIPTION": "回合开始时,如果你的生命高于最大值的90%, NL 获得额外的 !M! 点 [E] 。"
   },
   "Luminous:Mana_Overload_Luminous":{

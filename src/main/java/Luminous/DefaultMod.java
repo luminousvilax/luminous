@@ -363,7 +363,7 @@ public class DefaultMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.LuminousClass".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, luminous.Enums.LuminousClass);
+        //BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, luminous.Enums.LuminousClass);
         
         logger.info("Done editing potions");
     }
@@ -380,14 +380,7 @@ public class DefaultMod implements
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new MirrorRelic(), luminous.Enums.COLOR_luminous);
         BaseMod.addRelicToCustomPool(new BlackBlessingRelic(), luminous.Enums.COLOR_luminous);
-        //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), luminous.Enums.COLOR_luminous);
-        //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), luminous.Enums.COLOR_luminous);ous);
-        
-        // This adds a relic to the Shared pool. Every character can find this relic.
-        //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
-        
-        // Mark relics as seen (the others are all starters so they're marked as seen in the character file
-        //UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
+
         logger.info("Done adding relics!");
     }
     

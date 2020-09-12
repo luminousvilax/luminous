@@ -17,8 +17,11 @@ public class reduceCardCostAction extends AbstractGameAction {
     }
 
     public void update() {
-        for (AbstractCard c : cardGroup.group)
-            c.setCostForTurn(c.costForTurn-this.amount);
+        for (AbstractCard c : cardGroup.group){
+            c.modifyCostForCombat(-this.amount);
+        }
+            //c.setCostForTurn(c.costForTurn-this.amount);
+
         this.isDone = true;
     }
 

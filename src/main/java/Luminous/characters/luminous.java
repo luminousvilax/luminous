@@ -159,36 +159,38 @@ public class luminous extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        //retVal.add(Light_Flash_Shower.ID);
         retVal.add(Light_Flash_Shower.ID);
         retVal.add(Light_Flash_Shower.ID);
-        //retVal.add(Dark_Abyssal_Drop.ID);
-        //retVal.add(Dark_Abyssal_Drop.ID);
-        //retVal.add(Dark_Abyssal_Drop.ID);
-        //retVal.add(Defend_Luminous.ID);
-        //retVal.add(Defend_Luminous.ID);
-        //retVal.add(Defend_Luminous.ID);
-        //retVal.add(Defend_Luminous.ID);
-        //retVal.add(Switch_Luminous.ID);
-        retVal.add(Concentrate_Luminous.ID);
-        retVal.add(Mana_Well_Luminous.ID);
-        retVal.add(Light_Reflection.ID);
-        //retVal.add(Dark_Morning_Star.ID);
-//        retVal.add(Fast_Spell_Luminous.ID);
-        //retVal.add(Freud_Wisdom1_Luminous.ID);
-//        retVal.add(Light_Gather.ID);
-        //retVal.add(Chaos_Field_Luminous.ID);
-        //retVal.add(Darks_Surge_Luminous.ID);
-        retVal.add(Lights_Protection_Luminous.ID);
+        retVal.add(Light_Flash_Shower.ID);
+        retVal.add(Dark_Abyssal_Drop.ID);
+        retVal.add(Dark_Abyssal_Drop.ID);
+        retVal.add(Dark_Abyssal_Drop.ID);
+        retVal.add(Defend_Luminous.ID);
+        retVal.add(Defend_Luminous.ID);
+        retVal.add(Defend_Luminous.ID);
+        retVal.add(Defend_Luminous.ID);
+        retVal.add(Switch_Luminous.ID);
 
-        retVal.add(Light_Disperse.ID);
+        //retVal.add(Balance_Death_Scythe.ID);
+//        retVal.add(Freud_Wisdom1_Luminous.ID);
+//        retVal.add(Light_Track.ID);
+//        retVal.add(Light_Glare.ID);
+
+        //Light deck
+//        retVal.add(Lights_Protection_Luminous.ID);
+//        retVal.add(Light_Reflection.ID);
+//        retVal.add(Light_Track.ID);
+//        retVal.add(Light_Gather.ID);
+//        retVal.add(Light_Ray_of_Redemption.ID);
+//        retVal.add(Light_Disperse.ID);
+
+        //Dark deck
         //retVal.add(Dark_Dim_Erosion.ID);
-        retVal.add(Light_Track.ID);
-        retVal.add(Light_Gather.ID);
-        retVal.add(Light_Ray_of_Redemption.ID);
         //retVal.add(Dark_Extract.ID);
+        //retVal.add(Darks_Surge_Luminous.ID);
         //retVal.add(Dark_Moonlight_Spear.ID);
         //retVal.add(Dark_Pressure_Void.ID);
+        //retVal.add(Dark_Morning_Star.ID);
 
 
         return retVal;
@@ -199,12 +201,10 @@ public class luminous extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
 
         retVal.add(MirrorRelic.ID);
-        retVal.add(BlackBlessingRelic.ID);
+        //retVal.add(BlackBlessingRelic.ID);
 
         UnlockTracker.markRelicAsSeen(MirrorRelic.ID);
         UnlockTracker.markRelicAsSeen(BlackBlessingRelic.ID);
-        //UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
 
         return retVal;
     }

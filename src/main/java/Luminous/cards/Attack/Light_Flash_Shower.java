@@ -33,7 +33,7 @@ public class Light_Flash_Shower extends AbstractMagicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 2;
 
     // /STAT DECLARATION/
