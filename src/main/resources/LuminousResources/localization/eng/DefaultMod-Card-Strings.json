@@ -1,21 +1,21 @@
 {
   "Luminous:Balance_Aether_Conduit":{
     "NAME": "Aether Conduit",
-    "DESCRIPTION": "Deal !D! Damage. Deal an additional !M! damage for each MagicPower. NL Luminous:Balance",
+    "DESCRIPTION": "Deal !D! Damage. Deal an additional !M! damage for each luminous:MagicPower. NL luminous:Balance",
     "EXTENDED_DESCRIPTION": [" NL ( !Luminous:SecondMagic! additional damage.)"]
   },
   "Luminous:Balance_Baptism":{
     "NAME": "Baptism",
-    "DESCRIPTION": "Exhaust all Ender power. Deal !D! damage for every exhausted power. Exhaust NL Luminous:Balance",
+    "DESCRIPTION": "Exhaust all Ender power. Deal !D! damage for every exhausted power. Exhaust. NL luminous:Balance",
     "EXTENDED_DESCRIPTION": ["Don't have Ender Power!"]
   },
   "Luminous:Balance_Death_Scythe":{
     "NAME": "Death Scythe",
-    "DESCRIPTION": "Deal !D! Damage 2 times to all enemy. Plus !M! damage per !Luminous:SecondMagic! damaged. Luminous:Balance"
+    "DESCRIPTION": "Deal !D! Damage 2 times to all enemy. Plus !M! damage per !Luminous:SecondMagic! damaged. NL luminous:Balance"
   },
   "Luminous:Balance_Ender":{
     "NAME": "Ender",
-    "DESCRIPTION": "Deal !D! Damage. 150% Damage for Elites and Boss. NL Apply !M! Ender Power. NL Luminous:Balance"
+    "DESCRIPTION": "Deal !D! Damage. 150% Damage for Elites and Boss. NL Apply !M! Ender Power. NL luminous:Balance"
   },
   "Luminous:Dark_Abyssal_Drop": {
     "NAME": "Abyssal Drop",
@@ -24,11 +24,11 @@
   "Luminous:Dark_Apocalypse": {
     "NAME": "Apocalypse",
     "DESCRIPTION": "Deal !D! Damage to All enemies !Luminous:SecondMagic! times. NL [#e60000]Dark[]",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage to All enemies !Luminous:SecondMagic! times, NL plus !M! Luminous:Pressure_Void. NL [#e60000]Dark[]"
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage to All enemies !Luminous:SecondMagic! times, NL plus !M! luminous:Pressure_Void. NL [#e60000]Dark[]"
   },
   "Luminous:Dark_Arcane_Pitch": {
     "NAME": "Arcane Pitch",
-    "DESCRIPTION": "Deal !D! Damage. Gain additional !M! [#ff9900]MagicPower[] this turn. NL [#e60000]Dark[]"
+    "DESCRIPTION": "Deal !D! Damage. Gain additional !M! luminous:MagicPower this turn. NL [#e60000]Dark[]"
   },
   "Luminous:Dark_Dim_Erosion": {
     "NAME": "Dim Erosion",
@@ -36,12 +36,12 @@
   },
   "Luminous:Dark_Extract": {
     "NAME": "Extract",
-    "DESCRIPTION": "Deal !D! Damage. NL If target has Pressure_Void, Remove it and Gain [E] NL [#e60000]Dark[]",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL If target has Pressure_Void, Remove it and Gain [E] [E] NL [#e60000]Dark[]"
+    "DESCRIPTION": "Deal !D! Damage. NL If target has luminous:Pressure_Void, Remove it and Gain [E] NL [#e60000]Dark[]",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL If target has luminousPressure_Void, Remove it and Gain [E] [E] NL [#e60000]Dark[]"
   },
   "Luminous:Dark_Moonlight_Spear": {
     "NAME": "Moonlight Spear",
-    "DESCRIPTION": "Deal !D! Damage. NL If target has Pressure_Void, Apply !M! Vulnerable, Gain [E] . NL [#e60000]Dark[]"
+    "DESCRIPTION": "Deal !D! Damage. NL If target has luminous:Pressure_Void, Apply !M! Vulnerable, Gain [E] . NL [#e60000]Dark[]"
   },
   "Luminous:Dark_Morning_Star": {
     "NAME": "Morning Star",
@@ -49,7 +49,7 @@
   },
   "Luminous:Dark_Pressure_Void": {
     "NAME": "Pressure Void",
-    "DESCRIPTION": "Apply !M! NL Luminous:Pressure_Void. NL [#e60000]Dark[]"
+    "DESCRIPTION": "Apply !M! NL luminous:Pressure_Void . NL [#e60000]Dark[]"
   },
   "Luminous:Dark_Raid": {
     "NAME": "Raid",
@@ -69,7 +69,7 @@
   },
   "Luminous:Light_Glare": {
     "NAME": "Glare",
-    "DESCRIPTION": "Deal !D! Damage. If target's HP is full, Apply 2 [#03e3fc]Mark[] . NL [#03e3fc]Light[]"
+    "DESCRIPTION": "Deal !D! Damage. If target's HP is full, Apply 2 luminous:Mark . NL [#03e3fc]Light[]"
   },
   "Luminous:Light_Ray_of_Redemption": {
     "NAME": "Ray of Redemption",
@@ -91,13 +91,13 @@
   },
   "Luminous:Light_Track": {
     "NAME": "Track",
-    "DESCRIPTION": "Deal !D! Damage. NL Mark the target, When you attack it, Gain !M! Block. NL [#03e3fc]Light[]"
+    "DESCRIPTION": "Deal !D! Damage. NL Apply !M! luminous:Mark . NL [#03e3fc]Light[]"
   },
 
   "Luminous:Accumulation_Luminous": {
     "NAME": "Accumulation",
     "DESCRIPTION": "End Turn, Gain [E] as remaining next turn.",
-    "UPGRADE_DESCRIPTION": "End Turn, Gain [E] as remaining+1 next turn.",
+    "UPGRADE_DESCRIPTION": "Gain [E] as remaining+1 next turn.",
     "EXTENDED_DESCRIPTION": ["No Energy to retain."]
   },
   "Luminous:Arcane_Rage_Luminous": {
@@ -162,27 +162,27 @@
   },
   "Luminous:Freud_Wisdom1_Luminous":{
     "NAME": "Freud's Wisdom",
-    "DESCRIPTION": "Reduce !Luminous:SecondMagic! cost for !M! random cards this turn. NL Add Freud's Protection to top of draw pile."
+    "DESCRIPTION": "Reduce !Luminous:SecondMagic! cost for !M! random cards this turn. NL Add [#ff9900]Freud's[] [#ff9900]Protection[] to top of draw pile. Exhaust."
   },
   "Luminous:Freud_Wisdom2_Luminous":{
     "NAME": "Freud's Protection",
-    "DESCRIPTION": "Gain !M! Plated Armor. NL Add Freud's Healing to top of draw pile."
+    "DESCRIPTION": "Gain !M! Plated Armor. NL Add [#ff9900]Freud's[] [#ff9900]Healing[] to top of draw pile. Exhaust."
   },
   "Luminous:Freud_Wisdom3_Luminous":{
     "NAME": "Freud's Healing",
-    "DESCRIPTION": "Heal !M! HP. NL Add Freud's Increment to top of draw pile."
+    "DESCRIPTION": "Heal !M! HP. NL Add [#ff9900]Freud's[] [#ff9900]Increment[] to top of draw pile. Exhaust."
   },
   "Luminous:Freud_Wisdom4_Luminous":{
     "NAME": "Freud's Increment",
-    "DESCRIPTION": "Gain !M! Strength, !M! Dexterity. NL Add Freud's Perseverance to top of draw pile."
+    "DESCRIPTION": "Gain !M! Strength, !M! Dexterity. NL Add [#ff9900]Freud's[] [#ff9900]Perseverance[] to top of draw pile. Exhaust."
   },
   "Luminous:Freud_Wisdom5_Luminous":{
     "NAME": "Freud's Perseverance",
-    "DESCRIPTION": "Give additional !M! damage to Boss and Elite. NL Add Freud's Blessing to top of draw pile."
+    "DESCRIPTION": "Give additional !M! damage to Boss and Elite. NL Add [#ff9900]Freud's[] [#ff9900]Blessing[] to top of draw pile. Exhaust."
   },
   "Luminous:Freud_Wisdom6_Luminous":{
     "NAME": "Freud's Blessing",
-    "DESCRIPTION": "Receive !M! Invincible."
+    "DESCRIPTION": "Receive !M! luminous:Invincible . Exhaust."
   },
   "Luminous:Lights_Protection_Luminous":{
     "NAME": "Light Protection",
@@ -195,8 +195,8 @@
   },
   "Luminous:Magic_Guard_Luminous": {
     "NAME": "Magic Guard",
-    "DESCRIPTION": "Gain !M! Block X times.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Block X+1 times."
+    "DESCRIPTION": "Gain !B! Block X times.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X+1 times."
   },
   "Luminous:Mana_Well_Luminous":{
     "NAME": "Mana Well",
@@ -225,15 +225,15 @@
   },
   "Luminous:Switch_Luminous":{
     "NAME": "Switch",
-    "DESCRIPTION": "Switch between Light and Dark. Gain !B! Block. NL If [#ffad33]MagicPower[] > !M!, Gain 1 turn Luminous:Balance."
+    "DESCRIPTION": "Switch between Light and Darks. Gain !B! Block. NL If luminous:MagicPower > !M!, Gain 1 turn luminous:Balance."
   },
   "Luminous:Sympathy_Luminous":{
     "NAME": "Sympathy",
-    "DESCRIPTION": "In !M! turn(s), NL Gain [#ffad33]MagicPower[] no matter attack type."
+    "DESCRIPTION": "In !M! turn(s), NL Gain luminous:MagicPower no matter attack type."
   },
   "Luminous:Tune_Luminous":{
     "NAME": "Tune",
-    "DESCRIPTION": "Draw !M! cards, NL Discard !Luminous:SecondMagic! cards."
+    "DESCRIPTION": "Draw !M! cards, NL Put !Luminous:SecondMagic! card from your hand onto the bottom of your draw pile."
   },
 
   "Luminous:Abyss_Heart_Luminous": {
@@ -243,8 +243,8 @@
   },
   "Luminous:Dark_Crescendo_Luminous": {
     "NAME": "Dark Crescendo",
-    "DESCRIPTION": "When you Gain MagicPower for !Luminous:SecondMagic! times, Gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL When you Gain MagicPower for !Luminous:SecondMagic! times, Gain !M! Strength."
+    "DESCRIPTION": "When you Gain luminous:MagicPower for !Luminous:SecondMagic! times, Gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL When you Gain luminous:MagicPower for !Luminous:SecondMagic! times, Gain !M! Strength."
   },
   "Luminous:Darkness_Mastery_Luminous": {
     "NAME": "Darkness Mastery",
@@ -253,7 +253,7 @@
   },
   "Luminous:Dusk_Guard_Luminous":{
     "NAME": "Dusk Guard",
-    "DESCRIPTION": "At end of your turn, Gain Block according to amount of MagicPower."
+    "DESCRIPTION": "At end of your turn, Gain Block according to amount of luminous:MagicPower ."
   },
   "Luminous:Ethereal_Form_Luminous":{
     "NAME": "Ethereal Form",

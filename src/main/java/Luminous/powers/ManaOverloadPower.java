@@ -51,7 +51,7 @@ public class ManaOverloadPower extends AbstractPower implements CloneablePowerIn
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK) {
             for (int i = 0; i < this.amount; i++) {
-                if (AbstractDungeon.player.energy.energy >= COST && !action.target.isDeadOrEscaped()) {
+                if (AbstractDungeon.player.energy.energy >= COST && action.target != null && !action.target.isDeadOrEscaped()) {
                     AbstractDungeon.player.loseEnergy(COST);
                     int Damage = BaseDamage + getPowerAmtAction.main(StrengthPower.POWER_ID);
                     AbstractDungeon.actionManager.addToBottom(new DamageAction(

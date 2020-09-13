@@ -2,6 +2,7 @@ package Luminous.cards.Skill;
 
 import Luminous.DefaultMod;
 import Luminous.cards.AbstractMagicCard;
+import Luminous.characters.luminous;
 import Luminous.powers.FreudInvinciblePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,10 +19,10 @@ public class Freud_Wisdom6_Luminous extends AbstractMagicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = CardColor.COLORLESS;
+    public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
     private static final int COST = 1;
     private static final int AMOUNT = 2;
@@ -34,6 +35,7 @@ public class Freud_Wisdom6_Luminous extends AbstractMagicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         exhaust = true;
         baseMagicNumber = magicNumber = AMOUNT;
+        setDisplayRarity(CardRarity.RARE);
     }
 
     // Actions the card should do.

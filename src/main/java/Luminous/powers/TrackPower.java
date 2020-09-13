@@ -52,7 +52,7 @@ public class TrackPower extends AbstractPower implements CloneablePowerInterface
 
     @Override
     public void atEndOfRound(){
-        DefaultMod.logger.info("=======标记的目标受到伤害为 "+this.dmgOfTurn+" ==========");
+        //DefaultMod.logger.info("=======标记的目标受到伤害为 "+this.dmgOfTurn+" ==========");
         if (this.dmgOfTurn < DMG_LIMIT) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, TrackPower.POWER_ID));
         }

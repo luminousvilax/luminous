@@ -38,11 +38,13 @@ public class MagicPowerAction {
         else {
             int i = 0;
             CardGroup hand = AbstractDungeon.player.hand;
-            randomCard =  hand.getRandomCard( false);
-            while (randomCard.costForTurn == 0 && i < hand.size()) {
-                randomCard = hand.getRandomCard( false);
+            if (hand.size() > 0) {
+                randomCard =  hand.getRandomCard( false);
+                while (randomCard.costForTurn == 0 && i < hand.size()) {
+                    randomCard = hand.getRandomCard( false);
+                }
+                randomCard.setCostForTurn(randomCard.costForTurn - 1);
             }
-            randomCard.setCostForTurn(randomCard.costForTurn - 1);
         }
     }
 

@@ -3,10 +3,9 @@ package Luminous.cards.Skill;
 import Luminous.DefaultMod;
 import Luminous.cards.AbstractMagicCard;
 import Luminous.characters.luminous;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -44,7 +43,7 @@ public class Tune_Luminous extends AbstractMagicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(magicNumber));
-       AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, defaultSecondMagicNumber, false));
+       AbstractDungeon.actionManager.addToBottom(new PutOnBottomOfDeckAction((AbstractCreature)p, (AbstractCreature)p, 1, false));
     }
 
 

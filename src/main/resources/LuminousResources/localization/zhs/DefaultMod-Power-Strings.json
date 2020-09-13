@@ -69,7 +69,7 @@
         },
         "Luminous:EtherealFormPower": {
                 "NAME": "次元神隐",
-                "DESCRIPTIONS": ["每 ", " 回合, 获得1层 #y无实体 。"]
+                "DESCRIPTIONS": ["每 ", " 回合, 获得 "," 1层 #y无实体 。"]
         },
         "Luminous:FreudInvinciblePower": {
                 "NAME": "弗里德的祝福",

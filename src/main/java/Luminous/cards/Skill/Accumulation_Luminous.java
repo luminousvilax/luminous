@@ -56,12 +56,14 @@ public class Accumulation_Luminous extends AbstractMagicCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                 p, p, new EnergizedPower(p, energy), energy
         ));
-        AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
+        if (!upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
+        }
     }
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        return (EnergyPanel.getCurrentEnergy() != 0);
+        return (EnergyPanel.getCurrentEnergy() != 0) || this.upgraded;
     }
 
 

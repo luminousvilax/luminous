@@ -43,8 +43,7 @@ public class Magic_Guard_Luminous extends AbstractMagicCard {
 
     public Magic_Guard_Luminous() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = AMOUT;
-        baseMagicNumber = this.magicNumber;
+        baseBlock = AMOUT;
     }
 
     // Actions the card should do.
@@ -59,7 +58,7 @@ public class Magic_Guard_Luminous extends AbstractMagicCard {
         }
         for (int i = 0; i < count; i++) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(
-                    p, p, magicNumber
+                    p, p, block
             ));
         }
         p.energy.use(EnergyPanel.totalCount);

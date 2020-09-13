@@ -50,14 +50,16 @@ public class Freud_Wisdom1_Luminous extends AbstractMagicCard {
         CardGroup cardGroup = new CardGroup(CardGroup.CardGroupType.HAND);
         CardGroup hand = new CardGroup(CardGroup.CardGroupType.HAND);
         for (AbstractCard card: AbstractDungeon.player.hand.group) {
-            hand.addToBottom(card);
+            hand.addToTop(card);
         }
         hand.removeCard(this.cardID);
-        for (int i = 0; cardGroup.size() < magicNumber; i++) {
+        int maxHand = hand.size();
+        DefaultMod.logger.info("=========弗里德手牌 "+ hand.group.toString() + " ===========");
+        for (int i = 0; hand.size() > 0 && cardGroup.size() < magicNumber && cardGroup.size() < maxHand; i++) {
             AbstractCard randomCard = hand.getRandomCard(false);
-            //DefaultMod.logger.info("=========弗里德1随机到了手牌 "+ randomCard.name + " ===========");
+            DefaultMod.logger.info("=========弗里德1随机到了手牌 "+ randomCard.name + " ===========");
+            hand.removeCard(randomCard);
             if (randomCard.costForTurn > 0) {
-                hand.removeCard(randomCard);
                 cardGroup.group.add(randomCard);
             }
         }
@@ -81,6 +83,6 @@ public class Freud_Wisdom1_Luminous extends AbstractMagicCard {
     }
 
     public boolean canUpgrade() {
-        return true;
+        return this.timesUpgraded <= 6;
     }
 }

@@ -2,7 +2,9 @@ package Luminous.characters;
 
 import Luminous.cards.Attack.*;
 import Luminous.cards.Power.Abyss_Heart_Luminous;
+import Luminous.cards.Power.Ethereal_Form_Luminous;
 import Luminous.cards.Power.Lania_Blessing_Luminous;
+import Luminous.cards.Power.Mana_Overload_Luminous;
 import Luminous.cards.Skill.*;
 import Luminous.relics.BlackBlessingRelic;
 import Luminous.relics.MirrorRelic;
@@ -171,10 +173,11 @@ public class luminous extends CustomPlayer {
         retVal.add(Defend_Luminous.ID);
         retVal.add(Switch_Luminous.ID);
 
+        //test card
         //retVal.add(Balance_Death_Scythe.ID);
-//        retVal.add(Freud_Wisdom1_Luminous.ID);
-//        retVal.add(Light_Track.ID);
-//        retVal.add(Light_Glare.ID);
+        //retVal.add(Freud_Wisdom1_Luminous.ID);
+        //retVal.add(Mana_Overload_Luminous.ID);
+        //retVal.add(Tune_Luminous.ID);
 
         //Light deck
 //        retVal.add(Lights_Protection_Luminous.ID);

@@ -87,8 +87,8 @@ public class DefaultMod implements
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "Luminous";
-    private static final String AUTHOR = "Vilax"; // And pretty soon - You!
-    private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Default.";
+    private static final String AUTHOR = "Vilax";
+    private static final String DESCRIPTION = "Luminous the hero who comes from MapleStory!";
     
     // =============== INPUT TEXTURE LOCATION =================
     
@@ -599,6 +599,10 @@ public class DefaultMod implements
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
                 getModID() + "Resources/localization/"+ language + "/DefaultMod-Orb-Strings.json");
+
+        // UIStrings
+        BaseMod.loadCustomStringsFile(UIStrings.class,
+                getModID() + "Resources/localization/" + language + "/DefaultMod-UI-Strings.json");
         
         logger.info("Done edittting strings");
     }
@@ -637,6 +641,7 @@ public class DefaultMod implements
                 //  getModID().toLowerCase() makes your keyword mod specific (it won't show up in other cards that use that word)
             }
         }
+
     }
     
     // ================ /LOAD THE KEYWORDS/ ===================    

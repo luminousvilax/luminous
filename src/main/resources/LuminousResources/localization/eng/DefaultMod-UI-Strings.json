@@ -1,0 +1,16 @@
+{
+  "Luminous:Light":
+  {
+    "TEXT": [
+      "[#03e3fc]Light",
+      "This card can trigger #bSunfire, and gain #yMagicPower ."
+    ]
+  },
+  "Luminous:Dark":
+  {
+    "TEXT": [
+      "[#e60000]Dark",
+      "This card can trigger #rEclipse, and gain #yMagicPower ."
+    ]
+  }
+}

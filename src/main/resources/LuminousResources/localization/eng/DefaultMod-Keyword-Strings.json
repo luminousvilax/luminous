@@ -18,8 +18,33 @@
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
   },
   {
+    "PROPER_NAME": "Light",
+    "NAMES": [
+      "Light",
+      "light"
+    ],
+    "DESCRIPTION": "This card can trigger #bSunfire, and gain #yMagicPower ."
+  },
+  {
+    "PROPER_NAME": "Dark",
+    "NAMES": [
+      "Dark",
+      "dark"
+    ],
+    "DESCRIPTION": "This card can trigger #rEclipse, and gain #yMagicPower ."
+  },
+  {
     "PROPER_NAME": "Balance",
     "NAMES": [
+      "Balance",
+      "balance"
+    ],
+    "DESCRIPTION": "This card can trigger Both #bSunfire and #rEclipse."
+  },
+  {
+    "PROPER_NAME": "Balance",
+    "NAMES": [
+      "Balance",
       "balance"
     ],
     "DESCRIPTION": "This card can trigger Both #bSunfire and #rEclipse."
@@ -27,6 +52,7 @@
   {
     "PROPER_NAME": "MagicPower",
     "NAMES": [
+      "MagicPower",
       "magicpower"
     ],
     "DESCRIPTION": "Include #bSunfire and #rEclipse, you have 10 MagicPower in Equilibrium."
@@ -64,7 +90,7 @@
       "pressure_void",
       "pressurevoid"
     ],
-    "DESCRIPTION": "Every time you played a attack card this turn, receive additional damage as amount of this power."
+    "DESCRIPTION": "Every time you played a attack card this turn, this enemy will receive additional damage as amount of this power."
   },
   {
     "PROPER_NAME": "Black Blessing",
@@ -82,5 +108,21 @@
       "ethereal_form"
     ],
     "DESCRIPTION": "Every 3 Turns, Apply 1 Intangible."
+  },
+  {
+    "PROPER_NAME": "Mark",
+    "NAMES": [
+      "Mark",
+      "mark"
+    ],
+    "DESCRIPTION": "When you #yAttack this monster, Gain #yBlock as many as mark's amount. NL You can keep this power by cause at least 10 damage in 1 turn."
+  },
+  {
+    "PROPER_NAME": "Invincible",
+    "NAMES": [
+      "Invincible",
+      "invincible"
+    ],
+    "DESCRIPTION": "All damage taken is reduced to 0."
   }
 ]

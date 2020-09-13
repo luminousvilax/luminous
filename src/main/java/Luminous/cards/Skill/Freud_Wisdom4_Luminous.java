@@ -3,6 +3,7 @@ package Luminous.cards.Skill;
 import Luminous.DefaultMod;
 import Luminous.actions.FreudAddCardAction;
 import Luminous.cards.AbstractMagicCard;
+import Luminous.characters.luminous;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,10 +22,10 @@ public class Freud_Wisdom4_Luminous extends AbstractMagicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = CardColor.COLORLESS;
+    public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
     private static final int COST = 1;
     private static final int STRENGTH = 1;
@@ -39,6 +40,7 @@ public class Freud_Wisdom4_Luminous extends AbstractMagicCard {
         exhaust = true;
         baseMagicNumber = magicNumber = STRENGTH;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = DEXTERITY;
+        setDisplayRarity(CardRarity.RARE);
     }
 
     // Actions the card should do.

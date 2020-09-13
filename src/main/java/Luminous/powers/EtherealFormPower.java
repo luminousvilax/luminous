@@ -3,10 +3,13 @@ package Luminous.powers;
 import Luminous.DefaultMod;
 import Luminous.actions.MagicPowerAction;
 import Luminous.actions.getPowerAmtAction;
+import Luminous.cards.Power.Ethereal_Form_Luminous;
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -29,6 +32,7 @@ public class EtherealFormPower extends AbstractPower implements CloneablePowerIn
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public static final int ApplyTurns = 3;
+    private int stack;
     private boolean justApplied;
 
     public EtherealFormPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
@@ -42,6 +46,7 @@ public class EtherealFormPower extends AbstractPower implements CloneablePowerIn
         type = PowerType.BUFF;
         isTurnBased = true;
         justApplied = true;
+        stack = 0;
 
         this.img = ImageMaster.loadImage(makePowerPath("EtherealForm.png"));
 
@@ -63,7 +68,7 @@ public class EtherealFormPower extends AbstractPower implements CloneablePowerIn
                     p, p, this.ID, ApplyTurns - 1
             ));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                    p, p, new IntangiblePlayerPower(p, 1), 1
+                    p, p, new IntangiblePlayerPower(p, this.stack), this.stack
             ));
             this.justApplied = true;
         }
@@ -72,22 +77,29 @@ public class EtherealFormPower extends AbstractPower implements CloneablePowerIn
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
        if (power.ID.equals(this.ID) && this.amount == ApplyTurns - 1){
-           AbstractPlayer p = AbstractDungeon.player;
-           AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(
-                   p, p, this.ID, ApplyTurns - 1
-           ));
-           AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                   p, p, new IntangiblePlayerPower(p, 1), 1
-           ));
-           this.justApplied = true;
+               AbstractPlayer p = AbstractDungeon.player;
+               AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(
+                       p, p, this.ID, ApplyTurns - 1
+               ));
+               AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                       p, p, new IntangiblePlayerPower(p, this.stack), this.stack
+               ));
+               this.justApplied = true;
        }
+    }
+
+    @Override
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        if (card.cardID.equals(Ethereal_Form_Luminous.ID)) {
+            this.stack++;
+        }
     }
 
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-            description = DESCRIPTIONS[0] + ApplyTurns + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0] + ApplyTurns + DESCRIPTIONS[1] + this.stack + DESCRIPTIONS[2];
     }
 
     @Override
