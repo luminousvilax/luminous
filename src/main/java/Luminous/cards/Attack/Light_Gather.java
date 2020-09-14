@@ -34,7 +34,7 @@ public class Light_Gather extends AbstractMagicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DMG = 2;
     private static final float BLOCK_RATE = 0.5f;
 

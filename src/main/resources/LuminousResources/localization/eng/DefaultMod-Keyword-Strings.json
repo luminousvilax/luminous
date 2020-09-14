@@ -90,7 +90,7 @@
       "pressure_void",
       "pressurevoid"
     ],
-    "DESCRIPTION": "Every time you played a attack card this turn, this enemy will receive additional damage as amount of this power."
+    "DESCRIPTION": "Every time you played a #yAttack card this turn, this enemy will receive additional damage as amount of this power."
   },
   {
     "PROPER_NAME": "Black Blessing",
@@ -99,7 +99,7 @@
       "black_blessing",
       "blackblessing"
     ],
-    "DESCRIPTION": "This Blessing will give you #yStrength, and #yExhaust when you get HP Loss to reduce 50% Loss."
+    "DESCRIPTION": "This Blessing will give you #yStrength, and #yExhaust when you get HP Loss to reduce #b50% Loss."
   },
   {
     "PROPER_NAME": "Ethereal Form",
@@ -115,7 +115,7 @@
       "Mark",
       "mark"
     ],
-    "DESCRIPTION": "When you #yAttack this monster, Gain #yBlock as many as mark's amount. NL You can keep this power by cause at least 10 damage in 1 turn."
+    "DESCRIPTION": "When you #yAttack this monster, Gain #yBlock as many as mark's amount. NL You can keep this power by cause at least #b10 damage in 1 turn."
   },
   {
     "PROPER_NAME": "Invincible",
@@ -123,6 +123,6 @@
       "Invincible",
       "invincible"
     ],
-    "DESCRIPTION": "All damage taken is reduced to 0."
+    "DESCRIPTION": "All damage taken is reduced to #b0 ."
   }
 ]

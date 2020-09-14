@@ -57,8 +57,9 @@ public class PhantomTreasureAction extends AbstractGameAction {
                     if (this.isCopyable(c)) {
                         for(i = 0; i < this.dupeAmount; ++i) {
                             AbstractCard card = c.makeStatEquivalentCopy();
+                            card.freeToPlayOnce = true;
                             if (this.upgraded) {
-                                card.freeToPlayOnce = true;
+                                card.modifyCostForCombat(-card.cost);
                             }
                             this.addToTop(new MakeTempCardInHandAction(card));
                         }
@@ -79,8 +80,9 @@ public class PhantomTreasureAction extends AbstractGameAction {
             if (this.p.hand.group.size() == 1) {
                 for(i = 0; i < this.dupeAmount; ++i) {
                     AbstractCard card = this.p.hand.getTopCard();
+                    card.freeToPlayOnce = true;
                     if (this.upgraded) {
-                        card.freeToPlayOnce = true;
+                        card.modifyCostForCombat(-card.cost);
                     }
                     this.addToTop(new MakeTempCardInHandAction(card));
                 }
@@ -99,8 +101,9 @@ public class PhantomTreasureAction extends AbstractGameAction {
 
                 for(i = 0; i < this.dupeAmount; ++i) {
                     AbstractCard card = c.makeStatEquivalentCopy();
+                    card.freeToPlayOnce = true;
                     if (this.upgraded) {
-                        card.freeToPlayOnce = true;
+                        card.modifyCostForCombat(-card.cost);
                     }
                     this.addToTop(new MakeTempCardInHandAction(card));
                 }

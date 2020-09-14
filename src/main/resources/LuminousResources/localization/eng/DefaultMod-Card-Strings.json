@@ -143,7 +143,7 @@
   },
   "Luminous:Equalize_Luminous":{
     "NAME": "Equalize",
-    "DESCRIPTION": "Puts you in Equilibrium mode immediately upon use. NL Exhaust."
+    "DESCRIPTION": "Be in [#ff9900]Equilibrium[] immediately. NL Exhaust."
   },
   "Luminous:Erosion_Luminous": {
     "NAME": "Erosion",
@@ -162,23 +162,23 @@
   },
   "Luminous:Freud_Wisdom1_Luminous":{
     "NAME": "Freud's Wisdom",
-    "DESCRIPTION": "Reduce !Luminous:SecondMagic! cost for !M! random cards this turn. NL Add [#ff9900]Freud's[] [#ff9900]Protection[] to top of draw pile. Exhaust."
+    "DESCRIPTION": "Reduce !Luminous:SecondMagic! cost for !M! random cards this turn. Put [#ff9900]Freud's[] [#ff9900]Protection[] onto top of draw pile. Can upgrade multiple times to upgrade derivative cards. NL Exhaust."
   },
   "Luminous:Freud_Wisdom2_Luminous":{
     "NAME": "Freud's Protection",
-    "DESCRIPTION": "Gain !M! Plated Armor. NL Add [#ff9900]Freud's[] [#ff9900]Healing[] to top of draw pile. Exhaust."
+    "DESCRIPTION": "Gain !M! Plated Armor. NL Put [#ff9900]Freud's[] [#ff9900]Healing[] onto top of draw pile. Exhaust."
   },
   "Luminous:Freud_Wisdom3_Luminous":{
     "NAME": "Freud's Healing",
-    "DESCRIPTION": "Heal !M! HP. NL Add [#ff9900]Freud's[] [#ff9900]Increment[] to top of draw pile. Exhaust."
+    "DESCRIPTION": "Heal !M! HP. NL Put [#ff9900]Freud's[] [#ff9900]Increment[] onto top of draw pile. Exhaust."
   },
   "Luminous:Freud_Wisdom4_Luminous":{
     "NAME": "Freud's Increment",
-    "DESCRIPTION": "Gain !M! Strength, !M! Dexterity. NL Add [#ff9900]Freud's[] [#ff9900]Perseverance[] to top of draw pile. Exhaust."
+    "DESCRIPTION": "Gain !M! Strength, !M! Dexterity. NL Put [#ff9900]Freud's[] [#ff9900]Perseverance[] onto top of draw pile. Exhaust."
   },
   "Luminous:Freud_Wisdom5_Luminous":{
     "NAME": "Freud's Perseverance",
-    "DESCRIPTION": "Give additional !M! damage to Boss and Elite. NL Add [#ff9900]Freud's[] [#ff9900]Blessing[] to top of draw pile. Exhaust."
+    "DESCRIPTION": "Give additional !M! damage to Boss and Elite. NL Put [#ff9900]Freud's[] [#ff9900]Blessing[] onto top of draw pile. Exhaust."
   },
   "Luminous:Freud_Wisdom6_Luminous":{
     "NAME": "Freud's Blessing",
@@ -210,8 +210,8 @@
   },
   "Luminous:Phantom_Treasure_Luminous":{
     "NAME": "Phantom's Treasure",
-    "DESCRIPTION": "Choose an Attack card to copy. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Chose an Attack card to copy, [#00e600]free[] to play it once. NL Exhaust.",
+    "DESCRIPTION": "Choose an Attack card to copy, [#00e600]free[] to use it once. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Chose an Attack card to copy, [#00e600]free[] to use it. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Choose an Attack card.", "No card to copy!"]
   },
   "Luminous:Reverse_Spell_Luminous":{
@@ -265,7 +265,7 @@
   },
   "Luminous:Light_Wash_Luminous":{
     "NAME": "Talent of Light",
-    "DESCRIPTION": "Ignore !Luminous:SecondMagic! Block of monsters when Attack."
+    "DESCRIPTION": "Ignore 6 Block of monsters when Attack."
   },
   "Luminous:Lunar_Tide_Luminous":{
     "NAME": "Lunar Tide",
@@ -273,7 +273,7 @@
   },
   "Luminous:Mana_Overload_Luminous":{
     "NAME": "Mana Overload",
-    "DESCRIPTION": "Use 1 additional cost to deal more damage when attack. NL (Base: !M! )"
+    "DESCRIPTION": "Use 1 additional [E] to deal more damage when attack. NL (Base: !M! )"
   },
   "Luminous:Photic_Meditation_Luminous":{
     "NAME": "Photic Meditation",

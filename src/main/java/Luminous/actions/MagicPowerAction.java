@@ -42,6 +42,7 @@ public class MagicPowerAction {
                 randomCard =  hand.getRandomCard( false);
                 while (randomCard.costForTurn == 0 && i < hand.size()) {
                     randomCard = hand.getRandomCard( false);
+                    i++;
                 }
                 randomCard.setCostForTurn(randomCard.costForTurn - 1);
             }

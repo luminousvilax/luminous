@@ -1,10 +1,7 @@
 package Luminous.characters;
 
 import Luminous.cards.Attack.*;
-import Luminous.cards.Power.Abyss_Heart_Luminous;
-import Luminous.cards.Power.Ethereal_Form_Luminous;
-import Luminous.cards.Power.Lania_Blessing_Luminous;
-import Luminous.cards.Power.Mana_Overload_Luminous;
+import Luminous.cards.Power.*;
 import Luminous.cards.Skill.*;
 import Luminous.relics.BlackBlessingRelic;
 import Luminous.relics.MirrorRelic;

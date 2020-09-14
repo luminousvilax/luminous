@@ -31,7 +31,7 @@ public class Sympathy_Luminous extends AbstractMagicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     private static final int AMOUNT = 1;
     private static final int UPGRADE_AMOUNT = 1;

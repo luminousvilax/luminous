@@ -61,7 +61,7 @@ public class Date_of_Light_Luminous extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.retain = true;
+            this.selfRetain = true;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

@@ -3,7 +3,9 @@ package Luminous.powers;
 import Luminous.DefaultMod;
 import Luminous.cards.Power.Light_Wash_Luminous;
 import basemod.interfaces.CloneablePowerInterface;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
+import com.megacrit.cardcrawl.actions.utility.LoseBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -53,15 +55,17 @@ public class LightWashPower extends AbstractPower implements CloneablePowerInter
         updateDescription();
         if (card.type == AbstractCard.CardType.ATTACK){
             if (card.target == AbstractCard.CardTarget.ENEMY){
-                if (m.currentBlock <= IgnoreBlockAmount){
-                    card.damageTypeForTurn = DamageInfo.DamageType.HP_LOSS;
-                }
+                //if (m.currentBlock <= IgnoreBlockAmount){
+                    //card.damageTypeForTurn = DamageInfo.DamageType.HP_LOSS;
+                //}
+                AbstractDungeon.actionManager.addToTop(new LoseBlockAction(m, owner, IgnoreBlockAmount));
             }
             else {
                 for(AbstractMonster monster: AbstractDungeon.getMonsters().monsters){
-                    if (monster.currentBlock <= IgnoreBlockAmount){
-                        AbstractDungeon.actionManager.addToBottom(new RemoveAllBlockAction(monster, AbstractDungeon.player));
-                    }
+                    //if (monster.currentBlock <= IgnoreBlockAmount){
+                        //AbstractDungeon.actionManager.addToBottom(new RemoveAllBlockAction(monster, AbstractDungeon.player));
+                    //}
+                    AbstractDungeon.actionManager.addToTop(new LoseBlockAction(monster, owner, IgnoreBlockAmount));
                 }
             }
         }

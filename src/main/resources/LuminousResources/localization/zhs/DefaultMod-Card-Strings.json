@@ -11,7 +11,7 @@
   },
   "Luminous:Balance_Death_Scythe":{
     "NAME": "死亡之刃",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害2次。 NL 每造成 !Luminous:SecondMagic! 点伤害, 追加 !M! 点伤害。NL luminous:平衡"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害2次。 NL 每造成 !Luminous:SecondMagic! 点伤害, 追加 !M! 点伤害。 NL luminous:平衡"
   },
   "Luminous:Balance_Ender":{
     "NAME": "绝对死亡",
@@ -24,7 +24,7 @@
   "Luminous:Dark_Apocalypse": {
     "NAME": "启示录",
     "DESCRIPTION": "对所有敌人 NL 造成 !D! 点伤害 !Luminous:SecondMagic! 次。 NL [#e60000]暗[]",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !Luminous:SecondMagic! 次, NL 附加 !M! 层 luminous:重压 。 NL [#e60000]暗[]"
+    "UPGRADE_DESCRIPTION": "对所有敌人 NL 造成 !D! 点伤害 !Luminous:SecondMagic! 次, NL 附加 !M! 层 luminous:重压 。 NL [#e60000]暗[]"
   },
   "Luminous:Dark_Arcane_Pitch": {
     "NAME": "黑暗巫术",
@@ -76,7 +76,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得未被格挡伤害50%的生命回复。 NL 消耗 。 NL [#03e3fc]光[]"
   },
   "Luminous:Light_Reflection": {
-    "NAME": "闪电反射",
+    "NAME": "闪电反击",
     "DESCRIPTION": "对目标造成 !D! 点伤害, NL 再造成2次 !Luminous:SecondMagic! 点随机目标伤害。 NL (每次伤害降低 !M! 点) NL [#03e3fc]光[]",
     "UPGRADE_DESCRIPTION": "对目标造成 !D! 点伤害, NL 再造成2次 !Luminous:SecondMagic! 点随机目标伤害。 NL [#03e3fc]光[]"
   },
@@ -143,7 +143,7 @@
   },
   "Luminous:Equalize_Luminous":{
     "NAME": "记录",
-    "DESCRIPTION": "立即进入平衡。 NL 消耗 。"
+    "DESCRIPTION": "立即进入 [#ff9900]平衡[] 。 NL 消耗 。"
   },
   "Luminous:Erosion_Luminous": {
     "NAME": "侵蚀",
@@ -158,11 +158,11 @@
   "Luminous:Flash_Blink_Luminous": {
     "NAME": "光束瞬移",
     "DESCRIPTION": "获得 !M! 层 无实体 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 获得 !M! 层 无实体 。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得 !M! 层 无实体 。 NL 消耗 。"
   },
   "Luminous:Freud_Wisdom1_Luminous":{
     "NAME": "弗里德的智慧",
-    "DESCRIPTION": "随机地为 !M! 张手牌减少 !Luminous:SecondMagic! 点费用。 NL 将 [#ff9900]弗里德的加护[] 放到 NL 抽牌堆顶端。 NL 消耗 。"
+    "DESCRIPTION": "随机地为 !M! 张手牌减少 !Luminous:SecondMagic! 点费用。将 [#ff9900]弗里德的加护[] 放到抽牌堆顶端。可多次升级依次提升衍生牌的性能。 NL 消耗 。"
   },
   "Luminous:Freud_Wisdom2_Luminous":{
     "NAME": "弗里德的加护",
@@ -210,8 +210,8 @@
   },
   "Luminous:Phantom_Treasure_Luminous":{
     "NAME": "幻影的宝札",
-    "DESCRIPTION": "复制手中的一张攻击卡 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "复制手中的一张攻击卡 NL 可 [#00e600]0费[] 打出一次。 NL 消耗 。",
+    "DESCRIPTION": "复制手中的一张攻击卡 NL 可 [#00e600]0费[] 打出一次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "复制手中的一张攻击卡 NL 始终 [#00e600]0费[] 打出。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": ["选择一张卡牌。", "没有可复制的卡牌!"]
   },
   "Luminous:Reverse_Spell_Luminous":{
@@ -265,11 +265,11 @@
   },
   "Luminous:Light_Wash_Luminous":{
     "NAME": "穿透",
-    "DESCRIPTION": "攻击时, 如果目标的格挡低于 !Luminous:SecondMagic! 点, 则无视格挡。"
+    "DESCRIPTION": "攻击时，无视目标6点格挡。"
   },
   "Luminous:Lunar_Tide_Luminous":{
     "NAME": "月光潮汐",
-    "DESCRIPTION": "回合开始时,如果你的生命高于最大值的90%, NL 获得额外的 !M! 点 [E] 。"
+    "DESCRIPTION": "回合开始时，如果你的生命在最大值的90%以上， 获得额外的 !M! 点 [E] 。"
   },
   "Luminous:Mana_Overload_Luminous":{
     "NAME": "超压魔力",

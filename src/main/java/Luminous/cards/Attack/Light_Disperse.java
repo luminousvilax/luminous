@@ -35,7 +35,7 @@ public class Light_Disperse extends AbstractMagicCard {
     private static final int COST = 2;
 
     private static final int DAMAGE = 10;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int UPGRADE_PLUS_DMG = 5;
     private static final int WEAK_AMOUNT = 2;
 
 

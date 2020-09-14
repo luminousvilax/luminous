@@ -54,10 +54,10 @@ public class Freud_Wisdom1_Luminous extends AbstractMagicCard {
         }
         hand.removeCard(this.cardID);
         int maxHand = hand.size();
-        DefaultMod.logger.info("=========弗里德手牌 "+ hand.group.toString() + " ===========");
-        for (int i = 0; hand.size() > 0 && cardGroup.size() < magicNumber && cardGroup.size() < maxHand; i++) {
+        //DefaultMod.logger.info("=========弗里德手牌 "+ hand.group.toString() + " ===========");
+        while (hand.size() > 0 && cardGroup.size() < magicNumber && cardGroup.size() < maxHand) {
             AbstractCard randomCard = hand.getRandomCard(false);
-            DefaultMod.logger.info("=========弗里德1随机到了手牌 "+ randomCard.name + " ===========");
+            //DefaultMod.logger.info("=========弗里德1随机到了手牌 "+ randomCard.name + " ===========");
             hand.removeCard(randomCard);
             if (randomCard.costForTurn > 0) {
                 cardGroup.group.add(randomCard);
