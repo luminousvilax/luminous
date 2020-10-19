@@ -1,50 +1,53 @@
-package Luminous.cards.Power;
+package Luminous.cards.Skill;
 
 import Luminous.DefaultMod;
+import Luminous.actions.MagicPowerAction;
 import Luminous.cards.AbstractDynamicCard;
 import Luminous.characters.luminous;
-import Luminous.powers.DuskGuardPower;
-import Luminous.powers.LightWashPower;
+import Luminous.powers.MagicAcceleratePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static Luminous.DefaultMod.makeCardPath;
 
-//Gain 1 Dusk Guard power after played.
-public class Dusk_Guard_Luminous extends AbstractDynamicCard {
-
-    // TEXT DECLARATION
-
-    public static final String ID = DefaultMod.makeID(Dusk_Guard_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Dusk_Guard.png");
+public class Magic_Accelerate_Luminous extends AbstractDynamicCard {
 
 
-    // STAT DECLARATION
+    public static final String ID = DefaultMod.makeID(Magic_Accelerate_Luminous.class.getSimpleName());
+    public static final String IMG = makeCardPath("Magic_Accelerate.png");
+
+
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
-    private static final int MAGIC = 1;
+    private static final int UPGRADE_COST = 0;
+    private static final int MAGIC = 3;
 
-    public Dusk_Guard_Luminous() {
+
+    // /STAT DECLARATION/
+
+
+    public Magic_Accelerate_Luminous() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = MAGIC;
+        baseMagicNumber = magicNumber = MAGIC;
+        exhaust = true;
     }
-
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new DuskGuardPower(p, p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                AbstractDungeon.player, AbstractDungeon.player, new MagicAcceleratePower(AbstractDungeon.player, AbstractDungeon.player, magicNumber)
+        ));
     }
 
     //Upgraded stats.
@@ -52,7 +55,7 @@ public class Dusk_Guard_Luminous extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }
     }

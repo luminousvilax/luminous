@@ -29,7 +29,7 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
     public static final int Balance_AMT = 9;
     public static final int Balance_TURN = 2;
     private static final int BaseMagicAmount = 1;
-    public static final int MagicAmountAtBalance = 10;
+    public static int MagicAmountAtBalance = 10;
     public static boolean LightThrough = false;
     public static boolean DarkThrough = false;
     public static final String Magic_Light = "Light";
@@ -55,8 +55,11 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
 
 
     public void onAfterCardPlayed(final AbstractCard card) {
-        if (card.type != AbstractCard.CardType.ATTACK)
+        if (card.type != AbstractCard.CardType.ATTACK) {
+            updateDescription();
             return;
+        }
+
         int MagicAmount = BaseMagicAmount + getPowerAmtAction.main(ArcanePitchPower.POWER_ID);
         if ((juageMagicCardAction.isMagicCard(card, MagicPowerSystem.Magic_Light)) ||
                         AbstractDungeon.player.hasPower(SympathyPower.POWER_ID)){
@@ -83,12 +86,21 @@ public class MagicPowerSystem extends AbstractPower implements CloneablePowerInt
                 DarkThrough = true;
             }
         }
+        if (AbstractDungeon.player.hasPower(BalancePower.POWER_ID)) {
+            MagicAmountAtBalance += MagicAmount;
+        }
+        updateDescription();
     }
 
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0];
+        if (AbstractDungeon.player.hasPower(BalancePower.POWER_ID)) {
+            description = DESCRIPTIONS[0] + MagicAmountAtBalance + DESCRIPTIONS[1];
+        }
+        else {
+            description = DESCRIPTIONS[0] + getPowerAmtAction.magicPower() + DESCRIPTIONS[1];
+        }
     }
 
     @Override

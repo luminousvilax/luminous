@@ -450,6 +450,8 @@ public class DefaultMod implements
             BaseMod.addCard(new Freud_Wisdom6_Luminous());
         BaseMod.addCard(new Hero_Will_Luminous());
         BaseMod.addCard(new Lights_Protection_Luminous());
+        BaseMod.addCard(new Magic_Accelerate_Luminous());
+        BaseMod.addCard(new Magic_Boost_Luminous());
         BaseMod.addCard(new Magic_Guard_Luminous());
         BaseMod.addCard(new Mana_Well_Luminous());
         BaseMod.addCard(new Mirror_Force_Luminous());
@@ -522,6 +524,8 @@ public class DefaultMod implements
             UnlockTracker.unlockCard(Freud_Wisdom6_Luminous.ID);
         UnlockTracker.unlockCard(Hero_Will_Luminous.ID);
         UnlockTracker.unlockCard(Lights_Protection_Luminous.ID);
+        UnlockTracker.unlockCard(Magic_Accelerate_Luminous.ID);
+        UnlockTracker.unlockCard(Magic_Boost_Luminous.ID);
         UnlockTracker.unlockCard(Magic_Guard_Luminous.ID);
         UnlockTracker.unlockCard(Mana_Well_Luminous.ID);
         UnlockTracker.unlockCard(Mirror_Force_Luminous.ID);

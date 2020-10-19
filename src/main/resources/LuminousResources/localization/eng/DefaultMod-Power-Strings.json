@@ -23,7 +23,7 @@
         },
         "Luminous:MagicPowerSystem": {
                 "NAME": "Magic Power",
-                "DESCRIPTIONS": ["You can have buffed attack by #bSunfire or #rEclipse. Use #bLight or #rDark card to gain magic power."]
+                "DESCRIPTIONS": ["You can have buffed attack by #bSunfire or #rEclipse. Use #bLight or #rDark card to gain magic power. NL You have ", " #yMagicPower now."]
         },
 
         "Luminous:AbyssHeartPower": {
@@ -91,9 +91,13 @@
                 "NAME": "Lunar Tide",
                 "DESCRIPTIONS": ["If your HP higher than ", " this turn, Gain ", " #yenergy."]
         },
+        "Luminous:MagicAcceleratePower": {
+                "NAME": "Magic Accelerate",
+                "DESCRIPTIONS": ["In next ", " turns, Gain ", "  #yMagicPower at start of turn."]
+        },
         "Luminous:ManaOverloadPower": {
                 "NAME": "Mana Overload",
-                "DESCRIPTIONS": ["Use 1 additional cost to deal ", " more damage when attack."]
+                "DESCRIPTIONS": ["Cost ", " #yMagicPower to deal ", " more damage when attack."]
         },
         "Luminous:MirrorForcePower": {
                 "NAME": "Mirror Force",

@@ -193,6 +193,15 @@
     "DESCRIPTION": "移除所有负面状态。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "移除所有负面状态。 NL 回复 !M! 点生命。 NL 消耗 。"
   },
+  "Luminous:Magic_Accelerate_Luminous": {
+    "NAME": "魔导加速",
+    "DESCRIPTION": "在接下来的 !M! 回合，每回合获得2点 luminous:魔力 。 NL 消耗 。"
+  },
+  "Luminous:Magic_Boost_Luminous": {
+    "NAME": "魔导充能",
+    "DESCRIPTION": "获得X+ !M! luminous:魔力 。",
+    "UPGRADE_DESCRIPTION": "获得X+ !M! luminous:魔力 。"
+  },
   "Luminous:Magic_Guard_Luminous": {
     "NAME": "魔法盾",
     "DESCRIPTION": "获得 !B! 点 格挡 X次。",
@@ -277,6 +286,6 @@
   },
   "Luminous:Photic_Meditation_Luminous":{
     "NAME": "光照精神力",
-    "DESCRIPTION": "获得 !M! 点 力量 。"
+    "DESCRIPTION": "获得 !Luminous:SecondMagic! 层 再生 ， !M! 点 力量 。"
   }
 }

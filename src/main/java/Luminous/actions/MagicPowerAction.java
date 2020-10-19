@@ -1,6 +1,7 @@
 package Luminous.actions;
 import Luminous.powers.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -117,5 +118,78 @@ public class MagicPowerAction {
                     AbstractDungeon.player, AbstractDungeon.player, new LightPower(AbstractDungeon.player, darkAmount), darkAmount
             ));
         }
+    }
+
+    public static void gainMagicPower(int amount) {
+        if (AbstractDungeon.player.hasPower(BalancePower.POWER_ID)) {
+            MagicPowerSystem.MagicAmountAtBalance += amount;
+            return;
+        }
+
+        int lightAmount = getPowerAmtAction.main(LightPower.POWER_ID);
+        int darkAmount = getPowerAmtAction.main(DarkPower.POWER_ID);
+
+        if (lightAmount > 0) {
+            if (lightAmount + amount > MagicPowerSystem.Balance_AMT) {
+                toBalance(LightPower.POWER_ID, MagicPowerSystem.Balance_TURN);
+                MagicPowerSystem.LightThrough = true;
+                MagicPowerSystem.MagicAmountAtBalance = lightAmount + amount;
+                return;
+            }
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, new LightPower(AbstractDungeon.player, amount), amount
+            ));
+            return;
+        }
+
+        if (darkAmount > 0) {
+            if (darkAmount + amount > MagicPowerSystem.Balance_AMT) {
+                toBalance(DarkPower.POWER_ID, MagicPowerSystem.Balance_TURN);
+                MagicPowerSystem.DarkThrough = true;
+                MagicPowerSystem.MagicAmountAtBalance = darkAmount + amount;
+                return;
+            }
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, new DarkPower(AbstractDungeon.player, amount), amount
+            ));
+            return;
+        }
+
+        //if player don't have magic power
+        if (luckTestAction.main(0.5)) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, new LightPower(AbstractDungeon.player, amount), amount
+            ));
+        }
+        else {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, new DarkPower(AbstractDungeon.player, amount), amount
+            ));
+        }
+    }
+
+    public static boolean costMagicPower(int amount) {
+        if (AbstractDungeon.player.hasPower(BalancePower.POWER_ID) && MagicPowerSystem.MagicAmountAtBalance - amount > 0) {
+            MagicPowerSystem.MagicAmountAtBalance -= amount;
+            return true;
+        }
+
+        int lightAmount = getPowerAmtAction.main(LightPower.POWER_ID);
+        int darkAmount = getPowerAmtAction.main(DarkPower.POWER_ID);
+
+        if (lightAmount - amount > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, LightPower.POWER_ID, amount
+            ));
+            return true;
+        }
+
+        if (darkAmount - amount > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player, DarkPower.POWER_ID, amount
+            ));
+            return true;
+        }
+        return false;
     }
 }

@@ -73,6 +73,7 @@ public class BalancePower extends AbstractPower implements CloneablePowerInterfa
         }
         if (this.amount == 0){
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, BalancePower.POWER_ID));
+            MagicPowerSystem.MagicAmountAtBalance = 10;
         }
         else {
             if (this.amount == 1){

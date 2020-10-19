@@ -15,7 +15,7 @@
         },
         "Luminous:MagicPowerSystem": {
                 "NAME": "魔力",
-                "DESCRIPTIONS": ["可通过 #b太阳火焰 或 #r日蚀 增益攻击。 使用 #b光 或 #r暗 属性的攻击卡来获得 #y魔力 。"]
+                "DESCRIPTIONS": ["可通过 #b太阳火焰 或 #r日蚀 增益攻击。 使用 #b光 或 #r暗 属性的攻击卡来获得 #y魔力 。 NL 现在持有", " 点 #y魔力 。"]
         },
 
         "Luminous:AbyssHeartPower": {
@@ -83,9 +83,13 @@
                 "NAME": "黑暗潮汐",
                 "DESCRIPTIONS": ["如果这回合你的HP高于 ", " ， 获得 ", " #y能量 。"]
         },
+        "Luminous:MagicAcceleratePower": {
+                "NAME": "魔导加速",
+                "DESCRIPTIONS": ["在接下来的 ", " 回合开始时，获得 ", "  #y魔力 。"]
+        },
         "Luminous:ManaOverloadPower": {
                 "NAME": "超压魔力",
-                "DESCRIPTIONS": ["攻击时， 使用额外的1费造成 ", " 点额外伤害。"]
+                "DESCRIPTIONS": ["攻击时，消耗 ", " 点 #y魔力 造成 ", " 点额外伤害。"]
         },
         "Luminous:MirrorForcePower": {
                 "NAME": "反射镜力",

@@ -193,6 +193,15 @@
     "DESCRIPTION": "Remove all Debuff. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Remove all Debuff. NL Heal !M! HP. NL Exhaust."
   },
+  "Luminous:Magic_Accelerate_Luminous": {
+    "NAME": "Magic Accelerate",
+    "DESCRIPTION": "In next !M! turns, Gain 2 luminous:MagicPower per turn. NL Exhaust."
+  },
+  "Luminous:Magic_Boost_Luminous": {
+    "NAME": "Magic Boost",
+    "DESCRIPTION": "Gain X+ !M! luminous:MagicPower .",
+    "UPGRADE_DESCRIPTION": "Gain X+ !M! luminous:MagicPower ."
+  },
   "Luminous:Magic_Guard_Luminous": {
     "NAME": "Magic Guard",
     "DESCRIPTION": "Gain !B! Block X times.",
@@ -277,6 +286,6 @@
   },
   "Luminous:Photic_Meditation_Luminous":{
     "NAME": "Photic Meditation",
-    "DESCRIPTION": "Gain !M! Strength."
+    "DESCRIPTION": "Gain !Luminous:SecondMagic! Regen, !M! Strength."
   }
 }

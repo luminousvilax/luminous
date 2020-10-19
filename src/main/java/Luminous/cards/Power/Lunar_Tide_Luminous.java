@@ -29,8 +29,8 @@ public class Lunar_Tide_Luminous extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
     private static final int MAGIC = 1;
 
     public Lunar_Tide_Luminous() {

@@ -40,6 +40,7 @@ public class MirrorRelic extends CustomRelic {
         flash();
         //AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new RelicAboveCreatureAction((AbstractCreature)AbstractDungeon.player, (AbstractRelic)this));
        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new MagicPowerSystem((AbstractCreature)AbstractDungeon.player, 1)));
+       MagicPowerSystem.MagicAmountAtBalance = 10;
     }
 
 

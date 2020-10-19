@@ -31,7 +31,7 @@ public class Dark_Arcane_Pitch extends AbstractMagicCard {
     private static final int COST = 1;
     private static final int UPGRADE_COST = 0;
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 7;
     private static final int PLUS_MAGIC_FOR_TURN = 1;
 
     // /STAT DECLARATION/

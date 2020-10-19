@@ -11,7 +11,7 @@
     "NAMES": [
       "魔力"
     ],
-    "DESCRIPTION": "包括 #b太阳火焰 和 #r日蚀 , 平衡时按 #b10 魔力计算。"
+    "DESCRIPTION": "包括 #b太阳火焰 和 #r日蚀 , 进入平衡时至少为 #b10 魔力。"
   },
   {
     "PROPER_NAME": "穿透",

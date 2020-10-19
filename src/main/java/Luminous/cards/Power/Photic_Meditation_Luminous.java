@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.RegenPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static Luminous.DefaultMod.makeCardPath;
@@ -30,16 +31,21 @@ public class Photic_Meditation_Luminous extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
     private static final int MAGIC = 1;
+    private static final int REGEN = 3;
 
     public Photic_Meditation_Luminous() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = MAGIC;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = REGEN;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                p, p, new RegenPower(p, defaultSecondMagicNumber), defaultSecondMagicNumber
+        ));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                 p, p, new StrengthPower(p, magicNumber), magicNumber
         ));

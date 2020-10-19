@@ -1,6 +1,7 @@
 package Luminous.powers;
 
 import Luminous.DefaultMod;
+import Luminous.actions.MagicPowerAction;
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -29,7 +30,7 @@ public class ManaOverloadPower extends AbstractPower implements CloneablePowerIn
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public static final int BaseDamage = 6;
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     public ManaOverloadPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
@@ -51,9 +52,8 @@ public class ManaOverloadPower extends AbstractPower implements CloneablePowerIn
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK) {
             for (int i = 0; i < this.amount; i++) {
-                if (AbstractDungeon.player.energy.energy >= COST && action.target != null && !action.target.isDeadOrEscaped()) {
-                    AbstractDungeon.player.loseEnergy(COST);
-                    int Damage = BaseDamage + getPowerAmtAction.main(StrengthPower.POWER_ID);
+                if (MagicPowerAction.costMagicPower(COST * this.amount) && action.target != null && !action.target.isDeadOrEscaped()) {
+                    int Damage = (BaseDamage + getPowerAmtAction.main(StrengthPower.POWER_ID)) * this.amount;
                     AbstractDungeon.actionManager.addToBottom(new DamageAction(
                             action.target, new DamageInfo(owner, Damage, action.damageType), AbstractGameAction.AttackEffect.BLUNT_HEAVY
                     ));
@@ -65,7 +65,7 @@ public class ManaOverloadPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0]+ (BaseDamage + getPowerAmtAction.main(StrengthPower.POWER_ID)) + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0]+ COST * this.amount + DESCRIPTIONS[1] + (BaseDamage + getPowerAmtAction.main(StrengthPower.POWER_ID)) * this.amount + DESCRIPTIONS[2];
     }
 
     @Override
