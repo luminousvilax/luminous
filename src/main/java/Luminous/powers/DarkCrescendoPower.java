@@ -60,8 +60,8 @@ public class DarkCrescendoPower extends AbstractPower implements CloneablePowerI
                         owner, owner, new StrengthPower(owner, ReceiveStrengthAmount), ReceiveStrengthAmount));
             }
             else {
-                MagicPowerAmount++;
-                if (MagicPowerAmount == COUNTPOINT){
+                MagicPowerAmount += power.amount;
+                if (MagicPowerAmount >= COUNTPOINT){
                     flash();
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                             owner, owner, new StrengthPower(owner, ReceiveStrengthAmount), ReceiveStrengthAmount));

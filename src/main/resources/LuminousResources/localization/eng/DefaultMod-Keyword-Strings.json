@@ -124,5 +124,14 @@
       "invincible"
     ],
     "DESCRIPTION": "All damage taken is reduced to #b0 ."
+  },
+  {
+    "PROPER_NAME": "Ender Power",
+    "NAMES": [
+      "Ender Power",
+      "ender_power",
+      "enderpower"
+    ],
+    "DESCRIPTION": "Once you have #b3 #yEnder #yPower , join a Baptism card in your hand."
   }
 ]

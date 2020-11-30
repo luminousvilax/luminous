@@ -6,7 +6,7 @@
   },
   "Luminous:Balance_Baptism":{
     "NAME": "Baptism",
-    "DESCRIPTION": "Exhaust all Ender power. Deal !D! damage for every exhausted power. Exhaust. NL luminous:Balance",
+    "DESCRIPTION": "Exhaust all luminous:Ender_Power . Deal !D! damage twice times for every exhausted power, Attack more 1 time at last. Exhaust. NL luminous:Balance",
     "EXTENDED_DESCRIPTION": ["Don't have Ender Power!"]
   },
   "Luminous:Balance_Death_Scythe":{
@@ -15,7 +15,7 @@
   },
   "Luminous:Balance_Ender":{
     "NAME": "Ender",
-    "DESCRIPTION": "Deal !D! Damage. 150% Damage for Elites and Boss. NL Apply !M! Ender Power. NL luminous:Balance"
+    "DESCRIPTION": "Deal !D! Damage. 150% Damage for Elites and Boss. NL Apply !M! luminous:Ender_Power . NL luminous:Balance"
   },
   "Luminous:Dark_Abyssal_Drop": {
     "NAME": "Abyssal Drop",
@@ -53,7 +53,7 @@
   },
   "Luminous:Dark_Raid": {
     "NAME": "Raid",
-    "DESCRIPTION": "Deal !D! damage, if target's HP is full, Apply !M! Weak. NL [#e60000]Dark[]"
+    "DESCRIPTION": "Deal !D! damage, if target's HP isn't full, Apply !M! Weak. NL [#e60000]Dark[]"
   },
   "Luminous:Light_Disperse": {
     "NAME": "Disperse",
@@ -69,7 +69,7 @@
   },
   "Luminous:Light_Glare": {
     "NAME": "Glare",
-    "DESCRIPTION": "Deal !D! Damage. If target's HP is full, Apply 2 luminous:Mark . NL [#03e3fc]Light[]"
+    "DESCRIPTION": "Deal !D! Damage. If target's HP isn't full, Apply 2 luminous:Mark . NL [#03e3fc]Light[]"
   },
   "Luminous:Light_Ray_of_Redemption": {
     "NAME": "Ray of Redemption",
@@ -278,11 +278,11 @@
   },
   "Luminous:Lunar_Tide_Luminous":{
     "NAME": "Lunar Tide",
-    "DESCRIPTION": "At start of turn, if your HP higher than 90% Max HP, NL Gain !M! [E]."
+    "DESCRIPTION": "At start of turn, if your HP higher than 70% Max HP, Gain !M! [E]. NL Otherwise, Gain 3 Strength(1 time)."
   },
   "Luminous:Mana_Overload_Luminous":{
     "NAME": "Mana Overload",
-    "DESCRIPTION": "Use 1 additional [E] to deal more damage when attack. NL (Base: !M! )"
+    "DESCRIPTION": "Use 2 luminous:MagicPower to deal more damage when attack. NL (Base: !M! )"
   },
   "Luminous:Photic_Meditation_Luminous":{
     "NAME": "Photic Meditation",

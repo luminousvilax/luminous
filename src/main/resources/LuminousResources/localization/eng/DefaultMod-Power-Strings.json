@@ -65,7 +65,7 @@
         },
         "Luminous:EnderPower": {
                 "NAME": "Ender",
-                "DESCRIPTIONS": ["Once you have ", " Enders, add a free Baptism card to your hand."]
+                "DESCRIPTIONS": ["Once you have ", " Enders, add a free #yBaptism card to your hand."]
         },
         "Luminous:EtherealFormPower": {
                 "NAME": "Ethereal Form",

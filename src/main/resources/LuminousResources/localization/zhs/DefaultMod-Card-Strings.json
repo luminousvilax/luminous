@@ -6,7 +6,7 @@
   },
   "Luminous:Balance_Baptism":{
     "NAME": "光暗洗礼",
-    "DESCRIPTION": "消耗所有真理之剑。 NL 每消耗一把，造成 !D! 点伤害。 NL 消耗 NL luminous:平衡",
+    "DESCRIPTION": "消耗所有 luminous:真理之剑 。 NL 每消耗一把，造成 !D! 点伤害2次，最后再攻击1次。 NL 消耗 NL luminous:平衡",
     "EXTENDED_DESCRIPTION": ["没有真理之剑!"]
   },
   "Luminous:Balance_Death_Scythe":{
@@ -15,7 +15,7 @@
   },
   "Luminous:Balance_Ender":{
     "NAME": "绝对死亡",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 对精英或首领造成150%的伤害。 NL 获得 !M! 层真理之剑。 NL luminous:平衡"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 对精英或首领造成150%的伤害。 NL 获得 !M! 层 luminous:真理之剑 。 NL luminous:平衡"
   },
   "Luminous:Dark_Abyssal_Drop": {
     "NAME": "黑暗降临",
@@ -53,7 +53,7 @@
   },
   "Luminous:Dark_Raid": {
     "NAME": "突袭",
-    "DESCRIPTION": "造成 !D! 点伤害, NL 若攻击时目标满血, 给予 !M! 层 虚弱 。 NL [#e60000]暗[]"
+    "DESCRIPTION": "造成 !D! 点伤害, NL 若攻击时目标不是满血, 给予 !M! 层 虚弱 。 NL [#e60000]暗[]"
   },
   "Luminous:Light_Disperse": {
     "NAME": "驱散",
@@ -69,7 +69,7 @@
   },
   "Luminous:Light_Glare": {
     "NAME": "强光",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若攻击时目标满血, 给予 !M! 层 luminous:标记 。 NL [#03e3fc]光[]"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若攻击时目标不是满血, 给予 !M! 层 luminous:标记 。 NL [#03e3fc]光[]"
   },
   "Luminous:Light_Ray_of_Redemption": {
     "NAME": "闪耀救赎",
@@ -278,11 +278,11 @@
   },
   "Luminous:Lunar_Tide_Luminous":{
     "NAME": "月光潮汐",
-    "DESCRIPTION": "回合开始时，如果你的生命在最大值的90%以上， 获得额外的 !M! 点 [E] 。"
+    "DESCRIPTION": "回合开始时，如果你的生命在最大值的70%以上， 获得额外的 !M! 点 [E] 。否则一次性获得3点 力量 。"
   },
   "Luminous:Mana_Overload_Luminous":{
     "NAME": "超压魔力",
-    "DESCRIPTION": "攻击时,花费额外的1点能量造成更多伤害。 NL (基础: !M! )"
+    "DESCRIPTION": "攻击时,花费2点 luminous:魔力 造成更多伤害。 NL (基础: !M! )"
   },
   "Luminous:Photic_Meditation_Luminous":{
     "NAME": "光照精神力",

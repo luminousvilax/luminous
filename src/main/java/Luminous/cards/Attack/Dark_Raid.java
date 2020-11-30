@@ -45,7 +45,7 @@ public class Dark_Raid extends AbstractMagicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m.currentHealth == m.maxHealth) {
+        if (m.currentHealth != m.maxHealth) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                     m, p, new WeakPower(m, magicNumber, false), magicNumber
             ));

@@ -57,7 +57,7 @@
         },
         "Luminous:EnderPower": {
                 "NAME": "真理之剑",
-                "DESCRIPTIONS": ["一旦拥有 ", " 把真理之剑， 将一张0费的真理洗礼添加到手牌中。"]
+                "DESCRIPTIONS": ["一旦拥有 ", " 把真理之剑， 将一张0费的 #y真理洗礼 添加到手牌中。"]
         },
         "Luminous:EtherealFormPower": {
                 "NAME": "次元神隐",

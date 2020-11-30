@@ -36,7 +36,7 @@ public class Balance_Baptism extends AbstractMagicCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String CANTUSEMESSAGE = cardStrings.EXTENDED_DESCRIPTION[0];
 
-    private static final int COST = 3;
+    private static final int COST = 1;
 
     private static final int DAMAGE = 10;
     private static final int UPGRADED_PLUS_DAMAGE = 2;
@@ -54,7 +54,7 @@ public class Balance_Baptism extends AbstractMagicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int atkAmount = getPowerAmtAction.main(EnderPower.POWER_ID);
+        int atkAmount = getPowerAmtAction.main(EnderPower.POWER_ID) * 2 + 1;
         for (int i = 1; i <= atkAmount; i++){
             switch (i) {
                 case 1: case 4:
@@ -86,10 +86,10 @@ public class Balance_Baptism extends AbstractMagicCard {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, EnderPower.POWER_ID));
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        return super.canUse(p, m) && AbstractDungeon.player.hasPower(EnderPower.POWER_ID) ;
-    }
+//    @Override
+//    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+//        return super.canUse(p, m) && AbstractDungeon.player.hasPower(EnderPower.POWER_ID) ;
+//    }
 
     // Upgraded stats.
     @Override

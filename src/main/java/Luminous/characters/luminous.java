@@ -175,6 +175,9 @@ public class luminous extends CustomPlayer {
         //retVal.add(Freud_Wisdom1_Luminous.ID);
         //retVal.add(Mana_Overload_Luminous.ID);
         //retVal.add(Tune_Luminous.ID);
+//        retVal.add(Mana_Well_Luminous.ID);
+//        retVal.add(Mana_Well_Luminous.ID);
+
 
         //Light deck
 //        retVal.add(Lights_Protection_Luminous.ID);
