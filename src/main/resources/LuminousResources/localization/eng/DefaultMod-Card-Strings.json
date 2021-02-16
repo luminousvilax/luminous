@@ -17,14 +17,18 @@
     "NAME": "Ender",
     "DESCRIPTION": "Deal !D! Damage. 150% Damage for Elites and Boss. NL Apply !M! luminous:Ender_Power . NL luminous:Balance"
   },
+  "Luminous:Balance_Liberation_Orb":{
+    "NAME": "Liberation Orb",
+    "DESCRIPTION": "Channel 10 luminous:Magic_Orbs and Evoke them sequentially. NL Every !M! luminous:MagicPower add 1 damage to each orb. NL luminous:Balance"
+  },
   "Luminous:Dark_Abyssal_Drop": {
     "NAME": "Abyssal Drop",
     "DESCRIPTION": "Deal !D! Damage. NL [#e60000]Dark[]"
   },
   "Luminous:Dark_Apocalypse": {
     "NAME": "Apocalypse",
-    "DESCRIPTION": "Deal !D! Damage to All enemies !Luminous:SecondMagic! times. NL [#e60000]Dark[]",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage to All enemies !Luminous:SecondMagic! times, NL plus !M! luminous:Pressure_Void. NL [#e60000]Dark[]"
+    "DESCRIPTION": "Deal !D! Damage to All enemies !Luminous:SecondMagic! times, NL plus !M! luminous:Pressure_Void . NL [#e60000]Dark[]",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage to All enemies !Luminous:SecondMagic! times, NL plus !M! luminous:Pressure_Void . NL [#e60000]Dark[]"
   },
   "Luminous:Dark_Arcane_Pitch": {
     "NAME": "Arcane Pitch",
@@ -54,6 +58,11 @@
   "Luminous:Dark_Raid": {
     "NAME": "Raid",
     "DESCRIPTION": "Deal !D! damage, if target's HP isn't full, Apply !M! Weak. NL [#e60000]Dark[]"
+  },
+  "Luminous:Dark_Void_Devour": {
+    "NAME": "Void Devour",
+    "DESCRIPTION": "For the enemy who has luminous:Pressure_Void , Deal damage as !M! times of the amount. Apply !Luminous:SecondMagic! luminous:Pressure_Void to remaining enemies. NL Exhaust. NL [#e60000]Dark[]",
+    "UPGRADE_DESCRIPTION": "For the enemy who has luminous:Pressure_Void , Deal damage as !M! times of the amount. Apply !Luminous:SecondMagic! luminous:Pressure_Void to remaining enemies. NL [#e60000]Dark[]"
   },
   "Luminous:Light_Disperse": {
     "NAME": "Disperse",
@@ -93,11 +102,15 @@
     "NAME": "Track",
     "DESCRIPTION": "Deal !D! Damage. NL Apply !M! luminous:Mark . NL [#03e3fc]Light[]"
   },
+  "Luminous:Light_White_Aria": {
+    "NAME": "White Aria",
+    "DESCRIPTION": "Apply !M! luminous:Mark . NL You can gain additional Heal as half amount from luminous:Mark this turn. NL Exhaust. NL [#03e3fc]Light[]"
+  },
 
   "Luminous:Accumulation_Luminous": {
     "NAME": "Accumulation",
-    "DESCRIPTION": "End Turn, Gain [E] as remaining next turn.",
-    "UPGRADE_DESCRIPTION": "Gain [E] as remaining+1 next turn.",
+    "DESCRIPTION": "End Turn, Retain your hand, Gain [E] as remaining next turn.",
+    "UPGRADE_DESCRIPTION": "End Turn, Retain your hand, Gain [E] as remaining+2 next turn.",
     "EXTENDED_DESCRIPTION": ["No Energy to retain."]
   },
   "Luminous:Arcane_Rage_Luminous": {
@@ -186,7 +199,7 @@
   },
   "Luminous:Lights_Protection_Luminous":{
     "NAME": "Light Protection",
-    "DESCRIPTION": "In this turn, Gain !M! Block while using Skill card."
+    "DESCRIPTION": "In this turn, Gain !M! Block and Draw 1 card while using Skill card."
   },
   "Luminous:Hero_Will_Luminous": {
     "NAME": "Hero's Will",
@@ -206,6 +219,11 @@
     "NAME": "Magic Guard",
     "DESCRIPTION": "Gain !B! Block X times.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block X+1 times."
+  },
+  "Luminous:Mana_Barrier_Luminous": {
+    "NAME": "Mana Barrier",
+    "DESCRIPTION": "Cost 3 luminous:MagicPower , Gain 1 Buffer . NL Exhaust. ",
+    "EXTENDED_DESCRIPTION": ["Not enough MagicPower."]
   },
   "Luminous:Mana_Well_Luminous":{
     "NAME": "Mana Well",
@@ -234,7 +252,8 @@
   },
   "Luminous:Switch_Luminous":{
     "NAME": "Switch",
-    "DESCRIPTION": "Switch between Light and Darks. Gain !B! Block. NL If luminous:MagicPower > !M!, Gain 1 turn luminous:Balance."
+    "DESCRIPTION": "Switch between Light and Darks. Gain !B! Block. NL If luminous:MagicPower > !M!, Gain 1 turn luminous:Balance.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Switch between Light and Darks. Gain !B! Block. NL If luminous:MagicPower > !M!, Gain 1 turn luminous:Balance."
   },
   "Luminous:Sympathy_Luminous":{
     "NAME": "Sympathy",

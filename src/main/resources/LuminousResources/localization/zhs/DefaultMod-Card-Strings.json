@@ -17,13 +17,17 @@
     "NAME": "绝对死亡",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 对精英或首领造成150%的伤害。 NL 获得 !M! 层 luminous:真理之剑 。 NL luminous:平衡"
   },
+  "Luminous:Balance_Liberation_Orb":{
+    "NAME": "根源解放",
+    "DESCRIPTION": " 生成 10 个 luminous:魔球 并依次 激发 。 每有 !M!  luminous:魔力 将 NL 增加1点魔球的伤害。 NL luminous:平衡"
+  },
   "Luminous:Dark_Abyssal_Drop": {
     "NAME": "黑暗降临",
     "DESCRIPTION": "造成 !D! 点伤害。 NL [#e60000]暗[]"
   },
   "Luminous:Dark_Apocalypse": {
     "NAME": "启示录",
-    "DESCRIPTION": "对所有敌人 NL 造成 !D! 点伤害 !Luminous:SecondMagic! 次。 NL [#e60000]暗[]",
+    "DESCRIPTION": "对所有敌人 NL 造成 !D! 点伤害 !Luminous:SecondMagic! 次, NL 附加 !M! 层 luminous:重压 。 NL [#e60000]暗[]",
     "UPGRADE_DESCRIPTION": "对所有敌人 NL 造成 !D! 点伤害 !Luminous:SecondMagic! 次, NL 附加 !M! 层 luminous:重压 。 NL [#e60000]暗[]"
   },
   "Luminous:Dark_Arcane_Pitch": {
@@ -55,6 +59,11 @@
     "NAME": "突袭",
     "DESCRIPTION": "造成 !D! 点伤害, NL 若攻击时目标不是满血, 给予 !M! 层 虚弱 。 NL [#e60000]暗[]"
   },
+  "Luminous:Dark_Void_Devour": {
+    "NAME": "暗之终焉",
+    "DESCRIPTION": "对所有带有 luminous:重压 的敌人造成其层数 !M! 倍的伤害。 给予其他敌人 !Luminous:SecondMagic! 层 luminous:重压 。 NL 消耗 。 NL [#e60000]暗[]",
+    "UPGRADE_DESCRIPTION": "对所有带有 luminous:重压 的敌人造成其层数 !M! 倍的伤害。 给予其他敌人 !Luminous:SecondMagic! 层 luminous:重压 。 NL [#e60000]暗[]"
+  },
   "Luminous:Light_Disperse": {
     "NAME": "驱散",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。 NL [#03e3fc]光[]"
@@ -77,8 +86,8 @@
   },
   "Luminous:Light_Reflection": {
     "NAME": "闪电反击",
-    "DESCRIPTION": "对目标造成 !D! 点伤害, NL 再造成2次 !Luminous:SecondMagic! 点随机目标伤害。 NL (每次伤害降低 !M! 点) NL [#03e3fc]光[]",
-    "UPGRADE_DESCRIPTION": "对目标造成 !D! 点伤害, NL 再造成2次 !Luminous:SecondMagic! 点随机目标伤害。 NL [#03e3fc]光[]"
+    "DESCRIPTION": "对目标造成 !D! 点伤害, NL 再造成 !Luminous:SecondMagic! 次随机目标伤害。 NL (每次伤害降低 !M! 点) NL [#03e3fc]光[]",
+    "UPGRADE_DESCRIPTION": "对目标造成 !D! 点伤害, NL 再造成 !Luminous:SecondMagic! 次随机目标伤害。 NL [#03e3fc]光[]"
   },
   "Luminous:Light_Spectral_Light": {
     "NAME": "超级光谱",
@@ -93,12 +102,16 @@
     "NAME": "追踪",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 luminous:标记 。 NL [#03e3fc]光[]"
   },
+  "Luminous:Light_White_Aria": {
+    "NAME": "白咏叹调",
+    "DESCRIPTION": "给予 !M! 层 luminous:标记 。 NL 在这回合中，你能从 luminous:标记 中获得其层数一半的额外生命回复。 NL 消耗 。 NL [#03e3fc]光[]"
+  },
 
   "Luminous:Accumulation_Luminous": {
     "NAME": "蓄势",
-    "DESCRIPTION": "结束回合, 下回合额外获得当前剩余的 [E] 。",
-    "UPGRADE_DESCRIPTION": "下回合额外获得当前剩余+1的 [E] 。",
-    "EXTENDED_DESCRIPTION": ["没有剩余的能量"]
+    "DESCRIPTION": "结束回合,  保留 手牌， NL 下回合额外获得当前剩余的 [E] 。",
+    "UPGRADE_DESCRIPTION": "结束回合,  保留 手牌， NL 下回合额外获得当前剩余+2的 [E] 。",
+    "EXTENDED_DESCRIPTION": ["没有剩余的能量。"]
   },
   "Luminous:Arcane_Rage_Luminous": {
     "NAME": "奥术之怒",
@@ -186,7 +199,7 @@
   },
   "Luminous:Lights_Protection_Luminous":{
     "NAME": "光之护佑",
-    "DESCRIPTION": "此回合内, 使用技能卡时获得 !M! 点 格挡 。"
+    "DESCRIPTION": "此回合内, 使用技能卡时获得 !M! 点 格挡 ，并抽1张牌。"
   },
   "Luminous:Hero_Will_Luminous": {
     "NAME": "勇士的意志",
@@ -206,6 +219,11 @@
     "NAME": "魔法盾",
     "DESCRIPTION": "获得 !B! 点 格挡 X次。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 X+1次。"
+  },
+  "Luminous:Mana_Barrier_Luminous": {
+    "NAME": "魔力屏障",
+    "DESCRIPTION": "消耗 !M! luminous:魔力 , 获得1层 缓冲 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["没有足够的魔力。"]
   },
   "Luminous:Mana_Well_Luminous":{
     "NAME": "魔力延伸",
@@ -234,7 +252,8 @@
   },
   "Luminous:Switch_Luminous":{
     "NAME": "切换",
-    "DESCRIPTION": "在光暗之间切换。获得 !B! 点 格挡 。 NL 如果 luminous:魔力 高于 !M! 点, 进入一回合的 luminous:平衡 "
+    "DESCRIPTION": "在光暗之间切换。获得 !B! 点 格挡 。如果 luminous:魔力 高于 !M! 点, 进入一回合的 luminous:平衡  。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 在光暗之间切换。获得 !B! 点 格挡 。如果 luminous:魔力 高于 !M! 点, 进入一回合的 luminous:平衡  。"
   },
   "Luminous:Sympathy_Luminous":{
     "NAME": "和鸣",

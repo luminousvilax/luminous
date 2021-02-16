@@ -1,73 +1,69 @@
 package Luminous.cards.Skill;
 
 import Luminous.DefaultMod;
-import Luminous.cards.AbstractMagicCard;
+import Luminous.actions.MagicPowerAction;
+import Luminous.cards.AbstractDynamicCard;
 import Luminous.characters.luminous;
-import Luminous.powers.AccumulationPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import com.megacrit.cardcrawl.powers.BufferPower;
+import Luminous.actions.getPowerAmtAction;
 
 import static Luminous.DefaultMod.makeCardPath;
 
+public class Mana_Barrier_Luminous extends AbstractDynamicCard {
 
-public class Accumulation_Luminous extends AbstractMagicCard {
 
-    public static final String ID = DefaultMod.makeID(Accumulation_Luminous.class.getSimpleName());
-    public static final String IMG = makeCardPath("Accumulation.png");
+    public static final String ID = DefaultMod.makeID(Mana_Barrier_Luminous.class.getSimpleName());
+    public static final String IMG = makeCardPath("Mana_Barrier.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String CANT_USE_MESSAGE = cardStrings.EXTENDED_DESCRIPTION[0];
-
-    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
+    private static final int MAGIC = 3;
+    private static final int UPGRADE_PLUS_MAGIC = -1;
 
-    private static final int AMOUNT = 0;
-    private static final int UPGRADE_AMOUNT = 1;
+
     // /STAT DECLARATION/
 
 
-    public Accumulation_Luminous() {
+    public Mana_Barrier_Luminous() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = AMOUNT;
+        baseMagicNumber = magicNumber = MAGIC;
         cantUseMessage = CANT_USE_MESSAGE;
+        exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int energy = EnergyPanel.getCurrentEnergy() + magicNumber;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                p, p, new AccumulationPower(p, p, energy), energy
-        ));
-        AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
+        if (MagicPowerAction.costMagicPower(magicNumber)) {
+            addToBot(new ApplyPowerAction(
+                    p, p, new BufferPower(p, 1), 1
+            ));
+        }
     }
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        return (EnergyPanel.getCurrentEnergy() != 0) || this.upgraded;
+        return getPowerAmtAction.magicPower() > magicNumber;
     }
 
-
-    // Upgraded stats.
+    //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_AMOUNT);
-            rawDescription = UPGRADE_DESCRIPTION;
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
             initializeDescription();
         }
     }

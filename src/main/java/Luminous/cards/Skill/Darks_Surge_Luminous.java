@@ -26,7 +26,7 @@ public class Darks_Surge_Luminous extends AbstractMagicCard {
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
     private static final int COST = 0;
-    private static final int AMOUNT = 1;
+    private static final int AMOUNT = 2;
     private static final int UPGRADE_AMOUNT = 1;
     // /STAT DECLARATION/
 

@@ -7,5 +7,19 @@
       " cards.",
       "NL #yEvoke: Deal #b damage to all enemies."
     ]
+  },
+  "Luminous:DarkOrb": {
+    "NAME": "Dark Orb",
+    "DESCRIPTION": [
+      "Evoke: Deal ",
+      " damage to a random enemy."
+    ]
+  },
+  "Luminous:LightOrb": {
+    "NAME": "Light Orb",
+    "DESCRIPTION": [
+      "Evoke: Deal ",
+      " damage to a random enemy."
+    ]
   }
 }

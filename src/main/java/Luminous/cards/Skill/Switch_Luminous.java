@@ -19,10 +19,12 @@ public class Switch_Luminous extends AbstractMagicCard {
 
     public static final String ID = DefaultMod.makeID(Switch_Luminous.class.getSimpleName());
     public static final String IMG = makeCardPath("Switch.png");
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
@@ -31,7 +33,7 @@ public class Switch_Luminous extends AbstractMagicCard {
 
     private static final int AMOUNT = 5;
     private static final int BLOCK = 3;
-    private static final int UPGRADE_BLOCK = 3;
+    private static final int UPGRADE_BLOCK = 2;
     // /STAT DECLARATION/
 
 
@@ -57,6 +59,8 @@ public class Switch_Luminous extends AbstractMagicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK);
+            this.selfRetain = true;
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

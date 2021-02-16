@@ -115,7 +115,7 @@
       "Mark",
       "mark"
     ],
-    "DESCRIPTION": "When you #yAttack this monster, Gain #yBlock as many as mark's amount. NL You can keep this power by cause at least #b10 damage in 1 turn."
+    "DESCRIPTION": "When you #yAttack this monster, Gain #yBlock as many as mark's amount. NL You can keep this power by causing damage as #b3 times of its amount in 1 turn."
   },
   {
     "PROPER_NAME": "Invincible",
@@ -133,5 +133,14 @@
       "enderpower"
     ],
     "DESCRIPTION": "Once you have #b3 #yEnder #yPower , join a Baptism card in your hand."
+  },
+  {
+    "PROPER_NAME": "Magic Orbs",
+    "NAMES": [
+      "Magic Orbs",
+      "magic_orbs",
+      "magicorb"
+    ],
+    "DESCRIPTION": "Each orb deals #b3 damage to a random enemy on Evoke. NL No effect by Strength."
   }
 ]

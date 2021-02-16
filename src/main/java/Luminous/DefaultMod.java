@@ -153,7 +153,7 @@ public class DefaultMod implements
     }
     
     public static String makeOrbPath(String resourcePath) {
-        return getModID() + "Resources/orbs/" + resourcePath;
+        return getModID() + "Resources/images/orbs/" + resourcePath;
     }
     
     public static String makePowerPath(String resourcePath) {
@@ -408,6 +408,7 @@ public class DefaultMod implements
         BaseMod.addCard(new Balance_Baptism());
         BaseMod.addCard(new Balance_Death_Scythe());
         BaseMod.addCard(new Balance_Ender());
+        BaseMod.addCard(new Balance_Liberation_Orb());
         BaseMod.addCard(new Dark_Abyssal_Drop());
         BaseMod.addCard(new Dark_Apocalypse());
         BaseMod.addCard(new Dark_Arcane_Pitch());
@@ -417,6 +418,7 @@ public class DefaultMod implements
         BaseMod.addCard(new Dark_Morning_Star());
         BaseMod.addCard(new Dark_Pressure_Void());
         BaseMod.addCard(new Dark_Raid());
+        BaseMod.addCard(new Dark_Void_Devour());
         BaseMod.addCard(new Light_Disperse());
         BaseMod.addCard(new Light_Flash_Shower());
         BaseMod.addCard(new Light_Gather());
@@ -426,6 +428,7 @@ public class DefaultMod implements
         BaseMod.addCard(new Light_Spectral_Light());
         BaseMod.addCard(new Light_Sylvan_Lance());
         BaseMod.addCard(new Light_Track());
+        BaseMod.addCard(new Light_White_Aria());
 
         //Skill
         BaseMod.addCard(new Accumulation_Luminous());
@@ -453,6 +456,7 @@ public class DefaultMod implements
         BaseMod.addCard(new Magic_Accelerate_Luminous());
         BaseMod.addCard(new Magic_Boost_Luminous());
         BaseMod.addCard(new Magic_Guard_Luminous());
+        BaseMod.addCard(new Mana_Barrier_Luminous());
         BaseMod.addCard(new Mana_Well_Luminous());
         BaseMod.addCard(new Mirror_Force_Luminous());
         BaseMod.addCard(new Phantom_Treasure_Luminous());
@@ -482,6 +486,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Balance_Baptism.ID);
         UnlockTracker.unlockCard(Balance_Death_Scythe.ID);
         UnlockTracker.unlockCard(Balance_Ender.ID);
+        UnlockTracker.unlockCard(Balance_Liberation_Orb.ID);
         UnlockTracker.unlockCard(Dark_Abyssal_Drop.ID);
         UnlockTracker.unlockCard(Dark_Apocalypse.ID);
         UnlockTracker.unlockCard(Dark_Arcane_Pitch.ID);
@@ -491,6 +496,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Dark_Morning_Star.ID);
         UnlockTracker.unlockCard(Dark_Pressure_Void.ID);
         UnlockTracker.unlockCard(Dark_Raid.ID);
+        UnlockTracker.unlockCard(Dark_Void_Devour.ID);
         UnlockTracker.unlockCard(Light_Disperse.ID);
         UnlockTracker.unlockCard(Light_Flash_Shower.ID);
         UnlockTracker.unlockCard(Light_Gather.ID);
@@ -500,6 +506,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Light_Spectral_Light.ID);
         UnlockTracker.unlockCard(Light_Sylvan_Lance.ID);
         UnlockTracker.unlockCard(Light_Track.ID);
+        UnlockTracker.unlockCard(Light_White_Aria.ID);
 
         //Skill_Unlock
         UnlockTracker.addCard(Accumulation_Luminous.ID);
@@ -527,6 +534,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(Magic_Accelerate_Luminous.ID);
         UnlockTracker.unlockCard(Magic_Boost_Luminous.ID);
         UnlockTracker.unlockCard(Magic_Guard_Luminous.ID);
+        UnlockTracker.unlockCard(Mana_Barrier_Luminous.ID);
         UnlockTracker.unlockCard(Mana_Well_Luminous.ID);
         UnlockTracker.unlockCard(Mirror_Force_Luminous.ID);
         UnlockTracker.unlockCard(Phantom_Treasure_Luminous.ID);

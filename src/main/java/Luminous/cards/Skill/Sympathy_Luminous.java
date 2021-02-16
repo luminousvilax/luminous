@@ -33,7 +33,7 @@ public class Sympathy_Luminous extends AbstractMagicCard {
 
     private static final int COST = 0;
 
-    private static final int AMOUNT = 1;
+    private static final int AMOUNT = 2;
     private static final int UPGRADE_AMOUNT = 1;
     // /STAT DECLARATION/
 

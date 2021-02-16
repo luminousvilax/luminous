@@ -2,6 +2,7 @@ package Luminous.powers;
 
 import Luminous.DefaultMod;
 import basemod.interfaces.CloneablePowerInterface;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -44,6 +45,7 @@ public class LightProtectionPower extends AbstractPower implements CloneablePowe
         if (card.type == AbstractCard.CardType.SKILL) {
             flash();
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(owner, owner, this.amount));
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
         }
     }
 

@@ -9,16 +9,16 @@
 },
         "Luminous:LightPower": {
                 "NAME": "Sunfire",
-                "DESCRIPTIONS": ["#bLight attack have 50% chance to deal 50% additional damage, need ", " power ", " powers", " more to arrive #yBalance"]
+                "DESCRIPTIONS": ["#bLight attack have #b50% chance to deal #b50% additional damage, need ", " power ", " powers", " more to arrive #yBalance"]
         },
         "Luminous:DarkPower": {
                 "NAME": "Eclipse",
-                "DESCRIPTIONS": ["#rDark attack have 50% chance to reduce 1 cost of a random dark card this turn, need ",
+                "DESCRIPTIONS": ["#rDark attack have #b50% chance to reduce #b1 cost of a random dark card this turn, need ",
                         " power ", " powers", " more to arrive #yBalance"]
         },
         "Luminous:BalancePower": {
                 "NAME": "Equilibrium",
-                "DESCRIPTIONS": ["#yBalance attack will 100% trigger #bLight and #rDark buff, #bLight and #rDark attack triggers own buff as well, last for ",
+                "DESCRIPTIONS": ["#yBalance attack will #b100% trigger #bLight and #rDark buff, #bLight and #rDark attack triggers own buff as well, last for ",
                         " turn. ", " turns."]
         },
         "Luminous:MagicPowerSystem": {
@@ -30,18 +30,26 @@
                 "NAME": "Abyss Heart",
                 "DESCRIPTIONS": ["At start of turn, if you have debuff, Gain "," #yStrength"]
         },
+        "Luminous:AccumulationPower": {
+                "NAME": "Accumulation",
+                "DESCRIPTIONS": ["Next turn, Gain "," #yEnergy."]
+        },
         "Luminous:ArcanePitchPower": {
                 "NAME": "Arcane Pitch",
                 "DESCRIPTIONS": ["Gain additional "," #yMagicPower when attack this turn."]
         },
         "Luminous:BlackBlessingPower": {
                 "NAME": "Black Blessing",
-                "DESCRIPTIONS": ["This Blessing will give you #yStrength, and #yExhaust to reduce 50% damage when you get HP Loss.",
-                        " NL 1 Blessing: ", " NL 2 Blessing: ", " NL 3 Blessing: ", " #yStrength"]
+                "DESCRIPTIONS": ["This Blessing will give you #yStrength, and #yExhaust to reduce #b50% damage when you get HP Loss.",
+                        " NL #b1 Blessing: ", " NL #b2 Blessing: ", " NL #b3 Blessing: ", " #yStrength"]
         },
         "Luminous:BossDamagePower": {
                 "NAME": "Boss Damage",
                 "DESCRIPTIONS": ["Give additional "," #ydamage to Boss and Elite when attack."]
+        },
+        "Luminous:CurePower": {
+                "NAME": "Aria",
+                "DESCRIPTIONS": ["You can gain additional #yheal as half amount from effect of #yMark this turn."]
         },
         "Luminous:DarkCrescendoPower": {
                 "NAME": "Dark Crescendo",
@@ -69,7 +77,7 @@
         },
         "Luminous:EtherealFormPower": {
                 "NAME": "Ethereal Form",
-                "DESCRIPTIONS": ["Every ", " Turns, Apply ", " 1 Intangible."]
+                "DESCRIPTIONS": ["Every ", " Turns, Apply ", " #b1 Intangible."]
         },
         "Luminous:FreudInvinciblePower": {
                 "NAME": "Freud's Wisdom",
@@ -113,6 +121,6 @@
         },
         "Luminous:TrackPower": {
                 "NAME": "Mark",
-                "DESCRIPTIONS": ["When you #yAttack the monster this turn, Gain ", " #yBlock, if you deal more than 10 accumulative damage, then keep the power."]
+                "DESCRIPTIONS": ["When you #yAttack the monster this turn, Gain ", " #yBlock, if you deal more than ", " accumulative damage, then keep the power."]
         }
 }

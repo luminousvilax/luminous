@@ -36,8 +36,8 @@ public class Light_Glare extends AbstractMagicCard {
     private static final int COST = 1;
 
     private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int AMOUNT = 5;
+    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int AMOUNT = 2;
 
     // /STAT DECLARATION/
 

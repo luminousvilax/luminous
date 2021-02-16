@@ -22,6 +22,10 @@
                 "NAME": "深渊之心",
                 "DESCRIPTIONS": ["回合开始时， 如果带有 #b负面状态 ， 获得 "," #y力量 "]
         },
+        "Luminous:AccumulationPower": {
+                "NAME": "蓄势",
+                "DESCRIPTIONS": ["下回合获得 "," 点 #y能量 。"]
+        },
         "Luminous:ArcanePitchPower": {
                 "NAME": "黑暗巫术",
                 "DESCRIPTIONS": ["此回合获得额外的 "," #y魔力 。"]
@@ -34,6 +38,10 @@
         "Luminous:BossDamagePower": {
                 "NAME": " Boss 伤害",
                 "DESCRIPTIONS": ["对精英和 Boss 造成 "," 点 #y额外伤害 "]
+        },
+        "Luminous:CurePower": {
+                "NAME": "咏唱",
+                "DESCRIPTIONS": ["在这回合中，你能从 #y标记 的效果中获得其层数一半的额外生命回复。"]
         },
         "Luminous:DarkCrescendoPower": {
                 "NAME": "黑暗高潮",
@@ -105,6 +113,6 @@
         },
         "Luminous:TrackPower": {
                 "NAME": "标记",
-                "DESCRIPTIONS": ["攻击这个敌人时， 获得 ", " 点 #y格挡 ， 如果回合内造成了 #y10 点以上的累计伤害， 则保持标记。"]
+                "DESCRIPTIONS": ["攻击这个敌人时， 获得 ", " 点 #y格挡 ， 如果回合内造成了 ", " 点以上的累计伤害， 则保持标记。"]
         }
 }

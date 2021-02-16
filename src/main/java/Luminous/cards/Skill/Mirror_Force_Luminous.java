@@ -30,7 +30,7 @@ public class Mirror_Force_Luminous extends AbstractMagicCard {
     public static final CardColor COLOR = luminous.Enums.COLOR_luminous;
 
     private static final int COST = 1;
-
+    private static final int UPGRADE_COST = 2;
     private static final int AMOUNT = 1;
     // /STAT DECLARATION/
 
@@ -56,6 +56,7 @@ public class Mirror_Force_Luminous extends AbstractMagicCard {
         if (!upgraded) {
             upgradeName();
             this.exhaust = false;
+            upgradeBaseCost(UPGRADE_COST);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

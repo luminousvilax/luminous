@@ -175,12 +175,17 @@ public class luminous extends CustomPlayer {
         //retVal.add(Freud_Wisdom1_Luminous.ID);
         //retVal.add(Mana_Overload_Luminous.ID);
         //retVal.add(Tune_Luminous.ID);
-//        retVal.add(Mana_Well_Luminous.ID);
-//        retVal.add(Mana_Well_Luminous.ID);
+        //retVal.add(Mana_Well_Luminous.ID);
+        //retVal.add(Balance_Ender.ID);
+        //retVal.add(Balance_Ender.ID);
+//        retVal.add(Arcane_Rage_Luminous.ID);
+//        retVal.add(Light_Glare.ID);
+//        retVal.add(Light_Track.ID);
+//        retVal.add(Light_White_Aria.ID);
 
 
         //Light deck
-//        retVal.add(Lights_Protection_Luminous.ID);
+        //retVal.add(Lights_Protection_Luminous.ID);
 //        retVal.add(Light_Reflection.ID);
 //        retVal.add(Light_Track.ID);
 //        retVal.add(Light_Gather.ID);
@@ -192,7 +197,6 @@ public class luminous extends CustomPlayer {
         //retVal.add(Dark_Extract.ID);
         //retVal.add(Darks_Surge_Luminous.ID);
         //retVal.add(Dark_Moonlight_Spear.ID);
-        //retVal.add(Dark_Pressure_Void.ID);
         //retVal.add(Dark_Morning_Star.ID);
 
 

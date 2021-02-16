@@ -7,5 +7,19 @@
       " cards.",
       "NL #yEvoke: Deal #b damage to all enemies."
     ]
+  },
+  "Luminous:DarkOrb": {
+    "NAME": "黑暗魔球",
+    "DESCRIPTION": [
+      "激发： 对一个随机敌人造成 ",
+      " 点伤害。"
+    ]
+  },
+  "Luminous:LightOrb": {
+    "NAME": "光明魔球",
+    "DESCRIPTION": [
+      "激发： 对一个随机敌人造成 ",
+      " 点伤害。"
+    ]
   }
 }

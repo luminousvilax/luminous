@@ -6,6 +6,7 @@ import Luminous.characters.luminous;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -54,14 +55,16 @@ public class Light_Reflection extends AbstractMagicCard {
             decreaseDamage = 0;
         }
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LightningEffect(m.hb.cX, m.hb.cY)));
+        AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.LIGHTNING
+                m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE
         ));
         for (int i = 0; i < defaultSecondMagicNumber; i++){
             AbstractMonster monster = AbstractDungeon.getRandomMonster();
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new LightningEffect(monster.hb.cX, monster.hb.cY)));
+            AbstractDungeon.actionManager.addToBottom(new SFXAction("ORB_LIGHTNING_EVOKE"));
             AbstractDungeon.actionManager.addToBottom(new DamageAction(
-                    monster, new DamageInfo(p, damage - decreaseDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.LIGHTNING
+                    monster, new DamageInfo(p, damage - decreaseDamage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE
             ));
             if (!upgraded){
                 decreaseDamage += magicNumber;

@@ -169,7 +169,7 @@ public class MagicPowerAction {
     }
 
     public static boolean costMagicPower(int amount) {
-        if (AbstractDungeon.player.hasPower(BalancePower.POWER_ID) && MagicPowerSystem.MagicAmountAtBalance - amount > 0) {
+        if (AbstractDungeon.player.hasPower(BalancePower.POWER_ID) && MagicPowerSystem.MagicAmountAtBalance > amount) {
             MagicPowerSystem.MagicAmountAtBalance -= amount;
             return true;
         }
@@ -177,14 +177,14 @@ public class MagicPowerAction {
         int lightAmount = getPowerAmtAction.main(LightPower.POWER_ID);
         int darkAmount = getPowerAmtAction.main(DarkPower.POWER_ID);
 
-        if (lightAmount - amount > 0) {
+        if (lightAmount > amount) {
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(
                     AbstractDungeon.player, AbstractDungeon.player, LightPower.POWER_ID, amount
             ));
             return true;
         }
 
-        if (darkAmount - amount > 0) {
+        if (darkAmount > amount) {
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(
                     AbstractDungeon.player, AbstractDungeon.player, DarkPower.POWER_ID, amount
             ));
